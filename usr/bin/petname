@@ -1,5 +1,4 @@
-#!/bin/bash
-# N.B.: Use bash for $RANDOM
+#!/bin/sh
 #
 # petname
 #

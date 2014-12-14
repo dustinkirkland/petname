@@ -15,5 +15,7 @@ petname (1.0) unreleased; urgency=medium
     src/github.com/dustinkirkland/petname, setup.py, === target was
     u../../../, update.sh, usr/bin/petname:
     - initial repackaging
+  * usr/bin/petname:
+    - sh is fine, not using bash
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Sat, 13 Dec 2014 11:27:59 -0600
