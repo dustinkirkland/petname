@@ -2,3 +2,7 @@
 
 %:
 	dh $@
+
+override_dh_auto_build:
+	! grep "[^A-Za-z]" usr/lib/petname/*txt
+	dh_auto_build

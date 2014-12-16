@@ -19,5 +19,7 @@ petname (1.0) unreleased; urgency=medium
     - sh is fine, not using bash
   * usr/lib/petname/adverbs.txt, usr/lib/petname/names.txt:
     - fix up a few words
+  * debian/rules, LICENSE:
+    - add a license, and a test for the word lists
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Sat, 13 Dec 2014 11:27:59 -0600
