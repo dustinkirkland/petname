@@ -1,9 +1,9 @@
-petname (1.2) unreleased; urgency=medium
+petname (1.2-0ubuntu1) vivid; urgency=medium
 
   * usr/bin/petname, usr/lib/petname/petname.sh:
     - simplify our shell functions to just output rather than $_RET
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 16 Dec 2014 13:16:24 -0600
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 16 Dec 2014 13:23:39 -0600
 
 petname (1.1-0ubuntu1) vivid; urgency=medium
 
