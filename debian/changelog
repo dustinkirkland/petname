@@ -27,5 +27,7 @@ petname (1.0) unreleased; urgency=medium
     - add a manpage, update the README
   * README.md:
     - update readme, add code examples
+  * usr/lib/petname/adjectives.txt, usr/lib/petname/names.txt:
+    - fix sorting, add a few words
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Sat, 13 Dec 2014 11:27:59 -0600
