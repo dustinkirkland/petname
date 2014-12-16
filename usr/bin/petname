@@ -18,7 +18,10 @@
 
 set -e
 
-. /usr/lib/petname/petname.sh
+PKG=petname
+libdir="$(dirname $0)/../lib/$PKG"
+
+. "$libdir"/petname.sh
 
 WORDS=2
 SEPARATOR="-"

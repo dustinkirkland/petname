@@ -1,6 +1,7 @@
 petname (1.5) unreleased; urgency=medium
 
-  * UNRELEASED
+  * usr/bin/petname:
+    - ensure that the binary can run from local source checkout
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 16 Dec 2014 14:28:31 -0600
 
