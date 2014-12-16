@@ -1,6 +1,7 @@
 petname (1.4) unreleased; urgency=medium
 
-  * UNRELEASED
+  * usr/lib/petname/names.txt:
+    - remove some religious figures
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 16 Dec 2014 14:05:43 -0600
 

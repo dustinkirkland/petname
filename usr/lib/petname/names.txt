@@ -1,4 +1,3 @@
-
 Aaden
 Aaliyah
 Aarav
@@ -979,7 +978,6 @@ Jerry
 Jesse
 Jessica
 Jessie
-Jesus
 Jett
 Jewel
 Jillian
@@ -1472,9 +1470,6 @@ Miriam
 Misael
 Mitchell
 Miya
-Mohamed
-Mohammad
-Mohammed
 Moises
 Mollie
 Molly
@@ -1484,7 +1479,6 @@ Morgan
 Moriah
 Moses
 Moshe
-Muhammad
 Mustafa
 Mya
 Myah
