@@ -1,6 +1,7 @@
 petname (1.1) unreleased; urgency=medium
 
-  * UNRELEASED
+  * debian/copyright, README.md:
+    - update readme, add local location of license
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 16 Dec 2014 12:33:51 -0600
 
