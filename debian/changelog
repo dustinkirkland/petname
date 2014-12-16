@@ -2,6 +2,7 @@ petname (1.3) unreleased; urgency=medium
 
   * README.md:
     - update docs to point to pypi and pip install instructions
+    - add apt-get install instructions
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 16 Dec 2014 13:23:41 -0600
 
