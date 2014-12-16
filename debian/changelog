@@ -21,5 +21,9 @@ petname (1.0) unreleased; urgency=medium
     - fix up a few words
   * debian/rules, LICENSE:
     - add a license, and a test for the word lists
+  * === added directory usr/share, === added directory usr/share/man,
+    === added directory usr/share/man/man1,
+    usr/share/man/man1/petname.1:
+    - add a manpage, update the README
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Sat, 13 Dec 2014 11:27:59 -0600
