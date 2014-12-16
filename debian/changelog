@@ -26,6 +26,6 @@ petname (1.0) unreleased; urgency=medium
     usr/share/man/man1/petname.1:
     - add a manpage, update the README
   * README.md:
-    - update readme
+    - update readme, add code examples
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Sat, 13 Dec 2014 11:27:59 -0600
