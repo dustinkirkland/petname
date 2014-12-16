@@ -1,9 +1,9 @@
-petname (1.4) unreleased; urgency=medium
+petname (1.4-0ubuntu1) vivid; urgency=medium
 
   * usr/lib/petname/names.txt:
     - remove some religious figures
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 16 Dec 2014 14:05:43 -0600
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 16 Dec 2014 14:28:29 -0600
 
 petname (1.3-0ubuntu1) vivid; urgency=medium
 
