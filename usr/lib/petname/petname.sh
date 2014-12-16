@@ -17,13 +17,13 @@
 PKG="petname"
 
 RandAdverb() {
-	_RET=$(shuf -n 1 /usr/lib/$PKG/adverbs.txt)
+	shuf -n 1 /usr/lib/$PKG/adverbs.txt
 }
 
 RandAdjective() {
-	_RET=$(shuf -n 1 /usr/lib/$PKG/adjectives.txt)
+	shuf -n 1 /usr/lib/$PKG/adjectives.txt
 }
 
 RandName() {
-	_RET=$(shuf -n 1 /usr/lib/$PKG/names.txt)
+	shuf -n 1 /usr/lib/$PKG/names.txt
 }

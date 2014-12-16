@@ -1,6 +1,7 @@
 petname (1.2) unreleased; urgency=medium
 
-  * UNRELEASED
+  * usr/bin/petname, usr/lib/petname/petname.sh:
+    - simplify our shell functions to just output rather than $_RET
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 16 Dec 2014 13:16:24 -0600
 

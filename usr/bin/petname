@@ -39,31 +39,25 @@ while [ ! -z "$1" ]; do
 done
 
 if [ "$WORDS" = "1" ]; then
-	RandName
-	printf "%s\n" "$_RET"
+	printf "%s\n" "$(RandName)"
 	exit 0
 elif [ "$WORDS" = "2" ]; then
-	RandAdjective
-	adj="$_RET"
-	RandName
-	name="$_RET"
+	adj="$(RandAdjective)"
+	name="$(RandName)"
 	printf "%s%s%s\n" "$adj" "$SEPARATOR" "$name"
 	exit 0
 else
 	count=$((WORDS-2))
 	adverbs=
 	for i in $(seq 1 $count); do
-		RandAdverb
 		if [ -z "$adverbs" ]; then
-			adverbs=$(printf "%s%s" "$_RET" "$SEPARATOR")
+			adverbs=$(printf "%s%s" "$(RandAdverb)" "$SEPARATOR")
 		else
-			adverbs=$(printf "%s%s%s" "$adverbs" "$_RET" "$SEPARATOR")
+			adverbs=$(printf "%s%s%s" "$adverbs" "$(RandAdverb)" "$SEPARATOR")
 
 		fi
 	done
-	RandAdjective
-	adj="$_RET"
-	RandName
-	name="$_RET"
+	adj="$(RandAdjective)"
+	name="$(RandName)"
 	printf "%s%s%s%s\n" "$adverbs" "$adj" "$SEPARATOR" "$name"
 fi
