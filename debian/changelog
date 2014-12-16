@@ -1,4 +1,4 @@
-petname (1.1) unreleased; urgency=medium
+petname (1.1-0ubuntu1) vivid; urgency=medium
 
   * debian/copyright, README.md:
     - update readme, add local location of license
