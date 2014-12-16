@@ -1,3 +1,4 @@
+
 Aaden
 Aaliyah
 Aarav
@@ -119,6 +120,7 @@ Amare
 Amari
 Amaya
 Amber
+Ambroise
 Ameer
 Amelia
 Amelie
@@ -180,6 +182,7 @@ April
 Arabella
 Araceli
 Archer
+Archimedes
 Arely
 Ares
 Ari
@@ -664,6 +667,7 @@ Emmitt
 Emmy
 Emory
 Enoch
+Enrico
 Enrique
 Enzo
 Ephraim
@@ -673,6 +677,7 @@ Erick
 Erik
 Erika
 Erin
+Erna
 Ernest
 Ernesto
 Esme
@@ -683,6 +688,7 @@ Estelle
 Esther
 Estrella
 Ethan
+Euclid
 Eugene
 Eva
 Evalyn
@@ -721,6 +727,7 @@ Francesca
 Francis
 Francisco
 Franco
+Françoise
 Frank
 Frankie
 Franklin
@@ -733,6 +740,7 @@ Gabrielle
 Gael
 Gage
 Galilea
+Galileo
 Gannon
 Garrett
 Garrison
@@ -747,6 +755,8 @@ George
 Georgia
 Gerald
 Gerardo
+Gertrude
+Gerty
 Gia
 Giada
 Giana
@@ -839,6 +849,7 @@ Hudson
 Hugh
 Hugo
 Hunter
+Hypatia
 Ian
 Ibrahim
 Iker
@@ -949,6 +960,7 @@ Jazlyn
 Jazlynn
 Jazmin
 Jazmine
+Jean
 Jedidiah
 Jefferson
 Jeffery
@@ -1274,8 +1286,10 @@ Lincoln
 Linda
 Lindsay
 Lindsey
+Linus
 Lionel
 Lisa
+Lise
 Liv
 Livia
 Lizbeth
@@ -1507,7 +1521,9 @@ Nickolas
 Nico
 Nicolas
 Nicole
+Niels
 Niko
+Nikola
 Nikolai
 Nikolas
 Nina
@@ -1581,6 +1597,7 @@ Quinn
 Quintin
 Quinton
 Rachel
+Radia
 Raegan
 Raelyn
 Raelynn
@@ -1633,6 +1650,7 @@ Rihanna
 Riley
 River
 Rivka
+Rob
 Robert
 Roberto
 Rocco
@@ -1654,6 +1672,8 @@ Ronnie
 Rory
 Rosa
 Rosalie
+Rosalind
+Rosalyn
 Rose
 Roselyn
 Rosemary
@@ -1871,6 +1891,7 @@ Warren
 Waylon
 Wayne
 Wendy
+Werner
 Wesley
 Westin
 Weston

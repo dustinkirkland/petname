@@ -28,6 +28,6 @@ petname (1.0) unreleased; urgency=medium
   * README.md:
     - update readme, add code examples
   * usr/lib/petname/adjectives.txt, usr/lib/petname/names.txt:
-    - fix sorting, add a few words
+    - fix sorting, add a few words and names
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Sat, 13 Dec 2014 11:27:59 -0600
