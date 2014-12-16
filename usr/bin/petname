@@ -18,19 +18,7 @@
 
 set -e
 
-PKG="petname"
-
-RandAdverb() {
-	_RET=$(shuf -n 1 /usr/lib/$PKG/adverbs.txt)
-}
-
-RandAdjective() {
-	_RET=$(shuf -n 1 /usr/lib/$PKG/adjectives.txt)
-}
-
-RandName() {
-	_RET=$(shuf -n 1 /usr/lib/$PKG/names.txt)
-}
+. /usr/lib/petname/petname.sh
 
 WORDS=2
 SEPARATOR="-"
@@ -64,7 +52,7 @@ elif [ "$WORDS" = "2" ]; then
 else
 	count=$((WORDS-2))
 	adverbs=
-	for i in $(seq 0 $count); do
+	for i in $(seq 1 $count); do
 		RandAdverb
 		if [ -z "$adverbs" ]; then
 			adverbs=$(printf "%s%s" "$_RET" "$SEPARATOR")

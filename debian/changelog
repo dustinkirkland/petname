@@ -2,6 +2,11 @@ petname (1.1) unreleased; urgency=medium
 
   * debian/copyright, README.md:
     - update readme, add local location of license
+  * debian/copyright, debian/petname.install => debian/install,
+    usr/bin/petname, usr/lib/petname/petname.sh:
+    - install README, which is used by downstream packages
+    - move functions to common library
+    - use common library in shell script
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 16 Dec 2014 12:33:51 -0600
 
