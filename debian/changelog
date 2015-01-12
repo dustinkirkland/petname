@@ -1,3 +1,9 @@
+petname (1.7) unreleased; urgency=medium
+
+  * UNRELEASED
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 12 Jan 2015 09:36:46 -0600
+
 petname (1.6-0ubuntu1) vivid; urgency=medium
 
   * debian/rules, usr/share/petname/names.txt:
