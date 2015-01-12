@@ -1,6 +1,8 @@
 petname (1.6) unreleased; urgency=medium
 
-  * UNRELEASED
+  * debian/rules, usr/share/petname/names.txt:
+    - ensure our LC_ALL=C so that our grep works
+    - prune out a name with a funny character caught by our grep
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 12 Jan 2015 09:17:38 -0600
 

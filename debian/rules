@@ -4,5 +4,6 @@
 	dh $@
 
 override_dh_auto_build:
-	! grep "[^A-Za-z]" usr/share/petname/*txt
+	# Ensure that we only have A-Za-z in our words; no funny characters
+	! LC_ALL=C grep "[^A-Za-z]" usr/share/petname/*txt
 	dh_auto_build
