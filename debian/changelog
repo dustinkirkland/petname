@@ -1,4 +1,4 @@
-petname (1.5) unreleased; urgency=medium
+petname (1.5-0ubuntu1) vivid; urgency=medium
 
   * usr/bin/petname:
     - ensure that the binary can run from local source checkout
@@ -13,7 +13,7 @@ petname (1.5) unreleased; urgency=medium
   * usr/share/petname/petname.sh:
     - add interpreter to silence lintian
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 16 Dec 2014 14:28:31 -0600
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 12 Jan 2015 09:17:36 -0600
 
 petname (1.4-0ubuntu1) vivid; urgency=medium
 
