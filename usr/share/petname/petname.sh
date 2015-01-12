@@ -1,3 +1,5 @@
+#!/bin/sh
+#
 # petname
 #
 # Copyright 2014 Dustin Kirkland <dustin.kirkland@gmail.com>

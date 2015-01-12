@@ -10,6 +10,8 @@ petname (1.5) unreleased; urgency=medium
     usr/share/petname/names.txt, usr/lib/petname/petname.sh =>
     usr/share/petname/petname.sh:
     - this is architecture independent, so move lib -> share
+  * usr/share/petname/petname.sh:
+    - add interpreter to silence lintian
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 16 Dec 2014 14:28:31 -0600
 
