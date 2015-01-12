@@ -4,5 +4,5 @@
 	dh $@
 
 override_dh_auto_build:
-	! grep "[^A-Za-z]" usr/lib/petname/*txt
+	! grep "[^A-Za-z]" usr/share/petname/*txt
 	dh_auto_build
