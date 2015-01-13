@@ -1,3 +1,9 @@
+petname (1.8) unreleased; urgency=medium
+
+  * UNRELEASED
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 13 Jan 2015 11:30:54 -0600
+
 petname (1.7-0ubuntu1) vivid; urgency=medium
 
   * usr/bin/petname, usr/share/petname/petname.sh:
