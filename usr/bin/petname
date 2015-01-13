@@ -40,11 +40,11 @@ while [ ! -z "$1" ]; do
 done
 
 if [ "$WORDS" = "1" ]; then
-	printf "%s\n" "$(RandName)"
+	printf "%s\n" "$(Name)"
 	exit 0
 elif [ "$WORDS" = "2" ]; then
-	adj="$(RandAdjective)"
-	name="$(RandName)"
+	adj="$(Adjective)"
+	name="$(Name)"
 	printf "%s%s%s\n" "$adj" "$SEPARATOR" "$name"
 	exit 0
 else
@@ -52,13 +52,13 @@ else
 	adverbs=
 	for i in $(seq 1 $count); do
 		if [ -z "$adverbs" ]; then
-			adverbs=$(printf "%s%s" "$(RandAdverb)" "$SEPARATOR")
+			adverbs=$(printf "%s%s" "$(Adverb)" "$SEPARATOR")
 		else
-			adverbs=$(printf "%s%s%s" "$adverbs" "$(RandAdverb)" "$SEPARATOR")
+			adverbs=$(printf "%s%s%s" "$adverbs" "$(Adverb)" "$SEPARATOR")
 
 		fi
 	done
-	adj="$(RandAdjective)"
-	name="$(RandName)"
+	adj="$(Adjective)"
+	name="$(Name)"
 	printf "%s%s%s%s\n" "$adverbs" "$adj" "$SEPARATOR" "$name"
 fi

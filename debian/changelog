@@ -1,6 +1,7 @@
 petname (1.7) unreleased; urgency=medium
 
-  * UNRELEASED
+  * usr/bin/petname, usr/share/petname/petname.sh:
+    - drop the "Rand" prefix, as it's implicit
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 12 Jan 2015 09:36:46 -0600
 

@@ -18,14 +18,14 @@
 
 PKG="petname"
 
-RandAdverb() {
+Adverb() {
 	shuf -n 1 /usr/share/$PKG/adverbs.txt
 }
 
-RandAdjective() {
+Adjective() {
 	shuf -n 1 /usr/share/$PKG/adjectives.txt
 }
 
-RandName() {
+Name() {
 	shuf -n 1 /usr/share/$PKG/names.txt
 }
