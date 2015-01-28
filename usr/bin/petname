@@ -19,8 +19,7 @@
 set -e
 
 PKG=petname
-. "$(dirname $0)/../share/$PKG"/petname.sh
-
+DIR="/usr/share/$PKG"
 WORDS=2
 SEPARATOR="-"
 while [ ! -z "$1" ]; do
@@ -36,11 +35,27 @@ while [ ! -z "$1" ]; do
 		-h|--help)
 			exec man $PKG
 		;;
+		-d|--dir)
+			DIR="$2"
+			shift 2
+		;;
 		*)
 			error "Unknown options [$1]"
 		;;
 	esac
 done
+
+Adverb() {
+	shuf -n 1 $DIR/adverbs.txt
+}
+
+Adjective() {
+	shuf -n 1 $DIR/adjectives.txt
+}
+
+Name() {
+	shuf -n 1 $DIR/names.txt
+}
 
 if [ "$WORDS" = "1" ]; then
 	printf "%s\n" "$(Name)"

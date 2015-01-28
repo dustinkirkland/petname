@@ -2,6 +2,9 @@ petname (1.8) unreleased; urgency=medium
 
   * usr/bin/petname:
     - add a -h|--help option that drops you in the manpage
+  * usr/bin/petname, usr/share/man/man1/petname.1,
+    usr/share/petname/petname.sh:
+    - support directories with customized adjectives, adverbs, and names
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 13 Jan 2015 11:30:54 -0600
 

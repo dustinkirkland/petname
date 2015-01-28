@@ -19,13 +19,13 @@
 PKG="petname"
 
 Adverb() {
-	shuf -n 1 /usr/share/$PKG/adverbs.txt
+	shuf -n 1 $DIR/adverbs.txt
 }
 
 Adjective() {
-	shuf -n 1 /usr/share/$PKG/adjectives.txt
+	shuf -n 1 $DIR/adjectives.txt
 }
 
 Name() {
-	shuf -n 1 /usr/share/$PKG/names.txt
+	shuf -n 1 $DIR/names.txt
 }
