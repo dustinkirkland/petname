@@ -1,6 +1,7 @@
 petname (1.8) unreleased; urgency=medium
 
-  * UNRELEASED
+  * usr/bin/petname:
+    - add a -h|--help option that drops you in the manpage
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 13 Jan 2015 11:30:54 -0600
 

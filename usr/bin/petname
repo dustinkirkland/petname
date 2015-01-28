@@ -33,6 +33,9 @@ while [ ! -z "$1" ]; do
 			SEPARATOR="$2"
 			shift 2
 		;;
+		-h|--help)
+			exec man $PKG
+		;;
 		*)
 			error "Unknown options [$1]"
 		;;
