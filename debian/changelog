@@ -5,6 +5,8 @@ petname (1.8) unreleased; urgency=medium
   * usr/bin/petname, usr/share/man/man1/petname.1,
     usr/share/petname/petname.sh:
     - support directories with customized adjectives, adverbs, and names
+  * usr/bin/petname:
+    - move into a Generate() function
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 13 Jan 2015 11:30:54 -0600
 

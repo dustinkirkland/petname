@@ -57,26 +57,29 @@ Name() {
 	shuf -n 1 $DIR/names.txt
 }
 
-if [ "$WORDS" = "1" ]; then
-	printf "%s\n" "$(Name)"
-	exit 0
-elif [ "$WORDS" = "2" ]; then
-	adj="$(Adjective)"
-	name="$(Name)"
-	printf "%s%s%s\n" "$adj" "$SEPARATOR" "$name"
-	exit 0
-else
-	count=$((WORDS-2))
-	adverbs=
-	for i in $(seq 1 $count); do
-		if [ -z "$adverbs" ]; then
-			adverbs=$(printf "%s%s" "$(Adverb)" "$SEPARATOR")
-		else
-			adverbs=$(printf "%s%s%s" "$adverbs" "$(Adverb)" "$SEPARATOR")
+Generate() {
+	if [ "$WORDS" = "1" ]; then
+		printf "%s\n" "$(Name)"
+		return
+	elif [ "$WORDS" = "2" ]; then
+		adj="$(Adjective)"
+		name="$(Name)"
+		printf "%s%s%s\n" "$adj" "$SEPARATOR" "$name"
+		return
+	else
+		count=$((WORDS-2))
+		adverbs=
+		for i in $(seq 1 $count); do
+			if [ -z "$adverbs" ]; then
+				adverbs=$(printf "%s%s" "$(Adverb)" "$SEPARATOR")
+			else
+				adverbs=$(printf "%s%s%s" "$adverbs" "$(Adverb)" "$SEPARATOR")
+			fi
+		done
+		adj="$(Adjective)"
+		name="$(Name)"
+		printf "%s%s%s%s\n" "$adverbs" "$adj" "$SEPARATOR" "$name"
+	fi
+}
 
-		fi
-	done
-	adj="$(Adjective)"
-	name="$(Name)"
-	printf "%s%s%s%s\n" "$adverbs" "$adj" "$SEPARATOR" "$name"
-fi
+Generate
