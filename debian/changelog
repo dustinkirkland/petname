@@ -1,4 +1,4 @@
-petname (1.8) unreleased; urgency=medium
+petname (1.8-0ubuntu1) vivid; urgency=medium
 
   * usr/bin/petname:
     - add a -h|--help option that drops you in the manpage
@@ -16,7 +16,7 @@ petname (1.8) unreleased; urgency=medium
       http://wordlist.aspell.net/agid-readme/
     - update readme docs
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 13 Jan 2015 11:30:54 -0600
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 28 Jan 2015 15:15:05 -0600
 
 petname (1.7-0ubuntu1) vivid; urgency=medium
 
