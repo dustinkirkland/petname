@@ -10,6 +10,11 @@ petname (1.8) unreleased; urgency=medium
   * usr/share/petname/names.txt:
     - drastically increase list of first names, using US Census data:
       http://deron.meranda.us/data/census-derived-all-first.txt
+  * README.md, usr/share/petname/adjectives.txt,
+    usr/share/petname/adverbs.txt:
+    - drastically increase lists of adverbs and adjectives using:
+      http://wordlist.aspell.net/agid-readme/
+    - update readme docs
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 13 Jan 2015 11:30:54 -0600
 
