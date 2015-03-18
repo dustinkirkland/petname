@@ -1,6 +1,8 @@
 petname (1.9) unreleased; urgency=medium
 
-  * UNRELEASED
+  * usr/bin/petname:
+    - add support for --adverb|--adjective|--noun, to give
+      only a random word of this type
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 28 Jan 2015 15:15:08 -0600
 

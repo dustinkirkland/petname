@@ -39,6 +39,18 @@ while [ ! -z "$1" ]; do
 			DIR="$2"
 			shift 2
 		;;
+		--adverb)
+			ADVERB=1
+			shift
+		;;
+		--adjective)
+			ADJECTIVE=1
+			shift
+		;;
+		--name)
+			NAME=1
+			shift
+		;;
 		*)
 			error "Unknown options [$1]"
 		;;
@@ -58,7 +70,16 @@ Name() {
 }
 
 Generate() {
-	if [ "$WORDS" = "1" ]; then
+	if [ "$NAME" = "1" ]; then
+		printf "%s\n" "$(Name)"
+		return
+	elif [ "$ADJECTIVE" = "1" ]; then
+		printf "%s\n" "$(Adjective)"
+		return
+	elif [ "$ADVERB" = "1" ]; then
+		printf "%s\n" "$(Adverb)"
+		return
+	elif [ "$WORDS" = "1" ]; then
 		printf "%s\n" "$(Name)"
 		return
 	elif [ "$WORDS" = "2" ]; then
