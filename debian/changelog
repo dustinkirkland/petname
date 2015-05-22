@@ -3,6 +3,8 @@ petname (1.9) unreleased; urgency=medium
   * usr/bin/petname:
     - add support for --adverb|--adjective|--noun, to give
       only a random word of this type
+  * usr/bin/petname:
+    - define error() function
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 28 Jan 2015 15:15:08 -0600
 

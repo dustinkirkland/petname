@@ -18,6 +18,12 @@
 
 set -e
 
+
+error() {
+	printf "ERROR: %s\n" "$@"
+	exit 1
+}
+
 PKG=petname
 DIR="/usr/share/$PKG"
 WORDS=2
