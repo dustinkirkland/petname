@@ -1,4 +1,4 @@
-petname (1.9) unreleased; urgency=medium
+petname (1.9-0ubuntu1) xenial; urgency=medium
 
   * usr/bin/petname:
     - add support for --adverb|--adjective|--noun, to give
@@ -16,7 +16,7 @@ petname (1.9) unreleased; urgency=medium
   * debian/blacklist.txt:
     - add our religious figures to our blacklist
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 28 Jan 2015 15:15:08 -0600
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 30 Oct 2015 10:15:06 -0500
 
 petname (1.8-0ubuntu1) vivid; urgency=medium
 
