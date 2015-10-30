@@ -5,6 +5,14 @@ petname (1.9) unreleased; urgency=medium
       only a random word of this type
   * usr/bin/petname:
     - define error() function
+  * debian/blacklist.txt, debian/rules,
+    usr/share/petname/adjectives.txt, usr/share/petname/adverbs.txt,
+    usr/share/petname/names.txt:
+    - add a blacklist, adapted from
+      https://github.com/shutterstock/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words/blob/master/en
+    - check our wordlists against that blacklist during the build
+    - update our wordlists removing any blacklisted words or derivatives
+      + note that this conservatively prunes a few perfectly acceptable words
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 28 Jan 2015 15:15:08 -0600
 

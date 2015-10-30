@@ -59,7 +59,6 @@ accomplishedly
 accordantly
 accordingly
 accountably
-accumulatively
 accurately
 accursedly
 accusably
@@ -135,7 +134,6 @@ adoringly
 adorningly
 adrenally
 adroitly
-adscititiously
 adsorptively
 adulatingly
 adulterously
@@ -143,7 +141,6 @@ adultly
 adumbratively
 advancingly
 advantageously
-adventitiously
 adventively
 adventuresomely
 adventurously
@@ -267,7 +264,6 @@ amatorially
 amazedly
 amazingly
 ambagiously
-ambassadorially
 ambidextrously
 ambiguously
 ambilaterally
@@ -302,10 +298,6 @@ anaerobically
 anaerobiotically
 anagogically
 anagrammatically
-anally
-analogically
-analogously
-analytically
 anamnestically
 anapaestically
 anapestically
@@ -373,13 +365,11 @@ antichristianly
 anticipatingly
 anticipatively
 anticipatorily
-anticlassically
 anticlimactically
 anticly
 anticommercially
 anticommunistically
 anticonservatively
-anticonstitutionally
 anticontagiously
 anticonventionally
 anticorrosively
@@ -459,9 +449,6 @@ antiseptically
 antisocially
 antispiritually
 antistrophically
-antithetically
-antitraditionally
-antitypically
 antonomastically
 antrorsely
 anxiously
@@ -527,7 +514,6 @@ approximately
 appulsively
 aprioristically
 apsidally
-aptitudinally
 aptly
 aquatically
 aqueously
@@ -581,7 +567,6 @@ ascendingly
 ascertainably
 ascetically
 aseptically
-asexually
 ashamedly
 aside
 asininely
@@ -589,25 +574,6 @@ askance
 askew
 aspersively
 aspiringly
-assembly
-assentingly
-assertedly
-assertively
-assertorily
-assessingly
-asseveratively
-assiduously
-assignably
-assimilatedly
-assimilatingly
-associatively
-assortatively
-assumably
-assumedly
-assumingly
-assumptively
-assuredly
-assuringly
 astatically
 asthmatically
 astigmatically
@@ -662,7 +628,6 @@ auricularly
 auriculately
 auriscopically
 aurorally
-auspiciously
 austerely
 autarchically
 autarkically
@@ -676,7 +641,6 @@ autochthonously
 autocratically
 autodidactically
 autoeciously
-autoerotically
 autogenetically
 autogenously
 autographically
@@ -741,7 +705,6 @@ ballistically
 bally
 balmily
 balsamically
-banally
 banefully
 bankerly
 bankruptly
@@ -762,7 +725,6 @@ basally
 basely
 bashfully
 basically
-bassly
 bastardly
 bathymetrically
 bawdily
@@ -819,7 +781,6 @@ bewitchingly
 bialy
 biannually
 biasedly
-biassedly
 biaxially
 biblically
 bibliographically
@@ -864,14 +825,11 @@ biometrically
 bionomically
 biophysically
 biotechnologically
-bipartitely
 bipedally
 bipinnately
 bisectionally
 biserially
-bisexually
 bisymmetrically
-bitchily
 bitingly
 bitterly
 bittersweetly
@@ -952,7 +910,6 @@ bolshevistically
 bolsteringly
 bombastically
 bonnily
-boobily
 bookishly
 boomingly
 boorishly
@@ -990,7 +947,6 @@ brainlessly
 brainsickly
 brambly
 brashly
-brassily
 brattily
 bravely
 brawly
@@ -1010,7 +966,6 @@ brigandishly
 brightly
 brilliantly
 brimfully
-brimmingly
 briskly
 bristly
 brittlely
@@ -1066,7 +1021,6 @@ busily
 businesslike
 bustlingly
 butcherly
-butterfly
 butyrically
 buxomly
 buzzingly
@@ -1290,10 +1244,6 @@ cinematographically
 circinately
 circuitously
 circularly
-circumscriptively
-circumspectively
-circumspectly
-circumstantially
 cirrosely
 citizenly
 civically
@@ -1308,9 +1258,6 @@ clankingly
 clannishly
 clarifyingly
 clashingly
-classically
-classily
-classlessly
 clatteringly
 claustrophobically
 clavately
@@ -1361,10 +1308,6 @@ coarsely
 coastally
 coaxially
 coaxingly
-cockily
-cockishly
-cockneyishly
-cocksurely
 coconsciously
 coeducationally
 coefficiently
@@ -1460,7 +1403,6 @@ comparably
 comparatively
 comparingly
 compartmentally
-compassionately
 compatibly
 compellably
 compellingly
@@ -1468,7 +1410,6 @@ compendiously
 compensatingly
 competently
 competingly
-competitively
 complacently
 complainingly
 complaisantly
@@ -1617,13 +1558,9 @@ consolingly
 consolitorily
 consonantally
 consonantly
-conspicuously
 conspiratorially
 conspiringly
 constantly
-constituently
-constitutionally
-constitutively
 constrainedly
 constrainingly
 constrictedly
@@ -1806,7 +1743,6 @@ crankily
 crankly
 crapulously
 crashingly
-crassly
 craunchingly
 cravenly
 cravingly
@@ -1866,9 +1802,7 @@ crusily
 crustedly
 crustily
 cryingly
-cryptanalytically
 cryptically
-cryptoanalytically
 cryptographically
 cubbishly
 cubically
@@ -1885,10 +1819,6 @@ cultivably
 cultivatedly
 culturally
 culturedly
-cumbersomely
-cumbrously
-cumulately
-cumulatively
 cuneately
 cunningly
 curably
@@ -1983,7 +1913,6 @@ debauchedly
 debonairly
 decadally
 decadently
-decanally
 decanically
 deceitfully
 deceivably
@@ -2004,7 +1933,6 @@ decorously
 decreasingly
 decrepitly
 decretively
-decumbently
 decurrently
 decussately
 dedicatedly
@@ -2133,14 +2061,12 @@ desolatingly
 despairfully
 despairingly
 desperately
-despicably
 despisingly
 despitefully
 despiteously
 despondently
 despondingly
 despotically
-destitutely
 destructively
 desultorily
 detachedly
@@ -2317,7 +2243,6 @@ disorganizedly
 disorientedly
 disparagingly
 disparately
-dispassionately
 dispensatorily
 dispersedly
 dispersively
@@ -2402,7 +2327,6 @@ doctorally
 doctorially
 doctorly
 doctrinally
-documentarily
 dodgily
 doggedly
 doggishly
@@ -2552,7 +2476,6 @@ ecotypically
 ecstatically
 ectally
 ectosteally
-ecumenically
 edaciously
 edaphically
 edgily
@@ -2624,8 +2547,6 @@ elvishly
 emaciatedly
 emanatively
 emarginately
-embarrassedly
-embarrassingly
 embitteredly
 emblematically
 emboly
@@ -2648,12 +2569,9 @@ encaustically
 encephalographically
 enchantedly
 enchantingly
-enclitically
 encomiastically
-encompassingly
 encouragedly
 encouragingly
-encumberingly
 encyclopaedically
 encyclopedically
 endearingly
@@ -2705,7 +2623,6 @@ enthusedly
 enthusiastically
 enticingly
 entirely
-entitatively
 entomologically
 entrancedly
 entrancingly
@@ -2844,7 +2761,6 @@ excitingly
 exclamatorily
 exclusively
 excrementally
-excrementitiously
 excrescently
 excruciatingly
 excursively
@@ -2945,8 +2861,6 @@ facetiously
 facially
 facilely
 factiously
-factitiously
-factitively
 factorially
 factually
 facultatively
@@ -3058,7 +2972,6 @@ fibrously
 ficklely
 fickly
 fictionally
-fictitiously
 fictively
 fiddly
 fidgetingly
@@ -3350,7 +3263,6 @@ garishly
 garrulously
 gasometrically
 gaspingly
-gassily
 gastrologically
 gastronomically
 gauchely
@@ -3429,7 +3341,6 @@ glamourously
 glancingly
 glandularly
 glaringly
-glassily
 glaucously
 glazily
 gleamingly
@@ -3510,7 +3421,6 @@ graphemically
 graphically
 graphicly
 graspingly
-grassily
 gratefully
 gratifiedly
 gratifyingly
@@ -3622,8 +3532,6 @@ haphazardly
 haplessly
 haply
 happily
-harassedly
-harassingly
 hard
 harder
 hardheadedly
@@ -3873,7 +3781,6 @@ hypercarnally
 hyperconfidently
 hyperconscientiously
 hyperconservatively
-hyperconstitutionally
 hypercritically
 hyperdelicately
 hyperdeliciously
@@ -4019,11 +3926,6 @@ immutably
 impalpably
 impartially
 impartibly
-impassably
-impassibly
-impassionately
-impassionedly
-impassively
 impatiently
 impavidly
 impeccably
@@ -4119,7 +4021,6 @@ inartificially
 inartistically
 inattentively
 inaudibly
-inauspiciously
 incalculably
 incandescently
 incapably
@@ -4127,7 +4028,6 @@ incautiously
 incentively
 inceptively
 incessantly
-incestuously
 inchoately
 incidentally
 incipiently
@@ -4168,7 +4068,6 @@ inconsiderately
 inconsistently
 inconsolably
 inconsonantly
-inconspicuously
 inconstantly
 inconsumably
 incontestably
@@ -4191,7 +4090,6 @@ incredibly
 incredulously
 incrementally
 inculpably
-incumbently
 incurably
 incuriously
 indebtedly
@@ -4406,8 +4304,6 @@ instead
 instigatingly
 instinctively
 instinctually
-institutionally
-institutively
 instructedly
 instructively
 instrumentally
@@ -4492,10 +4388,8 @@ interrogatingly
 interrogatively
 interrogatorily
 interruptedly
-intersexually
 interspatially
 interspersedly
-interstitially
 intersystematically
 intertwiningly
 intertwistingly
@@ -4785,7 +4679,6 @@ lastly
 lately
 latently
 laterally
-latitudinally
 latterly
 laudably
 laudatorily
@@ -5046,8 +4939,6 @@ marvelously
 masculinely
 masochistically
 masonically
-massedly
-massively
 masterfully
 masterly
 matchlessly
@@ -5315,7 +5206,6 @@ multilaterally
 multiplicatively
 multiply
 multisonorously
-multitudinously
 mumblingly
 mumbly
 mundanely
@@ -5425,7 +5315,6 @@ newly
 next
 nicely
 niftily
-niggardly
 nigglingly
 niggly
 nightly
@@ -5465,7 +5354,6 @@ nonaccidentally
 nonaccommodably
 nonaccommodatingly
 nonaccordantly
-nonaccumulatively
 nonacoustically
 nonacquiescently
 nonacquisitively
@@ -5484,7 +5372,6 @@ nonadministratively
 nonadmissibly
 nonadmittedly
 nonadvantageously
-nonadventitiously
 nonadventurously
 nonadverbially
 nonaesthetically
@@ -5500,9 +5387,6 @@ nonamorously
 nonamphibiously
 nonanachronistically
 nonanachronously
-nonanalogically
-nonanalogously
-nonanalytically
 nonanarchically
 nonanatomically
 nonancestrally
@@ -5529,9 +5413,6 @@ nonascendently
 nonascertainably
 nonascetically
 nonaseptically
-nonassertively
-nonassignably
-nonassociatively
 nonasthmatically
 nonastringently
 nonastronomically
@@ -5604,10 +5485,7 @@ nonchromatically
 nonchronically
 noncircuitously
 noncircularly
-noncircumspectly
-noncircumstantially
 nonclamorously
-nonclassically
 nonclerically
 nonclinically
 nonclosely
@@ -5633,7 +5511,6 @@ noncommunally
 noncommunicatively
 noncommunistically
 noncompetently
-noncompetitively
 noncomplacently
 noncomplaisantly
 noncompliantly
@@ -5711,8 +5588,6 @@ noncruciformly
 noncryptically
 nonculpably
 nonculturally
-noncumbrously
-noncumulatively
 noncuratively
 noncuriously
 noncurrently
@@ -5871,7 +5746,6 @@ nonequilaterally
 nonequitably
 nonequivalently
 nonequivocally
-nonerotically
 nonerrantly
 nonerratically
 nonerroneously
@@ -5922,7 +5796,6 @@ nonextrinsically
 nonexultantly
 nonfacetiously
 nonfactiously
-nonfactitiously
 nonfactually
 nonfallaciously
 nonfalteringly
@@ -5946,7 +5819,6 @@ nonfestively
 nonfeudally
 nonfeverishly
 nonfeverously
-nonfictitiously
 nonfictively
 nonfiguratively
 nonfinancially
@@ -6049,7 +5921,6 @@ nonimpulsively
 nonimputably
 nonimputatively
 nonincandescently
-nonincestuously
 nonincidentally
 noninclusively
 nonindependently
@@ -6073,7 +5944,6 @@ noninjuriously
 noninquiringly
 noninstinctively
 noninstinctually
-noninstitutionally
 noninstructionally
 noninstructively
 noninstrumentally
@@ -6253,7 +6123,6 @@ nonparasitically
 nonparentally
 nonparochially
 nonpartially
-nonpassionately
 nonpastorally
 nonpatently
 nonpaternally
@@ -6291,7 +6160,6 @@ nonphrenetically
 nonphysically
 nonphysiologically
 nonpictorially
-nonplatitudinously
 nonplausibly
 nonpleadingly
 nonpliably
@@ -6353,7 +6221,6 @@ nonprovocatively
 nonprudentially
 nonprudently
 nonpsychically
-nonpsychoanalytically
 nonpsychologically
 nonpsychopathically
 nonpuerilely
@@ -6364,7 +6231,6 @@ nonpurposively
 nonpursuantly
 nonpurulently
 nonqualitatively
-nonquantitatively
 nonracially
 nonradiantly
 nonradically
@@ -6395,8 +6261,6 @@ nonremedially
 nonremittably
 nonremuneratively
 nonrepentantly
-nonrepetitiously
-nonrepetitively
 nonreprehensibly
 nonrepresentatively
 nonrepressibly
@@ -6471,7 +6335,6 @@ nonseriately
 nonseriously
 nonserviceably
 nonservilely
-nonsexually
 nonshrinkingly
 nonsibilantly
 nonsignificantly
@@ -6514,7 +6377,6 @@ nonsubmissively
 nonsubstantially
 nonsubstantivally
 nonsubstantively
-nonsubstitutionally
 nonsubtilely
 nonsubtly
 nonsubtractively
@@ -6585,10 +6447,8 @@ nontheocratically
 nontheologically
 nontheoretically
 nontheosophically
-nontherapeutically
 nonthermally
 nonthreateningly
-nontitularly
 nontolerably
 nontolerantly
 nontortuously
@@ -6693,7 +6553,6 @@ novelly
 now
 noxiously
 nubbly
-nudely
 numbingly
 numbly
 numerably
@@ -6724,7 +6583,6 @@ obliquely
 obliviously
 oblongly
 obnoxiously
-obreptitiously
 obscenely
 obscuredly
 obscurely
@@ -6884,7 +6742,6 @@ overacutely
 overaffirmatively
 overaggressively
 overambitiously
-overanalytically
 overanimatedly
 overanxiously
 overappreciatively
@@ -6892,9 +6749,6 @@ overapprehensively
 overaptly
 overargumentatively
 overartificially
-overassertively
-overassumptively
-overassuredly
 overattentively
 overbashfully
 overbearingly
@@ -6927,7 +6781,6 @@ overclinically
 overclosely
 overcoldly
 overcommonly
-overcompetitively
 overcomplacently
 overconfidently
 overconscientiously
@@ -7123,7 +6976,6 @@ overornamentally
 overpainfully
 overpartially
 overparticularly
-overpassionately
 overpatriotically
 overpensively
 overperemptorily
@@ -7215,10 +7067,8 @@ overstrongly
 overstudiously
 oversubtly
 oversufficiently
-oversuperstitiously
 oversurely
 oversusceptibly
-oversuspiciously
 oversweetly
 oversystematically
 overtalkatively
@@ -7348,14 +7198,8 @@ participially
 particularistically
 particularly
 partingly
-partitively
 partly
 partway
-passably
-passingly
-passionately
-passionlessly
-passively
 past
 pastorally
 pastorly
@@ -7388,7 +7232,6 @@ pawkily
 payably
 peaceably
 peacefully
-peacockishly
 peakily
 peakishly
 pearly
@@ -7468,8 +7311,6 @@ persistently
 personably
 personally
 perspectively
-perspicaciously
-perspicuously
 perspiringly
 persuadably
 persuadedly
@@ -7584,7 +7425,6 @@ planographically
 plashingly
 plastically
 plasticly
-platitudinously
 platonically
 plausibly
 playfully
@@ -7714,7 +7554,6 @@ preciously
 precipitately
 precipitously
 precisely
-preclassically
 precociously
 precognizantly
 precoincidently
@@ -7843,7 +7682,6 @@ presumedly
 presumingly
 presumptively
 presumptuously
-presuspiciously
 presystematically
 pretechnically
 pretemperately
@@ -7988,7 +7826,6 @@ pseudoaristocratically
 pseudoarticulately
 pseudoartistically
 pseudoascetically
-pseudoassertively
 pseudoasymmetrically
 pseudobenevolently
 pseudobiographically
@@ -7998,7 +7835,6 @@ pseudocandidly
 pseudocatholically
 pseudocharitably
 pseudoclerically
-pseudocompetitively
 pseudoconservatively
 pseudocourteously
 pseudocritically
@@ -8011,7 +7847,6 @@ pseudoeditorially
 pseudoeducationally
 pseudoemotionally
 pseudoenthusiastically
-pseudoerotically
 pseudoethically
 pseudoetymologically
 pseudoevangelically
@@ -8066,16 +7901,13 @@ pseudostudiously
 pseudotribally
 pseudoviperously
 pseudozealously
-psychanalytically
 psychiatrically
 psychically
-psychoanalytically
 psychogenetically
 psychographically
 psychologically
 psychometrically
 psychophysiologically
-psychotherapeutically
 publicly
 puckishly
 puddly
@@ -8132,7 +7964,6 @@ pyrotechnically
 quadratically
 quadrennially
 quadrilaterally
-quadripartitely
 quadrivalently
 quadruply
 quaintly
@@ -8143,8 +7974,6 @@ qualifyingly
 qualitatively
 qualmishly
 quantally
-quantitatively
-quantitively
 quarrelingly
 quarrellingly
 quarrelsomely
@@ -8246,8 +8075,6 @@ reasonably
 reasonedly
 reasoningly
 reasonlessly
-reassuredly
-reassuringly
 rebelliously
 rebuffably
 rebukingly
@@ -8366,8 +8193,6 @@ repellently
 repellingly
 repentantly
 repercussively
-repetitiously
-repetitively
 repletely
 repletively
 reply
@@ -8599,7 +8424,6 @@ saprophytically
 sarcastically
 sardonically
 sartorially
-sassily
 satanically
 satedly
 satiably
@@ -8631,10 +8455,6 @@ scarcely
 scaredly
 scarily
 scaringly
-scathelessly
-scathingly
-scatteredly
-scatteringly
 scenographically
 sceptically
 schematically
@@ -8662,7 +8482,6 @@ scowlingly
 scrabbly
 scraggily
 scraggly
-scrapingly
 scrappily
 scrappingly
 scratchably
@@ -8681,7 +8500,6 @@ scrumptiously
 scrupulously
 scrutinizingly
 scufflingly
-scummily
 scurrilously
 scurvily
 seamanly
@@ -8734,7 +8552,6 @@ semiacademically
 semiactively
 semiadhesively
 semiallegorically
-semianalytically
 semianatomically
 semiannually
 semianthropologically
@@ -8751,7 +8568,6 @@ semicapitalistically
 semichaotically
 semichemically
 semicircularly
-semiclassically
 semiclerically
 semiclinically
 semicolloquially
@@ -8825,7 +8641,6 @@ semiorganically
 semiorientally
 semiorthodoxly
 semiovally
-semipassively
 semipastorally
 semipathologically
 semipatriotically
@@ -8927,11 +8742,6 @@ settledly
 seventhly
 severally
 severely
-sexennially
-sexily
-sexlessly
-sextuply
-sexually
 shabbily
 shadfly
 shadily
@@ -9096,7 +8906,6 @@ sluggishly
 slumberously
 slurringly
 slushily
-sluttishly
 slyly
 smarmily
 smartingly
@@ -9116,7 +8925,6 @@ smotheringly
 smudgedly
 smudgily
 smugly
-smuttily
 snakily
 snappily
 snappingly
@@ -9125,15 +8933,12 @@ snaringly
 snarkily
 snarlingly
 snarly
-snatchily
-snatchingly
 sneakily
 sneeringly
 snidely
 sniffily
 sniffingly
 sniffly
-sniggeringly
 snippily
 snobbily
 snobbishly
@@ -9269,7 +9074,6 @@ speedingly
 spellbindingly
 spellingly
 spherically
-spicily
 spiffily
 spikily
 spinally
@@ -9296,7 +9100,6 @@ spongily
 spongingly
 spontaneously
 spookily
-spoonily
 sporadically
 sportfully
 sportily
@@ -9314,7 +9117,6 @@ sprinklingly
 spritely
 sprucely
 spryly
-spunkily
 spuriously
 spurtively
 squabblingly
@@ -9347,7 +9149,6 @@ stagily
 stagnantly
 staidly
 stainably
-stalactitically
 stalagmitically
 stalely
 stalkily
@@ -9513,7 +9314,6 @@ subangulately
 subantiquely
 subapparently
 subarticulately
-subassociatively
 subaudibly
 subaurally
 subautomatically
@@ -9635,8 +9435,6 @@ subspontaneously
 substantially
 substantivally
 substantively
-substitutionally
-substitutively
 subsuperficially
 subsynodically
 subtepidly
@@ -9728,7 +9526,6 @@ supercommercially
 superconfidently
 superconformably
 superconservatively
-superconstitutionally
 supercordially
 supercriminally
 supercritically
@@ -9782,7 +9579,6 @@ superimportantly
 superimprobably
 superinclusively
 superincomprehensibly
-superincumbently
 superindependently
 superindifferently
 superindignantly
@@ -9872,14 +9668,12 @@ supersilently
 supersmartly
 supersolemnly
 superspiritually
-superstitiously
 superstoically
 superstrenuously
 superstrictly
 superstylishly
 supersubstantially
 supersufficiently
-supersuspiciously
 supersweetly
 superthankfully
 superthoroughly
@@ -9920,24 +9714,20 @@ surgically
 surlily
 surly
 surmisedly
-surpassingly
 surprisedly
 surprisingly
 surreally
 surrenderingly
-surreptitiously
 surroundedly
 suspectingly
 suspensefully
 suspensively
-suspiciously
 sustainedly
 sustainingly
 susurringly
 suturally
 sveltely
 swaggeringly
-swankily
 swarthily
 swashingly
 swayingly
@@ -10021,7 +9811,6 @@ tarnally
 tartily
 tartishly
 tartly
-tasselly
 tastefully
 tastelessly
 tastily
@@ -10120,7 +9909,6 @@ theocratically
 theologically
 theoretically
 theosophically
-therapeutically
 thermally
 thermionically
 thermochemically
@@ -10162,7 +9950,6 @@ thromboplastically
 throughly
 thuddingly
 thuggishly
-thumpingly
 thunderingly
 thunderously
 thusly
@@ -10193,9 +9980,6 @@ tiredly
 tirelessly
 tiresomely
 tiringly
-titanically
-titillatingly
-titularly
 together
 toilfully
 toilsomely
@@ -10272,7 +10056,6 @@ transmarginally
 transmentally
 transmeridionally
 transmissively
-transmutably
 transnationally
 transnormally
 transparently
@@ -10371,8 +10154,6 @@ turgidly
 twangily
 twice
 twiddly
-twinklingly
-twinkly
 twirly
 twistedly
 twistingly
@@ -10417,7 +10198,6 @@ unaccidentally
 unacclivitously
 unaccommodatingly
 unaccountably
-unaccumulatively
 unaccurately
 unaccusingly
 unaccustomedly
@@ -10483,10 +10263,6 @@ unamusedly
 unamusingly
 unanachronistically
 unanachronously
-unanalagously
-unanalogically
-unanalytically
-unanalyzably
 unanecdotally
 unangrily
 unangularly
@@ -10536,14 +10312,6 @@ unascetically
 unashamedly
 unaskingly
 unaspiringly
-unassailably
-unassertively
-unassiduously
-unassignably
-unassociably
-unassociatively
-unassumingly
-unassuredly
 unathletically
 unattainably
 unattentively
@@ -10552,7 +10320,6 @@ unattractively
 unattributably
 unattributively
 unaudaciously
-unauspiciously
 unausterely
 unauthentically
 unauthoritatively
@@ -10679,14 +10446,10 @@ unchurlishly
 uncially
 uncircuitously
 uncircularly
-uncircumspectly
-uncircumstantially
 uncivilly
 unclamorously
 unclandestinely
 unclannishly
-unclassically
-unclassifiably
 uncleanly
 unclearly
 unclerically
@@ -10715,9 +10478,7 @@ uncommonly
 uncommunicatively
 uncommutatively
 uncomparably
-uncompassionately
 uncompetently
-uncompetitively
 uncomplacently
 uncomplainingly
 uncomplaisantly
@@ -10837,7 +10598,6 @@ uncruelly
 unctuously
 unctuousnessly
 uncubically
-uncumbrously
 uncurably
 uncuriously
 uncurrently
@@ -10959,7 +10719,6 @@ undisconnectedly
 undiscordantly
 undiscouragingly
 undiscriminatingly
-undispassionately
 undisputatiously
 undisputedly
 undissemblingly
@@ -11136,7 +10895,6 @@ unfervidly
 unfestively
 unfeudally
 unfibrously
-unfictitiously
 unfilially
 unfirmly
 unfiscally
@@ -11316,8 +11074,6 @@ unimmaculately
 unimmanently
 unimmediately
 unimpartially
-unimpassionately
-unimpassionedly
 unimpatiently
 unimpeachably
 unimpedingly
@@ -11333,7 +11089,6 @@ unimpressedly
 unimpressively
 unimpulsively
 uninceptively
-unincestuously
 unincidentally
 unincisively
 unindicatively
@@ -11363,8 +11118,6 @@ uninsistently
 uninspiredly
 uninspiringly
 uninstinctively
-uninstitutionally
-uninstitutively
 uninstructedly
 uninstructively
 uninstrumentally
@@ -11399,7 +11152,6 @@ uniquely
 uniridescently
 unironically
 unirritably
-unisexually
 unitarily
 unitedly
 unitively
@@ -11593,7 +11345,6 @@ unnervously
 unneurotically
 unneutrally
 unnicely
-unniggardly
 unnimbly
 unnocturnally
 unnoisily
@@ -11662,8 +11413,6 @@ unparentally
 unparenthetically
 unparochially
 unparsimoniously
-unpassionately
-unpassively
 unpastorally
 unpaternally
 unpathetically
@@ -11704,7 +11453,6 @@ unpermanently
 unperniciously
 unperpendicularly
 unpersonally
-unperspicuously
 unpersuadably
 unpersuasively
 unpertinently
@@ -11731,7 +11479,6 @@ unpiteously
 unpitiably
 unpitifully
 unplacidly
-unplatitudinously
 unplausibly
 unplayfully
 unpleasantly
@@ -11873,7 +11620,6 @@ unreadily
 unrealistically
 unreally
 unreasonably
-unreassuringly
 unrebelliously
 unreceptively
 unrecessively
@@ -11882,7 +11628,6 @@ unrecognisably
 unrecognizably
 unreconcilably
 unrectangularly
-unrecumbently
 unrecurrently
 unredeemably
 unrefinedly
@@ -11915,8 +11660,6 @@ unremuneratively
 unrepellently
 unrepentantly
 unrepentingly
-unrepetitiously
-unrepetitively
 unreposefully
 unreprehensibly
 unrepresentatively
@@ -12067,7 +11810,6 @@ unservilely
 unsettledly
 unsettlingly
 unseverely
-unsexually
 unshabbily
 unshadily
 unshakably
@@ -12143,7 +11885,6 @@ unspecifically
 unspeciously
 unspectacularly
 unspeedily
-unspicily
 unspirally
 unspiritedly
 unspiritually
@@ -12213,7 +11954,6 @@ unsuperfluously
 unsuperiorly
 unsuperlatively
 unsupernaturally
-unsuperstitiously
 unsupplicatingly
 unsupply
 unsupportably
@@ -12228,7 +11968,6 @@ unsusceptibly
 unsuspectedly
 unsuspectfully
 unsuspectingly
-unsuspiciously
 unswaggeringly
 unswervingly
 unsyllogistically
@@ -12277,7 +12016,6 @@ untheistically
 unthematically
 untheologically
 untheoretically
-untherapeutically
 unthickly
 unthievishly
 unthinkably
@@ -12293,7 +12031,6 @@ untimidly
 untimorously
 untiredly
 untiringly
-untitularly
 untolerably
 untopographically
 untormentingly
@@ -12313,7 +12050,6 @@ untransiently
 untransitionally
 untransitively
 untransitorily
-untransmutably
 untransparently
 untreacherously
 untremblingly
@@ -12478,7 +12214,6 @@ vacillatorily
 vacuously
 vagally
 vagariously
-vaginally
 vagrantly
 vaguely
 vaingloriously
@@ -12610,7 +12345,6 @@ vortically
 votively
 vowelly
 vowely
-voyeuristically
 vulgarly
 vulnerably
 vyingly

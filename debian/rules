@@ -6,4 +6,6 @@
 override_dh_auto_build:
 	# Ensure that we only have A-Za-z in our words; no funny characters
 	! LC_ALL=C grep "[^A-Za-z]" usr/share/petname/*txt
+	# Ensure we have no blacklisted words or derivatives
+	! for i in `cat debian/blacklist.txt`; do grep -ri $i ../usr/share/petname/*txt ; done
 	dh_auto_build

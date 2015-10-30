@@ -253,7 +253,6 @@ anabel
 anabella
 anabelle
 anahi
-analisa
 anamaria
 anastacia
 anastasia
@@ -447,7 +446,6 @@ ashton
 asia
 asley
 aspen
-assunta
 astrid
 asuncion
 athena
@@ -902,15 +900,6 @@ cash
 casie
 casimira
 cason
-cassandra
-cassaundra
-cassey
-cassi
-cassidy
-cassie
-cassius
-cassondra
-cassy
 castiel
 cataleya
 catalina
@@ -1011,8 +1000,6 @@ chas
 chase
 chasidy
 chasity
-chassidy
-chastity
 chau
 chauncey
 chaya
@@ -1104,7 +1091,6 @@ clarisa
 clarissa
 clarita
 clark
-classie
 claud
 claude
 claudette
@@ -1478,7 +1464,6 @@ diane
 diann
 dianna
 dianne
-dick
 diedra
 diedre
 diego
@@ -1564,7 +1549,6 @@ dottie
 dotty
 doug
 douglas
-douglass
 dovie
 doyle
 drake
@@ -2198,7 +2182,6 @@ gwenn
 gwyn
 gwyneth
 ha
-hadassah
 hadlee
 hadley
 hae
@@ -2237,8 +2220,6 @@ harris
 harrison
 harry
 harvey
-hassan
-hassie
 hattie
 haven
 haydee
@@ -2966,9 +2947,6 @@ kasha
 kasi
 kasie
 kason
-kassandra
-kassidy
-kassie
 katalina
 kate
 katelin
@@ -3452,7 +3430,6 @@ leta
 letha
 leticia
 letisha
-letitia
 lettie
 letty
 levi
@@ -3544,7 +3521,6 @@ loida
 lois
 loise
 lola
-lolita
 loma
 lon
 lona
@@ -4131,7 +4107,6 @@ mildred
 milena
 miles
 miley
-milford
 milissa
 millard
 miller
@@ -5488,8 +5463,6 @@ tiny
 tisa
 tish
 tisha
-titan
-titus
 tobi
 tobias
 tobie

@@ -128,9 +128,6 @@ accretionary
 accretive
 acculturational
 acculturative
-accumbent
-accumulable
-accumulative
 accurate
 accursed
 accusable
@@ -199,7 +196,6 @@ acinous
 acknowledgeable
 acmic
 acnodal
-acockbill
 acoelomate
 acoelous
 acold
@@ -259,7 +255,6 @@ actuarial
 actuarian
 acuate
 aculeate
-acuminous
 acutilingual
 acyclic
 adactylous
@@ -327,7 +322,6 @@ adorsed
 adrenergic
 adrenocorticotropic
 adroit
-adscititious
 adsorbable
 adularescent
 adulatory
@@ -340,8 +334,6 @@ adust
 advanced
 advantageous
 advective
-adventitial
-adventitious
 adventureful
 adventuresome
 adventurous
@@ -647,7 +639,6 @@ alterable
 altern
 alternant
 altimetrical
-altitudinal
 altruistic
 alular
 aluminic
@@ -665,14 +656,12 @@ amandine
 amaranthaceous
 amaranthine
 amaryllidaceous
-amassable
 amateurish
 amative
 amatory
 amaurotic
 amazing
 ambagious
-ambassadorial
 amberlike
 amberous
 ambery
@@ -819,7 +808,6 @@ anachronistic
 anachronous
 anaclastic
 anaclinal
-anaclitic
 anacoluthic
 anacoustic
 anacrogynous
@@ -838,15 +826,6 @@ anaglyptical
 anagogic
 anagrammatic
 anagrammatical
-anal
-analectic
-analemmatic
-analogical
-analogistic
-analogous
-analysable
-analytic
-analyzable
 anamnestic
 anamorphic
 anandrous
@@ -1075,7 +1054,6 @@ anticipative
 anticipatory
 anticivic
 anticivil
-anticlassical
 anticlastic
 anticlergy
 anticlimactic
@@ -1088,8 +1066,6 @@ anticommunistic
 anticommunistical
 anticommutative
 anticonfederative
-anticonstitution
-anticonstitutional
 anticontagious
 anticonvention
 anticonventional
@@ -1322,23 +1298,6 @@ antisymmetric
 antisymmetrical
 antisyndication
 antisynod
-antitank
-antitarnish
-antitarnishing
-antitartaric
-antitax
-antitaxation
-antitemperance
-antitheological
-antitheology
-antithetic
-antithetical
-antitoxic
-antitradition
-antitraditional
-antituberculous
-antitypic
-antitypical
 antiunion
 antivaccination
 antivirus
@@ -1455,7 +1414,6 @@ appendiceal
 appendicular
 appendiculate
 apperceptive
-appetitive
 appetizing
 applaudable
 applausive
@@ -1500,7 +1458,6 @@ apterial
 apterous
 apterygial
 apterygote
-aptitudinal
 apyretic
 aquarial
 aquarian
@@ -1633,7 +1590,6 @@ arseno
 arsenous
 arsino
 arterial
-arteriosclerotic
 arteriovenous
 artesian
 artful
@@ -1653,10 +1609,8 @@ articulative
 articulatory
 artier
 artiest
-artifactitious
 artificial
 artiodactylous
-artisanal
 artistic
 artless
 arty
@@ -1691,7 +1645,6 @@ ascribable
 asemic
 asepalous
 aseptic
-asexual
 ashake
 ashamed
 ashen
@@ -1712,40 +1665,6 @@ aspherical
 asphyxial
 aspiratory
 aspish
-assailable
-assassinative
-assaultable
-assayable
-assentive
-asserted
-assertible
-assertional
-assertive
-assertory
-assessable
-assessorial
-asseverative
-assiduous
-assignable
-assimilable
-assimilative
-assistive
-asslike
-associable
-associational
-associationistic
-associative
-assonantal
-assonantic
-assortative
-assorted
-assortive
-assuasive
-assumable
-assumed
-assuming
-assumptive
-assurgent
 astable
 astatic
 asteraceous
@@ -1794,7 +1713,6 @@ ateliotic
 atheistic
 athematic
 athermanous
-atherosclerotic
 athetoid
 athetosic
 athirst
@@ -1835,7 +1753,6 @@ attested
 attestive
 attingent
 attired
-attitudinal
 attractable
 attractive
 attrahent
@@ -1874,8 +1791,6 @@ auroral
 aurorean
 aurous
 auscultative
-auspicial
-auspicious
 austenitic
 austere
 autacoidal
@@ -1904,7 +1819,6 @@ autochthonous
 autocratic
 autodidactic
 autoecious
-autoerotic
 autogamic
 autogamous
 autogenetic
@@ -1995,7 +1909,6 @@ baboonish
 babyish
 babylike
 baccate
-bacchanalian
 bacchantic
 bacciferous
 bacciform
@@ -2069,7 +1982,6 @@ balsaminaceous
 balsamy
 balustered
 balustraded
-banal
 bananas
 banausic
 bandanaed
@@ -2154,7 +2066,6 @@ basinlike
 basipetal
 basketlike
 basophilic
-bassy
 bastionary
 bastioned
 bathetic
@@ -2325,7 +2236,6 @@ bibliopolical
 bibliopolistic
 bibliotaphic
 bibliothecal
-bibliotherapeutic
 bibliotic
 bibulous
 bicameral
@@ -2443,12 +2353,10 @@ biostatic
 biostatical
 biotechnological
 biotic
-biotitic
 biotypic
 biparietal
 biparous
 bipartisan
-bipartite
 biparty
 bipectinate
 bipedal
@@ -2472,9 +2380,6 @@ biserial
 biserrate
 bishopless
 bishoplike
-bismuthal
-bismuthic
-bismuthous
 bistable
 bistered
 bistred
@@ -2559,7 +2464,6 @@ bloodless
 bloodlike
 bloodshot
 bloodstained
-bloodsucking
 bloodthirsty
 bloodying
 bloomed
@@ -2647,7 +2551,6 @@ bonnier
 bonniest
 bony
 bonzer
-boobyish
 bookish
 bookless
 booklike
@@ -2767,12 +2670,6 @@ branny
 brashier
 brashiest
 brashy
-brassbound
-brassicaceous
-brassier
-brassiest
-brassish
-brassy
 brattier
 brattiest
 brattish
@@ -2992,19 +2889,9 @@ buskined
 bustier
 bustiest
 bustled
-busty
 busying
 butcherly
 butlerlike
-butterfingered
-butterless
-butterlike
-buttocked
-buttonless
-buttonlike
-buttony
-buttressless
-buttresslike
 butyraceous
 butyric
 butyryl
@@ -3149,9 +3036,6 @@ campimetrical
 campodeiform
 campy
 campylotropous
-canalicular
-canaliculate
-canaliculated
 cancelable
 cancellate
 cancered
@@ -3241,7 +3125,6 @@ carbuncled
 carbuncular
 carcaneted
 carcanetted
-carcassless
 carcinogenic
 carcinomatoid
 cardiographic
@@ -3300,7 +3183,6 @@ caryophyllaceous
 casebound
 caseless
 casemated
-casemented
 caseous
 cashable
 cashed
@@ -3309,7 +3191,6 @@ casklike
 casqued
 castable
 casteless
-castellanus
 castellated
 castellatus
 casterless
@@ -3324,7 +3205,6 @@ catachrestic
 catachrestical
 cataclinal
 cataclysmic
-catacumbal
 catadioptric
 catadromous
 catagenetic
@@ -3412,7 +3292,6 @@ cellarless
 cellular
 cellulolytic
 cellulous
-cementitious
 cementless
 cemeterial
 cenobitic
@@ -3477,7 +3356,6 @@ cernuous
 cerographic
 cerographical
 ceroplastic
-cerotic
 cerous
 certifiable
 certificatory
@@ -3622,7 +3500,6 @@ chemoreceptive
 chemosmotic
 chemosynthetic
 chemotactic
-chemotherapeutic
 chemotrophic
 chemotropic
 chemurgic
@@ -3856,41 +3733,10 @@ circuitous
 circulable
 circulative
 circulatory
-circumambient
-circumambulatory
-circumbasal
-circumcolumnar
-circumfluent
-circumfluous
-circumgyratory
-circumjacent
-circumlocutional
-circumlocutionary
-circumlocutory
-circumlunar
-circumnavigable
-circumnavigatory
-circumnutatory
-circumocular
-circumpolar
-circumrotatory
-circumscissile
-circumscribable
-circumscriptive
-circumsolar
-circumspect
-circumspective
-circumstantial
-circumvascular
-circumventive
-circumvolutory
 cirrate
 cirrhosed
 cirrhotic
 cirriform
-cirrocumular
-cirrocumulative
-cirrocumulous
 cirrose
 cirrostrative
 cirsoid
@@ -3943,17 +3789,6 @@ clanless
 clannish
 clapped
 clasping
-classable
-classical
-classicistic
-classier
-classiest
-classifiable
-classificational
-classificatory
-classified
-classless
-classy
 clastic
 clattery
 claudicant
@@ -4022,9 +3857,6 @@ cliquey
 cliquish
 cliquy
 clistocarpous
-clithral
-clitoral
-clitoridean
 cloacal
 cloakless
 clocklike
@@ -4107,15 +3939,6 @@ coccous
 coccygeal
 cochlear
 cochleate
-cockaded
-cockeyed
-cockier
-cockiest
-cockish
-cocklike
-cockneyish
-cockneylike
-cocksure
 coconscious
 codeless
 codicillary
@@ -4301,9 +4124,6 @@ companionless
 companyless
 comparable
 compartmental
-compassable
-compassionless
-compassless
 compatible
 compatriotic
 compellable
@@ -4313,7 +4133,6 @@ compensable
 compensational
 compensatory
 competent
-competitive
 compilatory
 complacent
 complainable
@@ -4455,7 +4274,6 @@ confirmable
 confirmatory
 confirmed
 confiscable
-confiscatory
 conflagrant
 conflagrative
 conflictive
@@ -4549,11 +4367,9 @@ consonantal
 consortable
 consortial
 conspecific
-conspicuous
 conspirative
 conspiratorial
 constellatory
-constitutive
 constrainable
 constrained
 constrictive
@@ -4899,12 +4715,9 @@ crankless
 crankous
 cranky
 crannied
-crapelike
 crapulent
 crapulous
 crashing
-crass
-crassulaceous
 crateral
 craterless
 craterlike
@@ -5073,9 +4886,7 @@ cryohydric
 cryophilic
 cryoscopic
 cryptal
-cryptanalytic
 cryptic
-cryptoanalytic
 cryptoclastic
 cryptocrystalline
 cryptogamic
@@ -5110,7 +4921,6 @@ cubistic
 cubital
 cuculiform
 cucullate
-cucumiform
 cucurbitaceous
 cuddlesome
 cuddly
@@ -5128,12 +4938,6 @@ cultual
 cultural
 cultured
 cultureless
-cumberless
-cumbersome
-cumbrous
-cumulative
-cumuliform
-cumulous
 cunctatious
 cunctatory
 cuneal
@@ -5270,7 +5074,6 @@ cytotoxic
 cytotrophoblastic
 cytotropic
 cytozoic
-daclassa
 dacolleta
 dactylographic
 daedal
@@ -5325,7 +5128,6 @@ daughterly
 dauntless
 dawnlike
 daydreamy
-dclass
 dcollet
 deadlier
 deadliest
@@ -5346,7 +5148,6 @@ decahedral
 decahydrated
 decalescent
 decamerous
-decanal
 decanormal
 decapodous
 decasyllabic
@@ -5392,8 +5193,6 @@ decrescent
 decretive
 decretory
 decubital
-decuman
-decumbent
 decurrent
 decurved
 dedal
@@ -5438,7 +5237,6 @@ deft
 defunct
 defunctive
 degenerative
-deglutitious
 degradable
 degradational
 degradative
@@ -5605,14 +5403,12 @@ desmidian
 desmotropic
 despairful
 despairing
-despicable
 despisable
 despiteful
 despiteous
 despondent
 despotic
 destined
-destitute
 destroyable
 destructible
 destructive
@@ -5944,7 +5740,6 @@ dishonest
 dishonorable
 dishy
 disillusive
-disimpassioned
 disinclined
 disinfective
 disingenuous
@@ -5965,7 +5760,6 @@ dismissive
 dismountable
 disobedient
 disordered
-dispassionate
 dispellable
 dispensable
 dispensational
@@ -6062,7 +5856,6 @@ distrustful
 disturbed
 disturbing
 distyle
-disubstituted
 disulfuric
 disused
 disyllabic
@@ -6239,8 +6032,6 @@ dramatizable
 dramaturgic
 dramaturgical
 drapable
-drapeable
-draperied
 drastic
 dratted
 draughtier
@@ -6496,7 +6287,6 @@ ectozoic
 ectrodactylous
 ectromelic
 ectypal
-ecumenical
 eczematoid
 eczematous
 edacious
@@ -6569,8 +6359,6 @@ elective
 electoral
 electrical
 electroacoustic
-electroanalytic
-electroanalytical
 electroballistic
 electrobiological
 electrocardiographic
@@ -6610,8 +6398,6 @@ electrosynthetic
 electrotactic
 electrotechnic
 electrotechnical
-electrotherapeutic
-electrotherapeutical
 electrothermal
 electrotonic
 electrotropic
@@ -6814,7 +6600,6 @@ enormous
 enphytotic
 enrapt
 ensiform
-enstatitic
 entangleable
 entelechial
 enterable
@@ -6828,7 +6613,6 @@ entertaining
 enthetic
 enthusiastic
 enthymematic
-entitative
 entoblastic
 entodermal
 entodermic
@@ -6975,7 +6759,6 @@ equiform
 equilibratory
 equilibrious
 equilibristic
-equimolecular
 equiponderant
 equipotent
 equiprobable
@@ -7137,7 +6920,6 @@ eutrophic
 evacuative
 evadable
 evadible
-evaginable
 evaluable
 evaluative
 evanescent
@@ -7207,7 +6989,6 @@ excogitative
 excommunicable
 excommunicative
 excommunicatory
-excrementitious
 excrementous
 excrescent
 excretal
@@ -7318,7 +7099,6 @@ expiable
 expiational
 expiatory
 expiratory
-expiscatory
 explainable
 explanate
 explanatory
@@ -7418,7 +7198,6 @@ extrasystolic
 extraterritorial
 extrauterine
 extravagant
-extravaginal
 extravascular
 extravehicular
 extraversive
@@ -7459,8 +7238,6 @@ facinorous
 factful
 factional
 factious
-factitious
-factitive
 factorable
 factorylike
 factual
@@ -7594,7 +7371,6 @@ febriferous
 febrific
 febrifugal
 febrile
-fecal
 feckless
 feculent
 fecund
@@ -7701,7 +7477,6 @@ fibular
 fickle
 fictile
 fictional
-fictitious
 fictive
 fiddling
 fiddly
@@ -8071,7 +7846,6 @@ foreign
 foreknowable
 forenamed
 forensic
-forepassed
 foresaid
 foreseeable
 foresighted
@@ -8114,7 +7888,6 @@ forniciform
 forspent
 forthcoming
 fortifiable
-fortitudinous
 fortuitous
 fortunate
 fortuneless
@@ -8301,7 +8074,6 @@ fulgorous
 fulgourous
 fulgurant
 fulgurating
-fulgurous
 fuliginous
 fully
 fulminant
@@ -8492,9 +8264,6 @@ gasolineless
 gasolinic
 gasometric
 gasometrical
-gassier
-gassiest
-gassy
 gastight
 gastric
 gastritic
@@ -8727,11 +8496,6 @@ glarier
 glariest
 glaring
 glary
-glassier
-glassiest
-glassless
-glasslike
-glassy
 glaucescent
 glaucomatous
 glauconitic
@@ -8975,8 +8739,6 @@ granuloblastic
 granulocytic
 granulomatous
 granulose
-grapelike
-grapey
 graphic
 graphitic
 graphologic
@@ -8990,11 +8752,6 @@ graptolitic
 grapy
 graspable
 graspless
-grassier
-grassiest
-grassless
-grasslike
-grassy
 grateful
 grateless
 gratelike
@@ -9251,7 +9008,6 @@ hadal
 haemagglutinative
 haemal
 haematal
-haematitic
 haematocryal
 haematogenous
 haematoid
@@ -9357,8 +9113,6 @@ happiest
 haptic
 haptical
 harangueful
-harassable
-harassed
 harborless
 harborous
 harbourless
@@ -9388,10 +9142,8 @@ harnessless
 harnesslike
 harpless
 harplike
-harpoonlike
 harpylike
 harsh
-haruspical
 harvestless
 hastate
 hasteful
@@ -9549,7 +9301,6 @@ hemagglutinative
 hemal
 hematal
 hemathermal
-hematitic
 hematocryal
 hematogenous
 hematoid
@@ -9594,7 +9345,6 @@ hemophilic
 hemophilioid
 hemorrhagic
 hemorrhoidal
-hemosiderotic
 hemotoxic
 hemotrophic
 hempen
@@ -9720,7 +9470,6 @@ hexametral
 hexametric
 hexametrical
 hexangular
-hexapartite
 hexaplar
 hexaplaric
 hexapodic
@@ -9895,7 +9644,6 @@ homodyne
 homoeomorphic
 homoeomorphous
 homoeopathic
-homoerotic
 homofermentative
 homogamous
 homogenetic
@@ -9935,7 +9683,6 @@ honeyed
 honeyful
 honeyless
 honeylike
-honeysuckled
 honied
 honorable
 honorary
@@ -10141,7 +9888,6 @@ hydrostatic
 hydrosulfurous
 hydrotactic
 hydrothecal
-hydrotherapeutic
 hydrothermal
 hydrothoracic
 hydrotropic
@@ -10208,13 +9954,11 @@ hypercarnal
 hypercatalectic
 hypercathartic
 hypercivilized
-hyperclassical
 hypercoagulable
 hypercomposite
 hyperconfident
 hyperconscientious
 hyperconscious
-hyperconstitutional
 hypercorrect
 hypercritical
 hypercyanotic
@@ -10303,7 +10047,6 @@ hyperpigmented
 hyperplastic
 hyperploid
 hyperpolysyllabic
-hyperpotassemic
 hyperprognathous
 hyperprophetic
 hyperprophetical
@@ -10359,7 +10102,6 @@ hyphal
 hyphenated
 hyphenic
 hypnagogic
-hypnoanalytic
 hypnogenetic
 hypnoid
 hypnoidal
@@ -10410,7 +10152,6 @@ hypophyllous
 hypophyseal
 hypoplastic
 hypoploid
-hypopotassemic
 hyporchematic
 hypostatic
 hyposthenic
@@ -10609,11 +10350,6 @@ imparisyllabic
 impartable
 impartial
 impartible
-impassable
-impassible
-impassionate
-impassioned
-impassive
 impatient
 impavid
 impeachable
@@ -10738,7 +10474,6 @@ inartificial
 inartistic
 inattentive
 inaudible
-inauspicious
 inbond
 inborn
 inbound
@@ -10754,7 +10489,6 @@ incarcerative
 incarnational
 incautious
 incessant
-incestuous
 incidentless
 incipient
 incised
@@ -10804,7 +10538,6 @@ inconsiderate
 inconsistent
 inconsolable
 inconsonant
-inconspicuous
 inconstant
 inconsumable
 incontestable
@@ -10823,7 +10556,6 @@ incorporeal
 incorrect
 incorrupt
 incorruptible
-incrassative
 increasable
 increasing
 increate
@@ -11174,9 +10906,6 @@ instable
 instantaneous
 instigative
 instinctive
-institutional
-institutionary
-institutive
 instructible
 instructional
 instructive
@@ -11273,7 +11002,6 @@ interchurch
 interciliary
 intercity
 intercivic
-interclass
 interclavicular
 interclerical
 interclub
@@ -11391,7 +11119,6 @@ interlaboratory
 interlacustrine
 interlamellar
 interlaminar
-interlatitudinal
 interlibrary
 interligamentary
 interligamentous
@@ -11536,7 +11263,6 @@ interseminal
 intersentimental
 interseptal
 intersesamoid
-intersexual
 intershifting
 intershop
 intersidereal
@@ -11548,7 +11274,6 @@ intersonant
 interspatial
 interspecial
 interspheral
-interspicular
 interspinal
 interspinous
 intersporal
@@ -11585,7 +11310,6 @@ intertubular
 interungular
 interungulate
 interuniversity
-intervaginal
 intervalic
 intervalvular
 intervarietal
@@ -11675,7 +11399,6 @@ inundatory
 inurbane
 inutile
 invadable
-invaginable
 invaluable
 invasive
 invected
@@ -11694,7 +11417,6 @@ investigable
 investigational
 investigative
 investigatory
-investitive
 inveterate
 inviable
 invidious
@@ -11746,7 +11468,6 @@ irradiant
 irradiative
 irrational
 irrationalistic
-irrebuttable
 irreclaimable
 irrecoverable
 irrecusable
@@ -12135,7 +11856,6 @@ kinkier
 kinkiest
 kinkled
 kinkly
-kinky
 kinless
 kirklike
 kirtled
@@ -12354,8 +12074,6 @@ lathlike
 lathy
 laticiferous
 latish
-latitudinal
-latitudinous
 latreutic
 lattermost
 latticed
@@ -13077,7 +12795,6 @@ mantric
 manubrial
 manufacturable
 manufactural
-manuscriptal
 maplelike
 mappable
 marcescent
@@ -13116,16 +12833,10 @@ masked
 masklike
 masochistic
 masonic
-massier
-massiest
-massive
-massless
-massy
 masterful
 masterless
 masterly
 masticable
-mastitic
 mastless
 mastlike
 mastoparietal
@@ -13134,7 +12845,6 @@ masturbational
 masturbatory
 matchable
 matchless
-matelass
 maternal
 maternalistic
 mathematical
@@ -13398,8 +13108,6 @@ miasmatic
 miasmatical
 miasmic
 micellar
-microanalytic
-microanalytical
 microbeless
 microbial
 microbian
@@ -13517,12 +13225,10 @@ miry
 misaccused
 misadjudicated
 misadjusted
-misanalyzed
 misappended
 misapplied
 misapprehensive
 misbegotten
-misbuttoned
 miscegenetic
 miscellaneous
 mischievous
@@ -13534,7 +13240,6 @@ misdiagrammed
 misdictated
 miserable
 miserly
-misexplained
 misfashioned
 misfeatured
 misfocused
@@ -13948,7 +13653,6 @@ multiovular
 multiovulate
 multiovulated
 multiparous
-multipartite
 multiperforate
 multiperforated
 multipersonal
@@ -13986,8 +13690,6 @@ multisonorous
 multisonous
 multispeed
 multispermous
-multispicular
-multispiculate
 multispindled
 multispinous
 multispiral
@@ -13998,16 +13700,6 @@ multistratified
 multistriate
 multisulcate
 multisulcated
-multitentacled
-multitentaculate
-multithreaded
-multititular
-multitoed
-multitoned
-multitube
-multituberculate
-multitubular
-multitudinous
 multivalent
 multivalued
 multivalvular
@@ -14310,7 +14002,6 @@ nickelous
 nicotined
 nicotineless
 nicotinic
-nictitant
 nidicolous
 nidificational
 nidifugous
@@ -14332,7 +14023,6 @@ ninnyish
 niobic
 niobous
 nipping
-nippleless
 nippy
 nirvanic
 nisi
@@ -14421,8 +14111,6 @@ nonaccretive
 nonaccrued
 nonaccruing
 nonacculturated
-nonaccumulating
-nonaccumulative
 nonaccusing
 nonacidic
 nonacoustical
@@ -14460,7 +14148,6 @@ nonadmissive
 nonadoptable
 nonadorning
 nonadvantageous
-nonadventitious
 nonadventurous
 nonadverbial
 nonaerated
@@ -14505,13 +14192,6 @@ nonamphibious
 nonanachronistic
 nonanachronous
 nonanaemic
-nonanalogic
-nonanalogical
-nonanalogous
-nonanalytic
-nonanalytical
-nonanalyzable
-nonanalyzed
 nonanarchic
 nonanarchical
 nonanarchistic
@@ -14592,19 +14272,6 @@ nonaspirated
 nonaspirating
 nonaspiratory
 nonaspiring
-nonassenting
-nonassertive
-nonassignable
-nonassigned
-nonassimilable
-nonassimilating
-nonassimilative
-nonassimilatory
-nonassociable
-nonassociational
-nonassociative
-nonassumed
-nonassumptive
 nonastral
 nonastringent
 nonastronomic
@@ -14694,7 +14361,6 @@ nonbureaucratic
 nonburnable
 nonbusiness
 nonbusy
-nonbuttressed
 noncadenced
 noncadent
 noncaffeinic
@@ -14778,11 +14444,6 @@ noncircuitous
 noncircular
 noncirculating
 noncirculatory
-noncircumscribed
-noncircumscriptive
-noncircumspect
-noncircumstantial
-noncircumvallated
 noncitable
 nonciteable
 noncivilizable
@@ -14791,10 +14452,6 @@ nonclaimable
 nonclamorous
 nonclarifiable
 nonclarified
-nonclassic
-nonclassical
-nonclassifiable
-nonclassified
 nonclastic
 noncleistogamic
 noncleistogamous
@@ -14859,7 +14516,6 @@ noncompensative
 noncompensatory
 noncompetent
 noncompeting
-noncompetitive
 noncomplacent
 noncomplaisant
 noncompoundable
@@ -14931,8 +14587,6 @@ nonconsoling
 nonconsorting
 nonconspiratorial
 nonconspiring
-nonconstituted
-nonconstitutional
 nonconstraining
 nonconstricted
 nonconstricting
@@ -15036,8 +14690,6 @@ noncultivatable
 noncultivated
 noncultural
 noncultured
-noncumbrous
-noncumulative
 noncurative
 noncurious
 noncurrent
@@ -15287,7 +14939,6 @@ nondivorced
 nondivulging
 nondoctrinaire
 nondoctrinal
-nondocumental
 nondogmatic
 nondogmatical
 nondomesticated
@@ -15329,8 +14980,6 @@ nonecliptical
 noneconomic
 noneconomical
 nonecstatic
-nonecumenic
-nonecumenical
 nonedified
 noneditorial
 noneducable
@@ -15449,7 +15098,6 @@ noneroded
 nonerodent
 noneroding
 nonerosive
-nonerotic
 nonerrant
 nonerroneous
 nonerudite
@@ -15583,7 +15231,6 @@ nonexuding
 nonexultant
 nonfacetious
 nonfactious
-nonfactitious
 nonfactual
 nonfacultative
 nonfallacious
@@ -15629,7 +15276,6 @@ nonfeudal
 nonfeverish
 nonfeverous
 nonfibrous
-nonfictitious
 nonfictive
 nonfigurative
 nonfilamentous
@@ -15710,7 +15356,6 @@ nonganglionic
 nongangrenous
 nongarrulous
 nongaseous
-nongassy
 nongelatinizing
 nongelatinous
 nongelling
@@ -15880,7 +15525,6 @@ nonimputative
 nonincandescent
 nonincarnate
 nonincarnated
-nonincestuous
 nonincidental
 noninclinable
 noninclinational
@@ -15936,7 +15580,6 @@ noninsistent
 noninspissating
 noninstinctive
 noninstinctual
-noninstitutional
 noninstructional
 noninstructive
 noninstrumental
@@ -16257,8 +15900,6 @@ nonocculting
 nonoccupational
 nonodoriferous
 nonodorous
-nonoecumenic
-nonoecumenical
 nonoffensive
 nonofficial
 nonofficinal
@@ -16332,8 +15973,6 @@ nonpartible
 nonparticipating
 nonpartisan
 nonparty
-nonpassible
-nonpassionate
 nonpatentable
 nonpatented
 nonpaternal
@@ -16432,7 +16071,6 @@ nonpinaceous
 nonplacental
 nonplanetary
 nonplated
-nonplatitudinous
 nonplausible
 nonpleadable
 nonpleading
@@ -16451,7 +16089,6 @@ nonponderable
 nonponderous
 nonpopular
 nonpopulous
-nonpornographic
 nonporous
 nonporphyritic
 nonportable
@@ -16564,8 +16201,6 @@ nonprudent
 nonprudential
 nonpsychiatric
 nonpsychical
-nonpsychoanalytic
-nonpsychoanalytical
 nonpsychologic
 nonpsychological
 nonpsychopathic
@@ -16597,7 +16232,6 @@ nonputrescible
 nonpyogenic
 nonqualifying
 nonqualitative
-nonquantitative
 nonrabbinical
 nonracial
 nonradiant
@@ -16700,8 +16334,6 @@ nonrepealable
 nonrepeated
 nonrepellent
 nonrepentant
-nonrepetitious
-nonrepetitive
 nonreplaceable
 nonreplicate
 nonreplicated
@@ -16838,7 +16470,6 @@ nonscholastical
 nonsciatic
 nonscientific
 nonscoring
-nonscraping
 nonscriptural
 nonsculptural
 nonsculptured
@@ -16901,8 +16532,6 @@ nonserviceable
 nonservile
 nonsetting
 nonseverable
-nonsexlinked
-nonsexual
 nonshattering
 nonshedding
 nonshipping
@@ -17037,10 +16666,6 @@ nonsubsistent
 nonsubstantial
 nonsubstantival
 nonsubstantive
-nonsubstituted
-nonsubstitutional
-nonsubstitutionary
-nonsubstitutive
 nonsubtile
 nonsubtle
 nonsubtractive
@@ -17174,8 +16799,6 @@ nontheoretic
 nontheoretical
 nontheosophic
 nontheosophical
-nontherapeutic
-nontherapeutical
 nonthermal
 nonthinking
 nonthoracic
@@ -17185,9 +16808,6 @@ nontidal
 nontillable
 nontimbered
 nontinted
-nontitaniferous
-nontitled
-nontitular
 nontolerable
 nontolerant
 nontolerated
@@ -17285,7 +16905,6 @@ nonutilized
 nonvacant
 nonvacillating
 nonvacuous
-nonvaginal
 nonvagrant
 nonvalid
 nonvalorous
@@ -17322,7 +16941,6 @@ nonvexatious
 nonviable
 nonvibratile
 nonvibrating
-nonvibratory
 nonvicarious
 nonvigilant
 nonvillainous
@@ -17362,8 +16980,6 @@ nonvoluble
 nonvoluntary
 nonvoting
 nonvulcanized
-nonvulval
-nonvulvar
 nonwarrantable
 nonwarranted
 nonwashable
@@ -17473,11 +17089,9 @@ nutrimental
 nutritious
 nutty
 nyctaginaceous
-nyctitropic
 nymphaeaceous
 nymphal
 nymphean
-nymphomaniacal
 nystagmic
 oafish
 oaken
@@ -17514,7 +17128,6 @@ oblongish
 obnoxious
 obovate
 obovoid
-obreptitious
 obscene
 obsequent
 obsequious
@@ -17586,7 +17199,6 @@ odorous
 odourful
 odourless
 odylic
-oecumenical
 oedipal
 oenochoe
 oesophageal
@@ -17759,7 +17371,6 @@ organologic
 organological
 organomagnesium
 organometallic
-orgasmic
 orgastic
 orgulous
 orientative
@@ -17888,8 +17499,6 @@ overage
 overaggressive
 overambitioned
 overambitious
-overanalytical
-overanalyzed
 overangry
 overanimated
 overanxious
@@ -17899,9 +17508,6 @@ overapprehensive
 overapt
 overargumentative
 overartificial
-overassertive
-overassumptive
-overassured
 overattached
 overattentive
 overbashful
@@ -17938,7 +17544,6 @@ overcharitable
 overcheap
 overcherished
 overchildish
-overcircumspect
 overcivil
 overclean
 overclement
@@ -17948,7 +17553,6 @@ overclose
 overcold
 overcommon
 overcommunicative
-overcompetitive
 overcomplacent
 overcomplex
 overcompliant
@@ -18028,7 +17632,6 @@ overextreme
 overexuberant
 overfacile
 overfactious
-overfactitious
 overfaint
 overfaithful
 overfamed
@@ -18200,7 +17803,6 @@ overpained
 overpainful
 overpartial
 overparticular
-overpassionate
 overpatient
 overpatriotic
 overpensive
@@ -18274,7 +17876,6 @@ overserene
 overserious
 overservile
 oversevere
-oversexed
 overshort
 overshot
 oversilent
@@ -18315,10 +17916,8 @@ overstudious
 overstuffed
 oversubtle
 oversufficient
-oversuperstitious
 oversure
 oversusceptible
-oversuspicious
 oversweet
 oversystematic
 overt
@@ -18600,8 +18199,6 @@ paramorphic
 paramorphous
 paranasal
 paranormal
-parapeted
-parapetless
 paraphrasable
 paraphrastic
 paraphysate
@@ -18671,7 +18268,6 @@ partible
 particularistic
 particulate
 partis
-partite
 partnerless
 partridgelike
 parturient
@@ -18679,16 +18275,6 @@ partyless
 parve
 pasquilic
 pasquillic
-passable
-passant
-passed
-passeriform
-passible
-passifloraceous
-passionate
-passionless
-passless
-passportless
 pastier
 pastiest
 pastose
@@ -18760,8 +18346,6 @@ peachier
 peachiest
 peachlike
 peachy
-peacockish
-peacocky
 peaked
 peakish
 peakless
@@ -18821,7 +18405,6 @@ peevish
 peglegged
 pegless
 peglike
-pegmatitic
 pelagial
 pelagic
 pelargonic
@@ -18947,7 +18530,6 @@ peridermic
 peridial
 peridiiform
 peridotic
-peridotitic
 perigeal
 perigean
 periglacial
@@ -18974,7 +18556,6 @@ perioecic
 perioecid
 periosteal
 periosteous
-periostitic
 periostracal
 periotic
 periphrastic
@@ -19023,7 +18604,6 @@ peroneal
 perorational
 perorative
 peroratorical
-perotic
 peroxidic
 peroxy
 perpetuable
@@ -19043,8 +18623,6 @@ persons
 perspectival
 perspectived
 perspectiveless
-perspicacious
-perspicuous
 perspirable
 perspiratory
 perspiry
@@ -19087,10 +18665,6 @@ petechiate
 petiolar
 petiolate
 petiolular
-petit
-petitionable
-petitionary
-petitory
 petrifiable
 petrificant
 petrogenetic
@@ -19369,7 +18943,6 @@ pinnal
 pinnate
 pinnatifid
 pinnatilobate
-pinnatipartite
 pinnatisect
 pinnular
 pinnulate
@@ -19385,8 +18958,6 @@ piquant
 piratelike
 piratic
 piratical
-piscatorial
-piscatory
 piscicultural
 pisciform
 piscine
@@ -19462,7 +19033,6 @@ platiniferous
 platinocyanic
 platinoid
 platinous
-platitudinous
 platycephalic
 platyhelminthic
 platykurtic
@@ -19694,7 +19264,6 @@ popish
 poplared
 popliteal
 poppied
-poppycockish
 poppylike
 pops
 popular
@@ -19740,7 +19309,6 @@ postacetabular
 postal
 postallantoic
 postamniotic
-postanal
 postanesthetic
 postantennal
 postaortic
@@ -19905,7 +19473,6 @@ postpalpebral
 postpaludal
 postparalytic
 postparotid
-postparotitic
 postparoxysmal
 postpartum
 postparturient
@@ -19929,7 +19496,6 @@ postprophetic
 postprophetical
 postprostate
 postpuberty
-postpubescent
 postpuerperal
 postpulmonary
 postpupillary
@@ -19976,7 +19542,6 @@ postthyroidal
 posttibial
 posttoxic
 posttracheal
-posttrapezoid
 posttraumatic
 posttubercular
 posttussive
@@ -20001,7 +19566,6 @@ postxiphoid
 postzygapophyseal
 postzygapophysial
 potamic
-potassic
 potatory
 potbellied
 potent
@@ -20066,9 +19630,7 @@ preallied
 preallowable
 prealphabetical
 prealtar
-preambassadorial
 preambitious
-preanal
 preanaphoral
 preantepenult
 preantepenultimate
@@ -20078,7 +19640,6 @@ prearticulate
 preartistic
 preascetic
 preaseptic
-preassigned
 preataxic
 preauditory
 preauricular
@@ -20137,8 +19698,6 @@ precipitative
 precipitous
 precise
 precisive
-preclassic
-preclassical
 preclerical
 preclinical
 precloacal
@@ -20213,7 +19772,6 @@ predependable
 predependent
 predesirous
 predespondent
-predestitute
 predeterminate
 predeterminative
 predetrimental
@@ -20239,7 +19797,6 @@ predisordered
 predispositional
 predistrustful
 predivinable
-predocumentary
 predomestic
 predominant
 predorsal
@@ -20581,7 +20138,6 @@ presuppurative
 presurgery
 presurgical
 presusceptible
-presuspicious
 presutural
 presymphonic
 presymphysial
@@ -20737,8 +20293,6 @@ proaristocracy
 proaristocratic
 proarmy
 proart
-proassessment
-proassociation
 proattack
 proattendance
 proauction
@@ -20770,7 +20324,6 @@ prochurch
 procity
 procivic
 procivilian
-proclassical
 proclergy
 proclerical
 procoercion
@@ -20781,15 +20334,12 @@ procommercial
 procommunity
 procommutation
 procompensation
-procompetition
 procompromise
 proconcession
 proconciliation
-proconfiscation
 proconscription
 proconservation
 proconsolidation
-proconstitutional
 proconsultation
 procontinuation
 proconvention
@@ -20803,7 +20353,6 @@ proctodeal
 proctologic
 proctological
 proctoscopic
-procumbent
 procurable
 procuratorial
 prodemocracy
@@ -21001,7 +20550,6 @@ prostomial
 prostomiate
 prostrative
 prosubscription
-prosubstitution
 prosuffrage
 prosupervision
 prosupport
@@ -21142,8 +20690,6 @@ pseudoarticulate
 pseudoartistic
 pseudoascetic
 pseudoascetical
-pseudoassertive
-pseudoassociational
 pseudoasymmetric
 pseudoasymmetrical
 pseudobankrupt
@@ -21167,7 +20713,6 @@ pseudocoelomate
 pseudocollegiate
 pseudocolumellar
 pseudocommissural
-pseudocompetitive
 pseudoconfessional
 pseudoconglomerate
 pseudoconservative
@@ -21198,7 +20743,6 @@ pseudoencephalitic
 pseudoenthusiastic
 pseudoepiscopal
 pseudoequalitarian
-pseudoerotic
 pseudoerysipelatous
 pseudoethical
 pseudoetymological
@@ -21339,7 +20883,6 @@ pseudospectral
 pseudospherical
 pseudospiritual
 pseudosquamate
-pseudostalactitic
 pseudostalagmitic
 pseudostigmatic
 pseudostudious
@@ -21369,8 +20912,6 @@ psychedelic
 psychiatric
 psychiatrical
 psychoactive
-psychoanalytic
-psychoanalytical
 psychobiologic
 psychobiological
 psychodelic
@@ -21389,10 +20930,8 @@ psychopathological
 psychopharmacologic
 psychopharmacological
 psychoprophylactic
-psychosexual
 psychosocial
 psychosomatic
-psychotherapeutic
 psychotomimetic
 psychotropic
 psychrometric
@@ -21411,7 +20950,6 @@ pterylological
 ptomainic
 ptotic
 puberulent
-pubescent
 pubic
 pucka
 puckery
@@ -21570,7 +21108,6 @@ quadrantlike
 quadricipital
 quadrifid
 quadrilingual
-quadripartite
 quadrivalent
 quadrivial
 quadrophonics
@@ -21595,7 +21132,6 @@ qualityless
 qualmish
 quantal
 quantifiable
-quantitative
 quantummechanical
 quaquaversal
 quarantinable
@@ -21642,7 +21178,6 @@ quinoidal
 quinonoid
 quinquefid
 quinquefoliate
-quinquepartite
 quinquevalent
 quinsied
 quintan
@@ -21810,8 +21345,6 @@ realistic
 realizable
 realizing
 realterable
-reanalyzable
-reanalyzed
 reapable
 reapproachable
 rearmost
@@ -21827,7 +21360,6 @@ reblown
 reboant
 reborn
 rebuffable
-rebuttable
 recallable
 recapitulative
 recapitulatory
@@ -21863,7 +21395,6 @@ recompensatory
 reconcilable
 reconciliatory
 recondite
-reconstituted
 reconstructed
 reconstructible
 reconstructional
@@ -21884,7 +21415,6 @@ rectal
 rectangular
 rectilinear
 rectricial
-recumbent
 recuperative
 recurrent
 recursive
@@ -22054,8 +21584,6 @@ repealable
 repeatable
 repeated
 repentant
-repetitious
-repetitive
 repletive
 reportable
 reportorial
@@ -22129,8 +21657,6 @@ responsive
 restful
 restiform
 resting
-restitutive
-restitutory
 restive
 restless
 restorable
@@ -22240,7 +21766,6 @@ rheumy
 rhinal
 rhinencephalic
 rhinencephalous
-rhinocerotic
 rhinologic
 rhinological
 rhinoplastic
@@ -22595,8 +22120,6 @@ sarmentose
 saronic
 sarraceniaceous
 sartorial
-sassier
-sassy
 satanic
 satem
 satiable
@@ -22686,15 +22209,6 @@ scarious
 scarlatinoid
 scarless
 scary
-scatheless
-scathing
-scatologic
-scatological
-scatophagous
-scatterable
-scatterbrained
-scattershot
-scatty
 scenic
 scenographic
 scenographical
@@ -22814,10 +22328,6 @@ scrupleless
 scrupulous
 scrutable
 sculpturesque
-scumless
-scumlike
-scummier
-scummiest
 scungy
 scurrile
 scurrilous
@@ -22945,8 +22455,6 @@ semiallegoric
 semiallegorical
 semialuminous
 semianaesthetic
-semianalytic
-semianalytical
 semianarchistic
 semianatomic
 semianatomical
@@ -22989,7 +22497,6 @@ semichaotic
 semichemical
 semicircular
 semicivilized
-semiclassical
 semiclerical
 semiclinical
 semiclosed
@@ -23166,7 +22673,6 @@ seminivorous
 seminocturnal
 seminomadic
 seminormal
-seminude
 semiobjective
 semioblivious
 semiofficial
@@ -23188,7 +22694,6 @@ semiparalysis
 semiparalyzed
 semiparasitic
 semiparochial
-semipassive
 semipastoral
 semipathologic
 semipathological
@@ -23343,7 +22848,6 @@ septarian
 septariate
 septate
 septavalent
-septempartite
 septemviral
 septennial
 septentrional
@@ -23409,19 +22913,6 @@ severest
 sewable
 sewerless
 sewerlike
-sexangular
-sexavalent
-sexed
-sexier
-sexiest
-sexivalent
-sexless
-sexological
-sexpartite
-sextan
-sextus
-sexual
-sexy
 shabbier
 shabbiest
 shabby
@@ -23563,7 +23054,6 @@ sideless
 sidereal
 siderographic
 siderostatic
-siderotic
 sidesplitting
 siegeable
 siest
@@ -23698,7 +23188,6 @@ skookum
 skyborne
 skyless
 skylike
-skyscraping
 slabbery
 slaggier
 slaggiest
@@ -23793,8 +23282,6 @@ slummiest
 slung
 slushier
 slushiest
-sluttish
-slutty
 sly
 smallish
 smarmy
@@ -23829,13 +23316,6 @@ smudgeless
 smug
 smugger
 smuggest
-smutchier
-smutchiest
-smutchless
-smutchy
-smuttier
-smuttiest
-smutty
 snaggy
 snaglike
 snaillike
@@ -23850,10 +23330,6 @@ snappiest
 snappy
 snareless
 snarly
-snatchable
-snatchier
-snatchiest
-snatchy
 snazzier
 snazziest
 snazzy
@@ -23947,7 +23423,6 @@ solidifiable
 solidillu
 solitudinous
 soloistic
-solstitial
 soluble
 solus
 solutional
@@ -24126,15 +23601,6 @@ sphygmic
 sphygmographic
 sphygmoid
 sphygmomanometric
-spicate
-spiceable
-spiceless
-spicelike
-spicey
-spicier
-spiciest
-spiculate
-spicy
 spidery
 spiffier
 spiffiest
@@ -24226,11 +23692,6 @@ spookier
 spookiest
 spooky
 spoollike
-spoonier
-spooniest
-spoonless
-spoonlike
-spoony
 sporadic
 sporal
 sporangial
@@ -24286,9 +23747,6 @@ spry
 spryer
 spryest
 spumescent
-spunkier
-spunkiest
-spunkless
 spurious
 spurless
 spurlike
@@ -24422,7 +23880,6 @@ steamless
 steamtight
 steamy
 stearic
-steatitic
 steatopygic
 stedfast
 steedless
@@ -24520,7 +23977,6 @@ stirpicultural
 stirrable
 stirrupless
 stirruplike
-stitchlike
 stochastic
 stockier
 stockiest
@@ -24541,7 +23997,6 @@ stoloniferous
 stomachy
 stomatal
 stomatic
-stomatitic
 stomatologic
 stomatological
 stomatous
@@ -24549,7 +24004,6 @@ stomodaeal
 stonable
 stoneable
 stoned
-stoneground
 stoneless
 stonelike
 stoney
@@ -24557,7 +24011,6 @@ stonier
 stoniest
 stonkered
 stony
-stopless
 stoppable
 stopped
 stopperless
@@ -24711,7 +24164,6 @@ subacrid
 subacrodrome
 subacrodromous
 subacromial
-subacuminate
 subacute
 subadditive
 subadjacent
@@ -24726,7 +24178,6 @@ subalgebraic
 subalgebraical
 subalpine
 subalternate
-subanal
 subanconeal
 subangular
 subangulate
@@ -24757,8 +24208,6 @@ subarticulative
 subarytenoid
 subarytenoidal
 subascending
-subassociational
-subassociative
 subastragalar
 subastral
 subastringent
@@ -25088,7 +24537,6 @@ subnodulose
 subnodulous
 subnotational
 subnotochordal
-subnude
 subnutritious
 suboblique
 subobscure
@@ -25122,7 +24570,6 @@ subpar
 subparallel
 subparalytic
 subparietal
-subpartitioned
 subpatellar
 subpatronal
 subpectinate
@@ -25171,7 +24618,6 @@ subprofessional
 subprofitable
 subproportional
 subprostatic
-subpubescent
 subpubic
 subpulmonary
 subpyramidal
@@ -25193,7 +24639,6 @@ subregular
 subreniform
 subrepand
 subrepent
-subreptitious
 subreputable
 subretinal
 subretractile
@@ -25211,7 +24656,6 @@ subsatiric
 subsatirical
 subsaturated
 subscleral
-subsclerotic
 subscribable
 subsecretarial
 subsensual
@@ -25246,9 +24690,6 @@ substandard
 substantiative
 substantival
 substernal
-substitutional
-substitutionary
-substitutive
 substratospheric
 substriate
 substriated
@@ -25283,7 +24724,6 @@ subthoracal
 subthoracic
 subtile
 subtilis
-subtitular
 subtle
 subtorrid
 subtotemic
@@ -25292,8 +24732,6 @@ subtranslucent
 subtransparent
 subtransversal
 subtransverse
-subtrapezoid
-subtrapezoidal
 subtriangular
 subtriangulate
 subtribal
@@ -25333,7 +24771,6 @@ subuniversal
 suburbicarian
 suburethral
 subursine
-subvaginal
 subventionary
 subventral
 subventricous
@@ -25364,7 +24801,6 @@ successoral
 succinct
 succinic
 succubous
-suckerlike
 suctional
 suctorial
 sudoriferous
@@ -25494,7 +24930,6 @@ superciliary
 supercilious
 supercivil
 supercivilized
-superclassified
 supercoincident
 supercolossal
 supercolumnar
@@ -25508,7 +24943,6 @@ superconfused
 supercongested
 superconsecrated
 superconservative
-superconstitutional
 supercordial
 supercretaceous
 supercritical
@@ -25596,7 +25030,6 @@ superimprobable
 superimproved
 superinclusive
 superincomprehensible
-superincumbent
 superindependent
 superindifferent
 superindignant
@@ -25730,7 +25163,6 @@ supersphenoid
 supersphenoidal
 superspiritual
 supersquamosal
-superstitious
 superstoical
 superstrenuous
 superstrict
@@ -25744,7 +25176,6 @@ supersubtle
 supersufficient
 supersulfureted
 supersulphureted
-supersuspicious
 supersweet
 supersympathetic
 supertemporal
@@ -25789,7 +25220,6 @@ supposed
 suppositional
 suppositionless
 suppositious
-supposititious
 suppressive
 supraglottal
 suprahepatic
@@ -25803,7 +25233,6 @@ suprarational
 suprarenal
 suprasegmental
 supratemporal
-supravaginal
 sural
 surbased
 surculose
@@ -25820,9 +25249,7 @@ surgy
 surly
 surmisable
 surmountable
-surpassable
 surpliced
-surreptitious
 surveyable
 survivable
 susceptible
@@ -25833,9 +25260,6 @@ suspenderless
 suspendible
 suspensible
 suspensive
-suspicionful
-suspicionless
-suspicious
 sustainable
 sustenanceless
 sustentacular
@@ -25856,12 +25280,8 @@ swampier
 swampiest
 swampless
 swampy
-swankier
-swankiest
-swanky
 swart
 swarthy
-swastikaed
 swathable
 swatheable
 swayable
@@ -26273,9 +25693,6 @@ textbookish
 textless
 textual
 thalamencephalic
-thalassic
-thalassographic
-thalassographical
 thallic
 thalloid
 thallous
@@ -26308,7 +25725,6 @@ theoretical
 theosophic
 theosophical
 theralite
-therapeutic
 theriacal
 therianthropic
 theriomorphic
@@ -26487,17 +25903,6 @@ tireless
 tiresome
 tissual
 tissuey
-titanic
-titaniferous
-titanous
-tithable
-titheless
-titillative
-titled
-titrable
-titratable
-tittuppy
-titubant
 toadish
 toadless
 toadlike
@@ -26550,7 +25955,6 @@ topflight
 topfull
 tophaceous
 topical
-topless
 topline
 toplofty
 topmost
@@ -26685,7 +26089,6 @@ transelementary
 transempirical
 transequatorial
 transeunt
-transexperiental
 transferable
 transferential
 transferrable
@@ -26728,7 +26131,6 @@ transmissive
 transmittable
 transmittible
 transmundane
-transmutable
 transnational
 transnatural
 transnormal
@@ -26744,13 +26146,10 @@ transpalmar
 transparent
 transparietal
 transparish
-transpassional
 transpenetrable
-transpenisular
 transperitoneal
 transpersonal
 transphysical
-transpicuous
 transpirable
 transpiratory
 transplanetary
@@ -26783,9 +26182,6 @@ transudatory
 transuranic
 transurethral
 transuterine
-trapezial
-trapeziform
-trapezohedral
 traplike
 trappean
 trappier
@@ -26913,7 +26309,6 @@ trinary
 trinocular
 trioecious
 triparted
-tripartite
 tripedal
 tripersonal
 tripetalous
@@ -26963,7 +26358,6 @@ trogonoid
 trollopy
 tromometric
 tromometrical
-troostitic
 trophallactic
 trophic
 trophied
@@ -27207,7 +26601,6 @@ unabstractive
 unabusable
 unabused
 unabusive
-unabutting
 unacademic
 unacademical
 unacceding
@@ -27241,9 +26634,6 @@ unaccoutered
 unaccoutred
 unaccredited
 unaccrued
-unaccumulable
-unaccumulated
-unaccumulative
 unaccurate
 unaccusable
 unaccused
@@ -27274,7 +26664,6 @@ unactinic
 unactionable
 unactivated
 unactuated
-unacuminous
 unadamant
 unadaptable
 unadapted
@@ -27418,7 +26807,6 @@ unamalgamable
 unamalgamated
 unamalgamating
 unamalgamative
-unamassed
 unamative
 unamazed
 unambient
@@ -27450,14 +26838,6 @@ unanachronistic
 unanachronistical
 unanachronous
 unanaemic
-unanalagous
-unanalogical
-unanalogized
-unanalytic
-unanalytical
-unanalyzable
-unanalyzed
-unanalyzing
 unanarchic
 unanarchistic
 unanatomisable
@@ -27626,44 +27006,6 @@ unaspersive
 unasphalted
 unaspirated
 unaspiring
-unassailable
-unassailed
-unassailing
-unassassinated
-unassaultable
-unassaulted
-unassayed
-unassaying
-unassembled
-unassenting
-unassentive
-unasserted
-unassertive
-unassessable
-unassessed
-unassibilated
-unassiduous
-unassignable
-unassigned
-unassimilable
-unassimilated
-unassimilating
-unassimilative
-unassistant
-unassisted
-unassisting
-unassociable
-unassociated
-unassociative
-unassorted
-unassuageable
-unassuaging
-unassuasive
-unassumable
-unassumed
-unassuming
-unassured
-unassuring
 unasthmatic
 unastonished
 unathletic
@@ -27703,7 +27045,6 @@ unauditioned
 unaugmentable
 unaugmentative
 unaugmented
-unauspicious
 unaustere
 unauthentic
 unauthentical
@@ -27787,7 +27128,6 @@ unbased
 unbashful
 unbasketlike
 unbasted
-unbastinadoed
 unbated
 unbathed
 unbating
@@ -27859,7 +27199,6 @@ unbeset
 unbesieged
 unbesmeared
 unbesmirched
-unbesmutted
 unbesought
 unbespoken
 unbesprinkled
@@ -28023,7 +27362,6 @@ unbriefed
 unbright
 unbrightened
 unbrilliant
-unbrimming
 unbrined
 unbristled
 unbrittle
@@ -28078,8 +27416,6 @@ unbusinesslike
 unbuskined
 unbustling
 unbutchered
-unbuttered
-unbuttressed
 unbuyable
 unbuying
 uncabined
@@ -28112,7 +27448,6 @@ uncamouflaged
 uncampaigning
 uncamped
 uncamphorated
-uncanalized
 uncancelable
 uncanceled
 uncancellable
@@ -28128,7 +27463,6 @@ uncanny
 uncanonical
 uncanopied
 uncantoned
-uncanvassed
 uncapable
 uncapacious
 uncaparisoned
@@ -28245,7 +27579,6 @@ uncertifiable
 uncertificated
 uncertified
 uncertifying
-uncertitude
 unchafed
 unchaffed
 unchaffing
@@ -28365,14 +27698,6 @@ uncircularized
 uncirculated
 uncirculating
 uncirculative
-uncircumcised
-uncircumlocutory
-uncircumscribable
-uncircumscribed
-uncircumspect
-uncircumspective
-uncircumstantial
-uncircumvented
 uncitable
 unciteable
 uncited
@@ -28393,12 +27718,6 @@ unclannish
 unclarified
 unclarifying
 unclashing
-unclassable
-unclassed
-unclassical
-unclassifiable
-unclassified
-unclassifying
 unclawed
 unclayed
 unclean
@@ -28451,7 +27770,6 @@ uncoaxed
 uncoaxial
 uncoaxing
 uncobbled
-uncocked
 uncoddled
 uncoded
 uncodified
@@ -28537,9 +27855,6 @@ uncompanionable
 uncompanioned
 uncomparable
 uncompared
-uncompassable
-uncompassionate
-uncompassioned
 uncompellable
 uncompelled
 uncompelling
@@ -28549,7 +27864,6 @@ uncompensating
 uncompensative
 uncompensatory
 uncompetent
-uncompetitive
 uncompiled
 uncomplacent
 uncomplained
@@ -28647,8 +27961,6 @@ unconfining
 unconfirmative
 unconfirmatory
 unconfiscable
-unconfiscated
-unconfiscatory
 unconflicting
 unconflictive
 unconformable
@@ -28726,8 +28038,6 @@ unconstant
 unconstellated
 unconsternated
 unconstipated
-unconstituted
-unconstitutional
 unconstrainable
 unconstrained
 unconstraining
@@ -28915,7 +28225,6 @@ uncredulous
 uncreeping
 uncreosoted
 uncrested
-uncrevassed
 uncried
 uncriminal
 uncrippled
@@ -28958,9 +28267,6 @@ uncultivatable
 uncultivated
 unculturable
 uncultured
-uncumbered
-uncumbrous
-uncumulative
 uncupped
 uncurable
 uncurbable
@@ -29171,7 +28477,6 @@ undenotative
 undenoted
 undenounced
 undented
-undenuded
 undenunciated
 undenunciatory
 undeparted
@@ -29264,7 +28569,6 @@ undersaturated
 underscrupulous
 underseated
 underseeded
-undersexed
 undershot
 undersighted
 undersize
@@ -29318,7 +28622,6 @@ undespondent
 undesponding
 undespotic
 undestined
-undestitute
 undestroyed
 undestructible
 undestructive
@@ -29505,7 +28808,6 @@ undisordered
 undisorderly
 undisorganized
 undisparaged
-undispassionate
 undispatchable
 undispatched
 undispatching
@@ -29595,8 +28897,6 @@ undocketed
 undoctored
 undoctrinal
 undoctrined
-undocumentary
-undocumented
 undodged
 undogmatic
 undogmatical
@@ -29636,7 +28936,6 @@ undramatical
 undramatisable
 undramatizable
 undramatized
-undraperied
 undrawable
 undreaded
 undreading
@@ -29806,7 +29105,6 @@ unemasculative
 unemasculatory
 unembalmed
 unembanked
-unembarrassed
 unembattled
 unembayed
 unembellished
@@ -29861,15 +29159,12 @@ unencamped
 unenchanted
 unencircled
 unenclosed
-unencompassed
 unencounterable
 unencountered
 unencouraged
 unencouraging
 unencroached
 unencroaching
-unencumbered
-unencumbering
 unencysted
 unendable
 unendangered
@@ -29947,7 +29242,6 @@ unenthusiastic
 unenticeable
 unenticed
 unenticing
-unentitled
 unentombed
 unentomological
 unentranced
@@ -30011,7 +29305,6 @@ uneroded
 unerodent
 uneroding
 unerosive
-unerotic
 unerrant
 unerratic
 unerring
@@ -30024,7 +29317,6 @@ unescaped
 unescheatable
 unescheated
 uneschewed
-unescorted
 unescutcheoned
 unesoteric
 unespied
@@ -30417,7 +29709,6 @@ unfibered
 unfibred
 unfibrous
 unfickle
-unfictitious
 unfidgeting
 unfiducial
 unfielded
@@ -30790,7 +30081,6 @@ ungarnished
 ungarrisoned
 ungarrulous
 ungashed
-ungassed
 ungated
 ungathered
 ungaudy
@@ -30857,8 +30147,6 @@ unglamorous
 unglamourous
 unglandular
 unglaring
-unglassed
-unglassy
 unglazed
 ungleaming
 ungleaned
@@ -30936,8 +30224,6 @@ ungrappling
 ungraspable
 ungrasped
 ungrasping
-ungrassed
-ungrassy
 ungrated
 ungrateful
 ungratifiable
@@ -31056,7 +30342,6 @@ unhappi
 unhappier
 unhappy
 unharangued
-unharassed
 unharbored
 unharboured
 unhardenable
@@ -31361,7 +30646,6 @@ unimpaired
 unimparted
 unimpartial
 unimpartible
-unimpassionate
 unimpatient
 unimpawned
 unimpeachable
@@ -31413,7 +30697,6 @@ unincarnate
 unincarnated
 unincensed
 uninceptive
-unincestuous
 uninchoative
 unincidental
 unincinerated
@@ -31436,7 +30719,6 @@ unincreasing
 unincriminated
 unincriminating
 unincubated
-unincumbered
 unindemnified
 unindentured
 unindexed
@@ -31559,9 +30841,6 @@ uninstigated
 uninstigative
 uninstilled
 uninstinctive
-uninstituted
-uninstitutional
-uninstitutive
 uninstructed
 uninstructible
 uninstructing
@@ -31664,7 +30943,6 @@ uninured
 uninurned
 uninvadable
 uninvaded
-uninvaginated
 uninvasive
 uninvective
 uninveighing
@@ -31722,8 +31000,6 @@ unirritative
 unirrupted
 unirruptive
 uniseptate
-unisex
-unisexual
 unisolationist
 unisolative
 unisomeric
@@ -31851,7 +31127,6 @@ unlamed
 unlamentable
 unlamented
 unlaminated
-unlampooned
 unlanced
 unlanded
 unlandmarked
@@ -31864,7 +31139,6 @@ unlapsing
 unlarcenous
 unlarded
 unlarge
-unlassoed
 unlasting
 unlathered
 unlatticed
@@ -32167,8 +31441,6 @@ unmarvelous
 unmasculine
 unmashed
 unmasked
-unmassacred
-unmassed
 unmasterable
 unmastered
 unmasterful
@@ -32594,7 +31866,6 @@ unnice
 unniched
 unnicked
 unnicknamed
-unniggard
 unnigh
 unnihilistic
 unnimble
@@ -32656,7 +31927,6 @@ unobdurate
 unobese
 unobeyed
 unobeying
-unobfuscated
 unobjected
 unobjectified
 unobjectionable
@@ -32705,8 +31975,6 @@ unodious
 unodored
 unodoriferous
 unodorous
-unoecumenic
-unoecumenical
 unoffendable
 unoffended
 unoffending
@@ -32918,14 +32186,7 @@ unparticularising
 unparticularized
 unparticularizing
 unpartisan
-unpartitioned
-unpartitive
 unpartizan
-unpassed
-unpassing
-unpassionate
-unpassioned
-unpassive
 unpasteurised
 unpasteurized
 unpastoral
@@ -33072,7 +32333,6 @@ unpersonalized
 unpersonalizing
 unpersonified
 unpersonifying
-unperspicuous
 unperspired
 unperspiring
 unpersuadable
@@ -33101,7 +32361,6 @@ unpestilent
 unpestilential
 unpetaled
 unpetalled
-unpetitioned
 unpetrified
 unpetrifying
 unpetted
@@ -33175,7 +32434,6 @@ unplanted
 unplashed
 unplastic
 unplated
-unplatitudinous
 unplatted
 unplausible
 unplayable
@@ -33264,7 +32522,6 @@ unpopularized
 unpopulated
 unpopulous
 unporcelainized
-unpornographic
 unporous
 unportable
 unportended
@@ -33528,7 +32785,6 @@ unproscriptive
 unprospered
 unprospering
 unprosperous
-unprostituted
 unprostrated
 unprotectable
 unprotected
@@ -33642,7 +32898,6 @@ unqualifiable
 unqualified
 unqualifying
 unquantified
-unquantitative
 unquarantined
 unquarreling
 unquarrelling
@@ -33720,7 +32975,6 @@ unransomable
 unransomed
 unranting
 unrapacious
-unraped
 unraptured
 unrapturous
 unrarefied
@@ -33760,7 +33014,6 @@ unreared
 unreasonable
 unreasoned
 unreasoning
-unreassuring
 unreaving
 unrebated
 unrebellious
@@ -33769,8 +33022,6 @@ unrebuffed
 unrebuilt
 unrebukable
 unrebuked
-unrebuttable
-unrebutted
 unrecalcitrant
 unrecallable
 unrecalled
@@ -33830,7 +33081,6 @@ unrecruited
 unrectangular
 unrectifiable
 unrectified
-unrecumbent
 unrecuperated
 unrecuperative
 unrecuperatory
@@ -34018,8 +33268,6 @@ unrepellent
 unrepentant
 unrepented
 unrepenting
-unrepetitious
-unrepetitive
 unrepined
 unrepining
 unreplaceable
@@ -34126,7 +33374,6 @@ unresponsive
 unrested
 unrestful
 unresting
-unrestitutive
 unrestorable
 unrestorative
 unrestored
@@ -34479,8 +33726,6 @@ unscarfed
 unscarified
 unscarred
 unscarved
-unscathed
-unscattered
 unscavenged
 unscenic
 unscented
@@ -34523,8 +33768,6 @@ unscourged
 unscourging
 unscouring
 unscowling
-unscraped
-unscraping
 unscratchable
 unscratched
 unscratching
@@ -34548,7 +33791,6 @@ unscrutinized
 unscrutinizing
 unsculptural
 unsculptured
-unscummed
 unsealable
 unsealed
 unsearchable
@@ -34672,7 +33914,6 @@ unsettled
 unseverable
 unsevere
 unsevered
-unsexual
 unshabby
 unshadowable
 unshadowed
@@ -34950,14 +34191,10 @@ unsmouldering
 unsmudged
 unsmug
 unsmuggled
-unsmutched
-unsmutted
-unsmutty
 unsnaffled
 unsnagged
 unsnaky
 unsnared
-unsnatched
 unsneaking
 unsneaky
 unsneering
@@ -35089,8 +34326,6 @@ unspending
 unspent
 unspewed
 unspherical
-unspiced
-unspicy
 unspied
 unspilled
 unspilt
@@ -35275,8 +34510,6 @@ unstipulated
 unstirrable
 unstirred
 unstirring
-unstitched
-unstitching
 unstocked
 unstockinged
 unstoic
@@ -35399,8 +34632,6 @@ unsubsidized
 unsubstantial
 unsubstantiated
 unsubstantive
-unsubstituted
-unsubstitutive
 unsubtle
 unsubtracted
 unsubtractive
@@ -35418,9 +34649,6 @@ unsuccinct
 unsuccorable
 unsuccored
 unsucculent
-unsuccumbing
-unsucked
-unsuckled
 unsued
 unsufferable
 unsuffering
@@ -35475,7 +34703,6 @@ unsupernatural
 unsuperscribed
 unsuperseded
 unsuperseding
-unsuperstitious
 unsupervised
 unsupervisory
 unsupine
@@ -35515,8 +34742,6 @@ unsurmising
 unsurmountable
 unsurmounted
 unsurnamed
-unsurpassable
-unsurpassed
 unsurpliced
 unsurprised
 unsurprising
@@ -35535,7 +34760,6 @@ unsuspectful
 unsuspecting
 unsuspended
 unsuspendible
-unsuspicious
 unsustainable
 unsustained
 unsustaining
@@ -35660,8 +34884,6 @@ untarried
 untarrying
 untartarized
 untasked
-untasseled
-untasselled
 untastable
 untasteable
 untasted
@@ -35758,8 +34980,6 @@ untheologic
 untheological
 untheoretic
 untheoretical
-untherapeutic
-untherapeutical
 unthick
 unthievish
 unthinkable
@@ -35823,13 +35043,6 @@ untippled
 untired
 untiring
 untissued
-untithable
-untithed
-untitillated
-untitillating
-untitled
-untittering
-untitular
 untoadying
 untoasted
 untogaed
@@ -35926,8 +35139,6 @@ untransmigrated
 untransmissible
 untransmissive
 untransmitted
-untransmutable
-untransmuted
 untransparent
 untranspired
 untranspiring
@@ -35964,8 +35175,6 @@ untremulent
 untremulous
 untrenched
 untrepanned
-untrespassed
-untrespassing
 untressed
 untriable
 untribal
@@ -36042,8 +35251,6 @@ untutelar
 untutelary
 untutored
 untwilled
-untwinkled
-untwinkling
 untwinned
 untwirled
 untwirling
@@ -36574,8 +35781,6 @@ vadose
 vagabondish
 vagal
 vagarious
-vaginal
-vaginate
 vagotropic
 vagrom
 vague
@@ -36645,7 +35850,6 @@ vaselike
 vasoconstrictive
 vasoinhibitory
 vasomotor
-vassalless
 vasty
 vatic
 vaticinal
@@ -37301,7 +36505,6 @@ xerographic
 xeromorphic
 xerophilous
 xerophytic
-xerotic
 xiphisternal
 xylic
 xylographic
