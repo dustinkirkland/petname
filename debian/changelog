@@ -13,6 +13,8 @@ petname (1.9) unreleased; urgency=medium
     - check our wordlists against that blacklist during the build
     - update our wordlists removing any blacklisted words or derivatives
       + note that this conservatively prunes a few perfectly acceptable words
+  * debian/blacklist.txt:
+    - add our religious figures to our blacklist
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 28 Jan 2015 15:15:08 -0600
 
