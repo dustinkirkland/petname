@@ -4717,7 +4717,6 @@ lengthwise
 leniently
 lenticularly
 leprously
-les
 less
 lethally
 lethargically

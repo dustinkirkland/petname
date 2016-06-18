@@ -3,6 +3,9 @@ petname (1.10) unreleased; urgency=medium
   * README.md, usr/bin/petname, usr/share/man/man1/petname.1:
     - add support for a -l|--letters parameter, default to 6
     - creates shorter, more readable names
+  * usr/share/petname/adjectives.txt, usr/share/petname/adverbs.txt,
+    usr/share/petname/names.txt:
+    - remove some nonsense words
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 30 Oct 2015 10:15:09 -0500
 

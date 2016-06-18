@@ -1898,7 +1898,6 @@ axonometric
 azeotropic
 azido
 azimuthal
-azo
 azoic
 azonal
 azonic
@@ -6141,7 +6140,6 @@ duple
 duplicable
 duplicative
 duplicatus
-dur
 durable
 dural
 durational
@@ -7899,7 +7897,6 @@ fossilisable
 fossilizable
 fossillike
 fossorial
-fou
 foudroyant
 foughten
 foulmouthed
@@ -9356,7 +9353,6 @@ henlike
 hennish
 henotheistic
 heortological
-hep
 heparinoid
 hepatotoxic
 heptagonal
@@ -9407,7 +9403,6 @@ hesitant
 hesitative
 hesperidate
 hesperideous
-het
 hetaeric
 hetaeristic
 hetairic
@@ -9516,6 +9511,7 @@ hindermost
 hindmost
 hingeless
 hingelike
+hip
 hiplength
 hipless
 hiplike
@@ -9746,6 +9742,7 @@ hospitable
 hostile
 hostless
 hostly
+hot
 hotelless
 hotheaded
 hotspurred
@@ -13186,7 +13183,6 @@ millefleur
 millennial
 millesimal
 milliary
-mim
 mimetic
 mimical
 mimosaceous
@@ -13877,7 +13873,6 @@ necrotomic
 nectareous
 nectariferous
 nectarous
-nee
 needful
 needier
 neediest
@@ -17042,7 +17037,6 @@ novelettish
 novelistic
 novercal
 noxious
-nth
 nubblier
 nubbliest
 nubbly
@@ -21009,7 +21003,6 @@ pupilless
 pupiparous
 puppyish
 puppylike
-pur
 purblind
 purchasable
 pure
@@ -24816,7 +24809,6 @@ sugarlike
 sugary
 suggestible
 suggestive
-sui
 suicidal
 suitable
 suited
@@ -26492,7 +26484,6 @@ twistable
 twittery
 twolegged
 twopenny
-twp
 tychistic
 tychopotamic
 tympanic
@@ -36485,7 +36476,6 @@ wrinkliest
 wrinkly
 wrongful
 wroth
-wud
 wurtzitic
 wuthering
 xanthic
