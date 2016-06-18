@@ -6,6 +6,8 @@ petname (1.10) unreleased; urgency=medium
   * usr/share/petname/adjectives.txt, usr/share/petname/adverbs.txt,
     usr/share/petname/names.txt:
     - remove some nonsense words
+  * usr/bin/petname:
+    - ensure we don't go less than 3 letters
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 30 Oct 2015 10:15:09 -0500
 

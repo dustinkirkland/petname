@@ -68,6 +68,8 @@ while [ ! -z "$1" ]; do
 	esac
 done
 
+[ $LETTERS -lt 3 ] && LETTERS=3
+
 Adverb() {
 	grep "^.\{0,$LETTERS\}$" $DIR/adverbs.txt | shuf -n 1
 }
