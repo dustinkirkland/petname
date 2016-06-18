@@ -28,10 +28,15 @@ PKG=petname
 DIR="/usr/share/$PKG"
 WORDS=2
 SEPARATOR="-"
+LETTERS=6
 while [ ! -z "$1" ]; do
 	case "${1}" in
 		-w|--words)
 			WORDS="$2"
+			shift 2
+		;;
+		-l|--letters)
+			LETTERS="$2"
 			shift 2
 		;;
 		-s|--separator)
@@ -64,15 +69,15 @@ while [ ! -z "$1" ]; do
 done
 
 Adverb() {
-	shuf -n 1 $DIR/adverbs.txt
+	grep "^.\{0,$LETTERS\}$" $DIR/adverbs.txt | shuf -n 1
 }
 
 Adjective() {
-	shuf -n 1 $DIR/adjectives.txt
+	grep "^.\{0,$LETTERS\}$" $DIR/adjectives.txt | shuf -n 1
 }
 
 Name() {
-	shuf -n 1 $DIR/names.txt
+	grep "^.\{0,$LETTERS\}$" $DIR/names.txt | shuf -n 1
 }
 
 Generate() {
