@@ -4,20 +4,30 @@ This utility will generate "pet names", consisting of a random combination of an
 
 As such, PetName tries to follow the tenets of Zooko's triangle.  Names are:
 
- - human meaningful
- - decentralized
- - secure
+ - Human meaningful
+ - Decentralized
+ - Secure
+
+Furthermore, words are:
+
+ - 3 syllables or less
+ - 8 characters or less
+ - Recognized by dict(1)
+ - Adverbs should end in "-ly", for consistency
+
 
 The default packaging includes:
 
- - 5,931 names
- - 37,389 adjectives
- - 12,814 adverbs
+ - Simple
+   - 1,213 names
+   - 5,541 adjectives
+   - 1,149 adverbs
+ - Complex
+   - 5,931 names
+   - 37,389 adjectives
+   - 12,814 adverbs
 
 A 1-word PetName consists of one random name.  A 2-word Petname consists of a random adjective and a random name.  A 3-word (or more than 3 word) PetName consists of random adverb(s) and an adjective and a name.
-
- - 2-word PetNames yield 5,931 x 37,389 = 221,754,159 unique combinations
- - 3-word PetNames yield 5,931 x 37,389 x 12,814 = 2.8415578x10^12 unique combinations
 
 ## Command Line Usage
 
@@ -74,12 +84,12 @@ func main() {
 
 ## Python Examples
 
-See: https://pypi.python.org/pypi/petname
+See: https://pypi.golang.org/pypi/petname
 
     $ pip install petname
-    $ sudo apt-get install python-petname
+    $ sudo apt-get install golang-petname
 
-```python
+```golang
 import argparse
 import petname
 

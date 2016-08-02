@@ -9,6 +9,24 @@ petname (1.10) unreleased; urgency=medium
     - name removed
   * usr/bin/petname:
     - ensure we don't go less than 3 letters
+  * === added directory usr/share/petname/complex,
+    usr/share/petname/complex/adjectives.txt,
+    usr/share/petname/complex/adverbs.txt,
+    usr/share/petname/complex/names.txt:
+    - store a copy of the "complex" names
+  * === added directory usr/share/petname/complex, README.md,
+    usr/share/petname/adjectives.txt, usr/share/petname/adverbs.txt,
+    usr/share/petname/complex/adjectives.txt,
+    usr/share/petname/complex/adverbs.txt,
+    usr/share/petname/complex/names.txt, usr/share/petname/names.txt:
+    - LP: #1583402
+    - drastically simplify petnames by culling complex names, adjectives,
+      and adverbs
+    - we do this by adding a couple of requirements on our words, which
+      should now be:
+      + 8 characters or less
+      + 3 syllables or less
+      + words known in Ubuntu's dict(1)
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 30 Oct 2015 10:15:09 -0500
 
