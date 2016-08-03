@@ -1,11 +1,19 @@
 #!/usr/bin/make -f
 
+LC_ALL=C
+
 %:
 	dh $@
 
-override_dh_auto_build:
-	# Ensure that we only have A-Za-z in our words; no funny characters
-	! LC_ALL=C grep "[^A-Za-z]" usr/share/petname/*txt
+override_dh_auto_test:
+	# Ensure that we only have a-z in our words; no funny characters; no upper case
+	! grep "[^a-z]" usr/share/petname/*txt
+	# Ensure that we have no words more than 8 characters
+	! grep "[a-z]\{9\}" usr/share/petname/*txt
+	# Ensure that we have no words more than 3 syllables
+	cat usr/share/petname/*txt | perl -e 'use strict; use Lingua::EN::Syllable; while(<>) { chomp; exit 1 if syllable($$_) > 3; };'
+	# Ensure that all words are in the dictionary
+	cat usr/share/petname/*txt | xargs -i dict -h localhost {} >/dev/null 2>&1
 	# Ensure we have no blacklisted words or derivatives
-	! for i in `cat debian/blacklist.txt`; do grep -ri $i ../usr/share/petname/*txt ; done
-	dh_auto_build
+	! grep -Ff debian/blacklist.txt usr/share/petname/*txt
+	dh_auto_test

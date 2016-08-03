@@ -2,8 +2,8 @@ Source: petname
 Section: admin
 Priority: optional
 Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
-Build-Depends: debhelper (>= 8),
-Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 8), dict, liblingua-en-syllable-perl, dictd, dict-gcide, dict-wn
+Standards-Version: 3.9.7
 Homepage: http://launchpad.net/petname
 Vcs-Browser: http://bazaar.launchpad.net/~petname/petname/trunk/files
 Vcs-Bzr: https://code.launchpad.net/petname/petname/trunk
@@ -11,6 +11,7 @@ Vcs-Bzr: https://code.launchpad.net/petname/petname/trunk
 Package: petname
 Architecture: all
 Depends: ${misc:Depends}
+Recommends: dict
 Description: generate pronouncable, perhaps even memorable, pet names
  This utility will generate "pet names", consisting of a random
  combination of an adverb, adjective, and proper name.  These are

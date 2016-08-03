@@ -28,7 +28,7 @@ PKG=petname
 DIR="/usr/share/$PKG"
 WORDS=2
 SEPARATOR="-"
-LETTERS=6
+LETTERS=8
 while [ ! -z "$1" ]; do
 	case "${1}" in
 		-w|--words)

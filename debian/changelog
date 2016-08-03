@@ -27,6 +27,10 @@ petname (1.10) unreleased; urgency=medium
       + 8 characters or less
       + 3 syllables or less
       + words known in Ubuntu's dict(1)
+  * debian/blacklist.txt, debian/control, debian/rules, usr/bin/petname:
+    - build depend on a few utilities necessary to test our wordlists
+      at build time
+    - test all words against our specs
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 30 Oct 2015 10:15:09 -0500
 
