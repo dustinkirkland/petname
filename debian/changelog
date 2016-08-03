@@ -37,6 +37,8 @@ petname (1.10) unreleased; urgency=medium
     - add a few blacklist words
     - use the SCOWL database to reduce complexity by culling infrequently
       used words
+  * README.md:
+    - update docs
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 30 Oct 2015 10:15:09 -0500
 

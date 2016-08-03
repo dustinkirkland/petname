@@ -8,24 +8,13 @@ As such, PetName tries to follow the tenets of Zooko's triangle.  Names are:
  - Decentralized
  - Secure
 
-Furthermore, words are:
+Furthermore, PetName words are:
 
  - 3 syllables or less
  - 8 characters or less
- - Recognized by dict(1)
- - Adverbs should end in "-ly", for consistency
-
-
-The default packaging includes:
-
- - Simple
-   - 1,052 names
-   - 2,714 adjectives
-   - 748 adverbs
- - Complex
-   - 5,931 names
-   - 37,389 adjectives
-   - 12,814 adverbs
+ - Recognized by dict(1) as a word
+ - A regularly used word according to the SCOWL database
+ - Adverbs end in "-ly", for consistency
 
 A 1-word PetName consists of one random name.  A 2-word Petname consists of a random adjective and a random name.  A 3-word (or more than 3 word) PetName consists of random adverb(s) and an adjective and a name.
 
@@ -33,7 +22,7 @@ A 1-word PetName consists of one random name.  A 2-word Petname consists of a ra
 
 Command line help:
 
-    usage: petname [--words INT] [--separator STR] [--letters INT]
+    usage: petname [-w|--words INT] [-s|--separator STR] [-l|--letters INT]
 
     optional arguments:
         -w|--words            number of words in the name, default is 2
