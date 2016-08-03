@@ -15,5 +15,5 @@ override_dh_auto_test:
 	# Ensure that all words are in the dictionary
 	cat usr/share/petname/*txt | xargs -i dict -h localhost {} >/dev/null 2>&1
 	# Ensure we have no blacklisted words or derivatives
-	! grep -Ff debian/blacklist.txt usr/share/petname/*txt
+	! grep -xi -Ff debian/blacklist.txt usr/share/petname/*txt
 	dh_auto_test

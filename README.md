@@ -19,9 +19,9 @@ Furthermore, words are:
 The default packaging includes:
 
  - Simple
-   - 1,213 names
-   - 5,541 adjectives
-   - 1,149 adverbs
+   - 1,052 names
+   - 2,714 adjectives
+   - 748 adverbs
  - Complex
    - 5,931 names
    - 37,389 adjectives

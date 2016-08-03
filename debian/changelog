@@ -31,6 +31,12 @@ petname (1.10) unreleased; urgency=medium
     - build depend on a few utilities necessary to test our wordlists
       at build time
     - test all words against our specs
+  * debian/blacklist.txt, debian/control, debian/rules, README.md,
+    usr/share/petname/adjectives.txt, usr/share/petname/adverbs.txt,
+    usr/share/petname/names.txt:
+    - add a few blacklist words
+    - use the SCOWL database to reduce complexity by culling infrequently
+      used words
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 30 Oct 2015 10:15:09 -0500
 
