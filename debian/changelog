@@ -1,19 +1,15 @@
-petname (1.10) unreleased; urgency=medium
+petname (2.0) unreleased; urgency=medium
 
   * README.md, usr/bin/petname, usr/share/man/man1/petname.1:
-    - add support for a -l|--letters parameter, default to 6
-    - creates shorter, more readable names
-  * usr/share/petname/adjectives.txt, usr/share/petname/adverbs.txt,
-    usr/share/petname/names.txt:
-    - remove some nonsense words
-    - name removed
+    - add support for an option -l|--letters parameter,
+      to enable shorter, more readable names
   * usr/bin/petname:
     - ensure we don't go less than 3 letters
   * === added directory usr/share/petname/complex,
     usr/share/petname/complex/adjectives.txt,
     usr/share/petname/complex/adverbs.txt,
     usr/share/petname/complex/names.txt:
-    - store a copy of the "complex" names
+    - backup a copy of the "complex" names
   * === added directory usr/share/petname/complex, README.md,
     usr/share/petname/adjectives.txt, usr/share/petname/adverbs.txt,
     usr/share/petname/complex/adjectives.txt,
@@ -24,8 +20,8 @@ petname (1.10) unreleased; urgency=medium
       and adverbs
     - we do this by adding a couple of requirements on our words, which
       should now be:
-      + 8 characters or less
-      + 3 syllables or less
+      + 12 characters or less
+      + 4 syllables or less
       + words known in Ubuntu's dict(1)
   * debian/blacklist.txt, debian/control, debian/rules, usr/bin/petname:
     - build depend on a few utilities necessary to test our wordlists
