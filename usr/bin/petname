@@ -112,7 +112,7 @@ Generate() {
 		adverbs=
 		for i in $(seq 1 $count); do
 			adv="$(Adverb)"
-			if [ -z "$ADVERBs" ]; then
+			if [ -z "$adverbs" ]; then
 				adverbs=$(printf "%s%s" "$adv" "$SEPARATOR")
 			else
 				adverbs=$(printf "%s%s%s" "$adverbs" "$adv" "$SEPARATOR")

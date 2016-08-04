@@ -29,6 +29,8 @@ petname (2.1) unreleased; urgency=medium
     usr/share/petname/names.txt:
     - separate the SCOWL tests for adj/adv
     - add a bunch of adverbs back, now that they pass tests
+  * usr/bin/petname:
+    - fix typo/regression in words>=3
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 03 Aug 2016 22:56:49 -0500
 
