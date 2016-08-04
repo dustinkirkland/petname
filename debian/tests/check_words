@@ -76,8 +76,19 @@ for word in $adjectives; do
 done
 [ "$fail" = "1" ] && fail || succeed
 
-echo "TEST: Ensure all adverbs and adjectives are common in the SCOWL database..."
-for word in $adjectives $adverbs; do
+echo "TEST: Ensure all adverbs are common in the SCOWL database..."
+for word in $adverbs; do
+	if grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-5]?; then
+		continue
+	else
+		echo $word
+		fail=1
+	fi
+done
+[ "$fail" = "1" ] && fail || succeed
+
+echo "TEST: Ensure all adjectives are common in the SCOWL database..."
+for word in $adjectives; do
 	if grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-5]?; then
 		continue
 	else
