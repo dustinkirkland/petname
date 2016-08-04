@@ -28,7 +28,6 @@ avidly
 awfully
 badly
 baldly
-bally
 barely
 basely
 bawdily
@@ -60,7 +59,6 @@ brightly
 briskly
 bristly
 broadly
-brolly
 brutally
 bubbly
 bully
@@ -81,7 +79,6 @@ cheekily
 cheerily
 chiefly
 chilly
-chirpily
 civilly
 cleanly
 clearly
@@ -113,7 +110,6 @@ crudely
 cruelly
 crumbly
 cuddly
-culpably
 curly
 curtly
 cussedly
@@ -134,7 +130,6 @@ deftly
 demurely
 densely
 devoutly
-diddly
 dilly
 dimly
 dingily
@@ -249,13 +244,11 @@ glumly
 gnarly
 godly
 goodly
-googly
 grandly
 gravelly
 gravely
 greatly
 greedily
-greenfly
 grimly
 grisly
 gristly
@@ -322,16 +315,13 @@ jocundly
 jointly
 jokingly
 jolly
-jowly
 joyfully
 joyously
 justly
 keenly
-kelly
 kindly
 kingly
 knightly
-knobbly
 lamely
 largely
 lastly
@@ -400,7 +390,6 @@ mistily
 modestly
 modishly
 moistly
-molly
 monthly
 moodily
 morally
@@ -441,7 +430,6 @@ openly
 orally
 orderly
 ornately
-overfly
 overly
 overtly
 owlishly
@@ -464,7 +452,6 @@ placidly
 plainly
 pliantly
 politely
-poly
 poorly
 portly
 possibly
@@ -512,7 +499,6 @@ richly
 rightly
 rigidly
 ripely
-riskily
 robustly
 rosily
 roughly
@@ -547,7 +533,6 @@ shabbily
 shakily
 shapely
 sharply
-shelly
 shiftily
 shoddily
 shortly
@@ -579,7 +564,6 @@ smoothly
 smugly
 sneakily
 snidely
-snootily
 snugly
 soberly
 socially
@@ -593,14 +577,11 @@ sordidly
 sorely
 soundly
 sourly
-spangly
 sparely
-sparkly
 sparsely
 speedily
 spindly
 spirally
-squally
 squarely
 squiggly
 stably
@@ -646,18 +627,15 @@ tangibly
 tardily
 tartly
 tautly
-telly
 tenderly
 tensely
 termly
 terribly
 tersely
 testily
-tetchily
 thickly
 thinly
 thirdly
-tiddly
 tidily
 tightly
 timely
@@ -668,7 +646,6 @@ torpidly
 totally
 touchily
 toughly
-treacly
 trimly
 triply
 tritely
@@ -728,7 +705,6 @@ wifely
 wiggly
 wildly
 wilfully
-willy
 wily
 wisely
 wittily

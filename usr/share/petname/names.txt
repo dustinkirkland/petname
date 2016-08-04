@@ -452,7 +452,6 @@ hippo
 hoatzin
 hog
 honeybee
-honeybadger
 honeycreeper
 honeyeater
 hookworm

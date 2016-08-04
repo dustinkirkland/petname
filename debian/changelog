@@ -4,6 +4,8 @@ petname (2.1) unreleased; urgency=medium
     usr/share/petname/names.txt:
     - manual dictionary scrub of animal names;  I checked and read every
       entry to ensure names.txt consists only of animals
+  * usr/share/petname/adverbs.txt, usr/share/petname/names.txt:
+    - remove any adverbs/adjectives which are not recognized by ispell
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 03 Aug 2016 22:56:49 -0500
 
