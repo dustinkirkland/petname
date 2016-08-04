@@ -1,0 +1,2 @@
+Tests: check_words
+Depends: dict, liblingua-en-syllable-perl, dictd, dict-gcide, dict-wn, scowl, ispell

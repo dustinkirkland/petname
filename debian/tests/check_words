@@ -17,6 +17,9 @@ grep "[^a-z]" usr/share/petname/*txt && fail || succeed
 echo "TEST: Ensure that we have no words more than 12 characters..."
 grep "[a-z]\{13\}" usr/share/petname/*txt && fail || succeed
 
+echo "TEST: Ensure that all adverbs end in -ly..."
+grep -v "ly$" usr/share/petname/adverbs.txt && fail || succeed
+
 echo "TEST: Ensure that we have no words more than 4 syllables..."
 output=$(cat usr/share/petname/*txt | perl -e 'use strict; use Lingua::EN::Syllable; while(<>) { chomp; print $_ . "\n" if syllable($_) > 4; };')
 if [ -n "$output" ]; then

@@ -47,6 +47,10 @@ petname (1.10) unreleased; urgency=medium
   * usr/bin/petname, usr/share/man/man1/petname.1:
     - add an "ubuntu mode", which chooses words that start with the same
       letter
+  * debian/blacklist.txt, debian/control, debian/rules,
+    debian/tests/check_words, debian/tests/control, README.md,
+    usr/share/man/man1/petname.1, usr/share/petname/names.txt:
+    - update some docs, remove a word
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 30 Oct 2015 10:15:09 -0500
 

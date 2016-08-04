@@ -1,6 +1,6 @@
 # PetName
 
-This utility will generate "pet names", consisting of a random combination of an adverb, adjective, and proper name.  These are useful for unique hostnames, for instance.
+This utility will generate "pet names", consisting of a random combination of an adverb, adjective, and an animal.  These are useful for unique hostnames or containers, for instance.
 
 As such, PetName tries to follow the tenets of Zooko's triangle.  Names are:
 
@@ -8,47 +8,49 @@ As such, PetName tries to follow the tenets of Zooko's triangle.  Names are:
  - Decentralized
  - Secure
 
-Furthermore, PetName words are:
+Furthermore, PetName words must:
 
- - 3 syllables or less
- - 8 characters or less
- - Recognized by dict(1) as a word
- - A regularly used word according to the SCOWL database
- - Adverbs end in "-ly", for consistency
+ - Consist of only a-z, with no other characters, all lowercase
+ - Consist of 4 syllables or less
+ - Consist of 12 characters or less
+ - Be recognized by dict(1) or ispell(1) as a word
+ - Be common according to the SCOWL database
+ - End in "-ly" if an adverb
 
-A 1-word PetName consists of one random name.  A 2-word Petname consists of a random adjective and a random name.  A 3-word (or more than 3 word) PetName consists of random adverb(s) and an adjective and a name.
+A 1-word PetName consists of one random animal name.  A 2-word Petname consists of a random adjective and a random animal name.  A 3-word (or more than 3 word) PetName consists of random adverb(s) and an adjective and a name.  Beyond 3 words, adverbs are prepended indefinitely.
 
 ## Command Line Usage
 
 Command line help:
 
-    usage: petname [-w|--words INT] [-s|--separator STR] [-l|--letters INT]
+    usage: petname [-w|--words INT] [-s|--separator STR] [-l|--letters INT] [-u|--ubuntu]
 
     optional arguments:
         -w|--words            number of words in the name, default is 2
         -l|--letters          maximum number of letters in each word, default is 6
         -s|--separator        string used to separate name words, default is '-'
         -d|--dir              directory containing adverbs.txt, adjectives.txt, names.txt, default is \fI/usr/share/petname/\fP
+        -u|--ubuntu           generate ubuntu-style names, alliteration of first character of each word
 
 ## Command Line Examples
 
     $ petname
-    scary-mara
+    vigorous-yak
 
     $ petname --words 1
-    marco
+    slug
 
     $ petname --words 3
-    first-wary-jenae
+    daintily-quaint-mallard
 
     $ petname --words 4
-    coaly-filly-rare-mark
+    frostily-kingly-easy-bluegill
 
     $ petname --separator ":"
-    leery:jolie
+    desirous:glowworm
 
-    $ petname --separator "" --words 3
-    follypilyjaney
+    $ petname -u
+    light-lemming
 
 ## Golang Examples
 ```golang

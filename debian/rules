@@ -4,3 +4,7 @@ LC_ALL=C
 
 %:
 	dh $@
+
+override_dh_auto_test:
+	./debian/tests/check_words
+	dh_auto_test

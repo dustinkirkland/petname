@@ -63,7 +63,6 @@ batis
 beagle
 bear
 beauty
-beaver
 bedbug
 bee
 beetle
@@ -1183,7 +1182,6 @@ veery
 velvetbreast
 vendace
 verdin
-version
 vervet
 vicuna
 violetear
