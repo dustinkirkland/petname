@@ -2,9 +2,10 @@
 
 set -e
 fail=0
-adjectives=$(cat usr/share/petname/adjectives.txt)
-adverbs=$(cat usr/share/petname/adverbs.txt)
-names=$(cat usr/share/petname/names.txt)
+[ -n "$1" ] && dir="$1" || dir="usr/share/petname"
+adjectives=$(cat $dir/adjectives.txt)
+adverbs=$(cat $dir/adverbs.txt)
+names=$(cat $dir/names.txt)
 
 succeed() {
 	echo "⤷ Success"
@@ -16,24 +17,24 @@ fail() {
 }
 
 echo "TEST: Ensure we have no blacklisted words or derivatives..."
-grep -xi -Ff debian/blacklist.txt usr/share/petname/*txt && fail || succeed
+grep -xi -Ff debian/blacklist.txt $dir/*txt && fail || succeed
 
 echo "TEST: Ensure that we only have a-z in our words; no funny characters; no upper case..."
-grep "[^abcdefghijklmnopqrstuvwxyz]" usr/share/petname/*txt && fail || succeed
+grep "[^abcdefghijklmnopqrstuvwxyz]" $dir/*txt && fail || succeed
 
 echo "TEST: Ensure that we have no words more than 12 characters..."
-grep "[a-z]\{13\}" usr/share/petname/*txt && fail || succeed
+grep "[a-z]\{13\}" $dir/*txt && fail || succeed
 
 echo "TEST: Ensure we have no repeated words..."
-grep -xi -Ff usr/share/petname/adjectives.txt usr/share/petname/adverbs.txt && fail || succeed
-grep -xi -Ff usr/share/petname/adjectives.txt usr/share/petname/names.txt && fail || succeed
-grep -xi -Ff usr/share/petname/names.txt usr/share/petname/adverbs.txt && fail || succeed
+grep -xi -Ff $dir/adjectives.txt $dir/adverbs.txt && fail || succeed
+grep -xi -Ff $dir/adjectives.txt $dir/names.txt && fail || succeed
+grep -xi -Ff $dir/names.txt $dir/adverbs.txt && fail || succeed
 
 echo "TEST: Ensure that all adverbs end in -ly..."
-grep -v "ly$" usr/share/petname/adverbs.txt && fail || succeed
+grep -v "ly$" $dir/adverbs.txt && fail || succeed
 
 echo "TEST: Ensure that we have no words more than 4 syllables..."
-output=$(cat usr/share/petname/*txt | perl -e 'use strict; use Lingua::EN::Syllable; while(<>) { chomp; print $_ . "\n" if syllable($_) > 4; };')
+output=$(cat $dir/*txt | perl -e 'use strict; use Lingua::EN::Syllable; while(<>) { chomp; print $_ . "\n" if syllable($_) > 4; };')
 if [ -n "$output" ]; then
 	echo "$output"
 	fail
@@ -100,20 +101,23 @@ done
 
 echo "TEST: Ensure that all names are common nouns in the dictionary..."
 for word in $names; do
-	fail=0
+	score=0
 	if grep -qs "^$word$" debian/whitelist.txt; then
 		continue
 	fi
 	if ! (echo "$word" | ispell | grep -qs "^word: ok"); then
-		fail=$((fail+1))
+		score=$((score+1))
 	fi
 	if ! (dict -h localhost "$word" 2>&1 | egrep -qs "^      n | n\.|\\n\.") ; then
-		fail=$((fail+1))
+		score=$((score+1))
 	fi
 	if ! grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-7]?; then
-		fail=$((fail+1))
+		score=$((score+1))
 	fi
-	[ $fail -gt 1 ] && echo $word
+	if [ $score -gt 1 ]; then
+		echo $word
+		fail=1
+	fi
 done
 if [ "$fail" = "1" ]; then
 	fail

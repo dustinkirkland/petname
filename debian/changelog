@@ -31,6 +31,12 @@ petname (2.1) unreleased; urgency=medium
     - add a bunch of adverbs back, now that they pass tests
   * usr/bin/petname:
     - fix typo/regression in words>=3
+  * === added directory usr/share/petname/easy,
+    debian/tests/check_words, usr/share/petname/easy/adjectives.txt,
+    usr/share/petname/easy/adverbs.txt,
+    usr/share/petname/easy/names.txt:
+    - enable the test to run against multiple directories
+    - create an 'easy' set of words
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 03 Aug 2016 22:56:49 -0500
 
