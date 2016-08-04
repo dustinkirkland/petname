@@ -77,8 +77,8 @@ done
 [ "$fail" = "1" ] && fail || succeed
 
 echo "TEST: Ensure all adverbs and adjectives are common in the SCOWL database..."
-for word in $(cat usr/share/petname/ad*.txt); do
-	if grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-8]?; then
+for word in $adjectives $adverbs; do
+	if grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-5]?; then
 		continue
 	else
 		echo $word
@@ -87,14 +87,22 @@ for word in $(cat usr/share/petname/ad*.txt); do
 done
 [ "$fail" = "1" ] && fail || succeed
 
-echo "TEST: Ensure that all words are in the dictionary..."
-for word in $(cat usr/share/petname/*txt); do
-	if grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-8]?; then
+echo "TEST: Ensure that all names are common nouns in the dictionary..."
+for word in $names; do
+	fail=0
+	if grep -qs "^$word$" debian/whitelist.txt; then
 		continue
-	else
-		echo "$word"
-		fail=1
 	fi
+	if ! (echo "$word" | ispell | grep -qs "^word: ok"); then
+		fail=$((fail+1))
+	fi
+	if ! (dict -h localhost "$word" 2>&1 | egrep -qs "^      n | n\.|\\n\.") ; then
+		fail=$((fail+1))
+	fi
+	if ! grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-7]?; then
+		fail=$((fail+1))
+	fi
+	[ $fail -gt 1 ] && echo $word
 done
 if [ "$fail" = "1" ]; then
 	fail

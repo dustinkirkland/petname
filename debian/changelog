@@ -14,6 +14,10 @@ petname (2.1) unreleased; urgency=medium
   * debian/tests/check_words, usr/share/petname/adjectives.txt:
     - add a test to detect repeated words
     - remove some repeated words
+  * debian/tests/check_words, debian/whitelist.txt,
+    usr/share/petname/names.txt:
+    - simplify animal names further
+    - add dictionary tests to ensure animal names are nouns and common
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 03 Aug 2016 22:56:49 -0500
 
