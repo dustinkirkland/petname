@@ -39,6 +39,11 @@ petname (1.10) unreleased; urgency=medium
       used words
   * README.md:
     - update docs
+  * === added directory debian/tests, debian/blacklist.txt,
+    debian/rules, debian/tests/check_words,
+    usr/share/petname/adjectives.txt, usr/share/petname/names.txt:
+    - change from people names to animal names, inspired by ubuntu
+    - add tests
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 30 Oct 2015 10:15:09 -0500
 

@@ -1,0 +1,49 @@
+#!/bin/sh
+
+set -e
+
+succeed() {
+	echo "⤷ Success"
+}
+
+fail() {
+	echo "⤷ Failure"
+	exit 1
+}
+
+echo "TEST: Ensure that we only have a-z in our words; no funny characters; no upper case..."
+grep "[^a-z]" usr/share/petname/*txt && fail || succeed
+
+echo "TEST: Ensure that we have no words more than 12 characters..."
+grep "[a-z]\{13\}" usr/share/petname/*txt && fail || succeed
+
+echo "TEST: Ensure that we have no words more than 4 syllables..."
+output=$(cat usr/share/petname/*txt | perl -e 'use strict; use Lingua::EN::Syllable; while(<>) { chomp; print $_ . "\n" if syllable($_) > 4; };')
+if [ -n "$output" ]; then
+	echo "$output"
+	fail
+else
+	succeed
+fi
+
+echo "TEST: Ensure that all words are in the dictionary..."
+for word in $(cat usr/share/petname/*txt); do
+	if (echo "$word" | ispell | grep -qs "^word: ok"); then
+		continue
+	elif dict -h localhost "$word" >/dev/null 2>&1; then
+		continue
+	elif grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-8]?; then
+		continue
+	else
+		echo "$word"
+		fail=1
+	fi
+done
+if [ "$fail" = "1" ]; then
+	fail
+else
+	succeed
+fi
+
+echo "TEST: Ensure we have no blacklisted words or derivatives..."
+grep -xi -Ff debian/blacklist.txt usr/share/petname/*txt && fail || succeed
