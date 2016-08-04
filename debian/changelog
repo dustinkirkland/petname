@@ -1,6 +1,9 @@
 petname (2.1) unreleased; urgency=medium
 
-  * UNRELEASED
+  * debian/blacklist.txt, debian/tests/check_words,
+    usr/share/petname/names.txt:
+    - manual dictionary scrub of animal names;  I checked and read every
+      entry to ensure names.txt consists only of animals
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 03 Aug 2016 22:56:49 -0500
 

@@ -12,7 +12,7 @@ fail() {
 }
 
 echo "TEST: Ensure that we only have a-z in our words; no funny characters; no upper case..."
-grep "[^a-z]" usr/share/petname/*txt && fail || succeed
+grep "[^abcdefghijklmnopqrstuvwxyz]" usr/share/petname/*txt && fail || succeed
 
 echo "TEST: Ensure that we have no words more than 12 characters..."
 grep "[a-z]\{13\}" usr/share/petname/*txt && fail || succeed
