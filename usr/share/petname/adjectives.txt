@@ -194,7 +194,6 @@ cogent
 coherent
 collected
 colossal
-comely
 comforting
 comic
 comical
@@ -464,7 +463,6 @@ frank
 fraternal
 free
 fresh
-friendly
 frisky
 fruitful
 fulfilled
@@ -489,7 +487,6 @@ glistening
 glorious
 glowing
 godlike
-godly
 golden
 good
 gorgeous
@@ -526,7 +523,6 @@ healthful
 healthy
 heartfelt
 hearty
-heavenly
 helped
 helpful
 helping
@@ -543,7 +539,6 @@ hopeful
 hospitable
 hot
 huge
-human
 humane
 humble
 humorous
@@ -598,7 +593,6 @@ jesting
 jocular
 joint
 jointed
-jolly
 jovial
 joyful
 joyous
@@ -610,7 +604,6 @@ justified
 keen
 key
 kind
-kindly
 kindred
 knowing
 known
@@ -636,18 +629,15 @@ liberating
 light
 lightened
 liked
-likely
 limber
 literary
 literate
 lithe
 live
-lively
 living
 logical
 lovable
 loved
-lovely
 loving
 loyal
 lucid
@@ -668,14 +658,12 @@ major
 malleable
 manageable
 manifest
-manly
 many
 marketable
 masculine
 massive
 master
 masterful
-masterly
 matchless
 maternal
 mature
@@ -705,7 +693,6 @@ momentous
 monumental
 moral
 more
-motherly
 motivated
 motivating
 moved
@@ -753,7 +740,6 @@ optimal
 optimistic
 optimum
 opulent
-orderly
 organic
 oriented
 original
@@ -996,7 +982,6 @@ snug
 soaring
 sociable
 social
-sole
 solid
 soothed
 soothing
@@ -1021,7 +1006,6 @@ stable
 staid
 stalwart
 star
-stately
 staunch
 steadfast
 steady
@@ -1072,7 +1056,6 @@ swaying
 sweeping
 sweet
 swell
-swift
 systematic
 tactful
 talented
@@ -1096,7 +1079,6 @@ tickled
 tidy
 tight
 timeless
-timely
 tireless
 titillated
 together
@@ -1211,7 +1193,6 @@ wonderful
 wondrous
 workable
 working
-worldly
 worthwhile
 worthy
 youthful

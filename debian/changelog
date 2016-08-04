@@ -11,6 +11,9 @@ petname (2.1) unreleased; urgency=medium
     - add more tests
     - remove adverbs that aren't adverbs
     - remove adjectives that aren't adjectives
+  * debian/tests/check_words, usr/share/petname/adjectives.txt:
+    - add a test to detect repeated words
+    - remove some repeated words
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 03 Aug 2016 22:56:49 -0500
 

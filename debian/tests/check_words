@@ -18,6 +18,11 @@ fail() {
 echo "TEST: Ensure we have no blacklisted words or derivatives..."
 grep -xi -Ff debian/blacklist.txt usr/share/petname/*txt && fail || succeed
 
+echo "TEST: Ensure we have no repeated words..."
+grep -xi -Ff usr/share/petname/adjectives.txt usr/share/petname/adverbs.txt && fail || succeed
+grep -xi -Ff usr/share/petname/adjectives.txt usr/share/petname/names.txt && fail || succeed
+grep -xi -Ff usr/share/petname/names.txt usr/share/petname/adverbs.txt && fail || succeed
+
 echo "TEST: Ensure that we only have a-z in our words; no funny characters; no upper case..."
 grep "[^abcdefghijklmnopqrstuvwxyz]" usr/share/petname/*txt && fail || succeed
 
