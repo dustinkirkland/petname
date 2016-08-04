@@ -1,4 +1,4 @@
-petname (2.0) unreleased; urgency=medium
+petname (2.0-0ubuntu1) yakkety; urgency=medium
 
   * README.md, usr/bin/petname, usr/share/man/man1/petname.1:
     - add support for an option -l|--letters parameter,
@@ -48,7 +48,7 @@ petname (2.0) unreleased; urgency=medium
     usr/share/man/man1/petname.1, usr/share/petname/names.txt:
     - update some docs, remove a word
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 30 Oct 2015 10:15:09 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 03 Aug 2016 22:56:44 -0500
 
 petname (1.9-0ubuntu1) xenial; urgency=medium
 
