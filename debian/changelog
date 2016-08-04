@@ -18,6 +18,13 @@ petname (2.1) unreleased; urgency=medium
     usr/share/petname/names.txt:
     - simplify animal names further
     - add dictionary tests to ensure animal names are nouns and common
+  * debian/blacklist.txt, debian/tests/check_words,
+    usr/share/petname/adjectives.txt, usr/share/petname/adverbs.txt,
+    usr/share/petname/names.txt:
+    - add a couple to the blacklist
+    - create a whitelist (for okay words not in the dictionary)
+    - move some tests to run sooner
+    - add some adverbs
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 03 Aug 2016 22:56:49 -0500
 

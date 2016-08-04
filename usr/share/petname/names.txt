@@ -141,7 +141,6 @@ caracara
 cardinal
 caribou
 carp
-carps
 cassowary
 cat
 catbird
