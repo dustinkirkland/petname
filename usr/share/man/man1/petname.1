@@ -3,14 +3,15 @@
 petname \- utility to generate "pet names", consisting of a random combination of adverbs, an adjective, and a proper name
 
 .SH SYNOPSIS
-\fBpetname\fP [-w|--words INT] [-l|--letters INT] [-s|--separator STR]
+\fBpetname\fP [-w|--words INT] [-l|--letters INT] [-s|--separator STR] [-u|--ubuntu]
 
 .SH OPTIONS
 
     -w|--words            number of words in the name, default is 2
-    -l|--letters          maximum number of letters in each word, default is 6
+    -l|--letters          maximum number of letters in each word, default is unlimited
     -s|--separator        string used to separate name words, default is '-'
     -d|--dir              directory containing adverbs.txt, adjectives.txt, names.txt, default is \fI/usr/share/petname/\fP
+    -u|--ubuntu           generate ubuntu-style names, alliteration of first character of each word
 
 .SH DESCRIPTION
 
@@ -43,6 +44,9 @@ As such, PetName tries to follow the tenets of Zooko's triangle.  Names are:
 
     $ petname --separator "" --words 3
     adeptlystaticNicole
+
+    $ petname -u
+    amazed-asp
 
 .SH AUTHOR
 This manpage and the utility were written by Dustin Kirkland <dustin.kirkland@gmail.com> for Ubuntu systems (but may be used by others).  Permission is granted to copy, distribute and/or modify this document and the utility under the terms of the Apache2 License.

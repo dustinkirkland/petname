@@ -44,6 +44,9 @@ petname (1.10) unreleased; urgency=medium
     usr/share/petname/adjectives.txt, usr/share/petname/names.txt:
     - change from people names to animal names, inspired by ubuntu
     - add tests
+  * usr/bin/petname, usr/share/man/man1/petname.1:
+    - add an "ubuntu mode", which chooses words that start with the same
+      letter
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 30 Oct 2015 10:15:09 -0500
 

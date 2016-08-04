@@ -28,7 +28,8 @@ PKG=petname
 DIR="/usr/share/$PKG"
 WORDS=2
 SEPARATOR="-"
-LETTERS=8
+LETTERS=99
+UBUNTU=
 while [ ! -z "$1" ]; do
 	case "${1}" in
 		-w|--words)
@@ -49,6 +50,10 @@ while [ ! -z "$1" ]; do
 		-d|--dir)
 			DIR="$2"
 			shift 2
+		;;
+		-u|--ubuntu)
+			UBUNTU=$(cat $DIR/*.txt | shuf -n 1 | head -c 1)
+			shift
 		;;
 		--adverb)
 			ADVERB=1
@@ -71,15 +76,15 @@ done
 [ $LETTERS -lt 3 ] && LETTERS=3
 
 Adverb() {
-	grep "^.\{0,$LETTERS\}$" $DIR/adverbs.txt | shuf -n 1
+	grep "^$UBUNTU.\{0,$LETTERS\}$" $DIR/adverbs.txt | shuf -n 1
 }
 
 Adjective() {
-	grep "^.\{0,$LETTERS\}$" $DIR/adjectives.txt | shuf -n 1
+	grep "^$UBUNTU.\{0,$LETTERS\}$" $DIR/adjectives.txt | shuf -n 1
 }
 
 Name() {
-	grep "^.\{0,$LETTERS\}$" $DIR/names.txt | shuf -n 1
+	grep "^$UBUNTU.\{0,$LETTERS\}$" $DIR/names.txt | shuf -n 1
 }
 
 Generate() {
@@ -101,17 +106,18 @@ Generate() {
 		printf "%s%s%s\n" "$adj" "$SEPARATOR" "$name"
 		return
 	else
+		adj="$(Adjective)"
+		name="$(Name)"
 		count=$((WORDS-2))
 		adverbs=
 		for i in $(seq 1 $count); do
-			if [ -z "$adverbs" ]; then
-				adverbs=$(printf "%s%s" "$(Adverb)" "$SEPARATOR")
+			adv="$(Adverb)"
+			if [ -z "$ADVERBs" ]; then
+				adverbs=$(printf "%s%s" "$adv" "$SEPARATOR")
 			else
-				adverbs=$(printf "%s%s%s" "$adverbs" "$(Adverb)" "$SEPARATOR")
+				adverbs=$(printf "%s%s%s" "$adverbs" "$adv" "$SEPARATOR")
 			fi
 		done
-		adj="$(Adjective)"
-		name="$(Name)"
 		printf "%s%s%s%s\n" "$adverbs" "$adj" "$SEPARATOR" "$name"
 	fi
 }
