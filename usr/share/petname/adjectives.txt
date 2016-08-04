@@ -14,7 +14,6 @@ accredited
 accurate
 accustomed
 ace
-aces
 achieving
 acquainted
 active
@@ -74,7 +73,6 @@ approving
 apt
 ardent
 aroused
-arousing
 arresting
 arriving
 artful
@@ -178,7 +176,6 @@ childlike
 chipper
 chivalrous
 choice
-chosen
 chummy
 civic
 civil
@@ -242,7 +239,6 @@ crack
 cranked
 creamy
 creative
-credential
 credible
 creditable
 credited
@@ -287,7 +283,6 @@ deluxe
 democratic
 dependable
 deserving
-designer
 desirable
 desired
 desirous
@@ -313,7 +308,6 @@ diverting
 divine
 dominant
 doting
-doubtless
 dreamy
 driven
 driving
@@ -321,7 +315,6 @@ droll
 durable
 dutiful
 dynamic
-dynamite
 eager
 earnest
 earthy
@@ -528,7 +521,6 @@ harmless
 harmonic
 harmonious
 haunting
-head
 healing
 healthful
 healthy
@@ -671,7 +663,6 @@ magical
 magnetic
 maiden
 main
-mainstream
 majestic
 major
 malleable
@@ -747,7 +738,6 @@ noteworthy
 nourished
 nourishing
 novel
-now
 nurtured
 nurturing
 objective
@@ -783,7 +773,6 @@ paternal
 patient
 peaceable
 peaceful
-peak
 peerless
 perceptive
 perennial
@@ -816,7 +805,6 @@ pleasing
 plentiful
 pliable
 plucky
-plum
 poetic
 poignant
 poised
@@ -850,7 +838,6 @@ primary
 prime
 primed
 principal
-priority
 privileged
 pro
 probable
@@ -904,7 +891,6 @@ reasonable
 reassuring
 receiving
 receptive
-recipient
 reciprocal
 refined
 refreshed
@@ -1007,7 +993,6 @@ smitten
 smooth
 snappy
 snug
-snugly
 soaring
 sociable
 social
@@ -1094,7 +1079,6 @@ talented
 tangible
 tasteful
 tasty
-taught
 teaching
 teeming
 temperate
@@ -1103,7 +1087,6 @@ tenacious
 tender
 terrific
 thankful
-there
 thorough
 thoughtful
 thrilled
@@ -1116,7 +1099,6 @@ timeless
 timely
 tireless
 titillated
-today
 together
 tolerant
 tonic
@@ -1173,7 +1155,6 @@ upright
 upstanding
 uptown
 upward
-upwardly
 urbane
 usable
 useful
@@ -1205,7 +1186,6 @@ vital
 vivacious
 vivid
 vocal
-vogue
 volcanic
 voluptuous
 wanted

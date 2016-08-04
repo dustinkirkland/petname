@@ -6,6 +6,11 @@ petname (2.1) unreleased; urgency=medium
       entry to ensure names.txt consists only of animals
   * usr/share/petname/adverbs.txt, usr/share/petname/names.txt:
     - remove any adverbs/adjectives which are not recognized by ispell
+  * debian/blacklist.txt, debian/tests/check_words,
+    usr/share/petname/adjectives.txt, usr/share/petname/adverbs.txt:
+    - add more tests
+    - remove adverbs that aren't adverbs
+    - remove adjectives that aren't adjectives
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 03 Aug 2016 22:56:49 -0500
 
