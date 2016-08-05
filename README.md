@@ -74,7 +74,7 @@ CODE []()
 
 Besides this shell utility, there are also native libraries: python-petname, python3-petname, and golang-petname. Here are some programmatic examples in code:
 
-\#\# Golang Examples
+**Golang Examples**
 ’’’golang
 package main
 
@@ -95,8 +95,7 @@ fmt.Println(petname.Generate(\*words, \*separator))
 }
 ’’’
 
-\#\# Python Examples
-
+**Python Examples**
 See: https://pypi.golang.org/pypi/petname
 
 $ pip install petname

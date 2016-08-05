@@ -47,7 +47,7 @@ petname (2.1) unreleased; urgency=medium
     - run our tests against each
   * README.md, usr/share/man/man1/petname.1:
     - generate our README.md from our manpage
-  * debian/control, debian/rules, README.md:
+  * debian/control, debian/rules, README.md, usr/share/man/man1/petname.1:
     - add our new doc build deps
     - reformat for github
 
