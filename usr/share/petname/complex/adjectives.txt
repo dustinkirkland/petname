@@ -2894,7 +2894,6 @@ butlerlike
 butyraceous
 butyric
 butyryl
-buxom
 buyable
 buzzardlike
 byssaceous
@@ -6770,7 +6769,6 @@ eradicable
 eradicative
 erasable
 erectable
-erectile
 erective
 eremitic
 eremophilous
@@ -9712,12 +9710,9 @@ hormonal
 hormonic
 hornblendic
 horned
-hornier
-horniest
 hornish
 hornless
 hornlike
-horny
 horologic
 horopteric
 horoscopic

@@ -37,6 +37,14 @@ petname (2.1) unreleased; urgency=medium
     usr/share/petname/easy/names.txt:
     - enable the test to run against multiple directories
     - create an 'easy' set of words
+  * debian/rules, debian/tests/check_words, usr/bin/petname,
+    usr/share/man/man1/petname.1,
+    usr/share/petname/complex/adjectives.txt,
+    usr/share/petname/complex/adverbs.txt,
+    usr/share/petname/complex/names.txt:
+    - add a new -c|--complexity parameter, to support easy, standard, and
+      complex words
+    - run our tests against each
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 03 Aug 2016 22:56:49 -0500
 

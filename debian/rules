@@ -6,5 +6,7 @@ LC_ALL=C
 	dh $@
 
 override_dh_auto_test:
-	./debian/tests/check_words
+	./debian/tests/check_words usr/share/petname/
+	./debian/tests/check_words usr/share/petname/easy/
+	./debian/tests/check_words usr/share/petname/complex/
 	dh_auto_test
