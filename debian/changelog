@@ -45,6 +45,8 @@ petname (2.1) unreleased; urgency=medium
     - add a new -c|--complexity parameter, to support easy, standard, and
       complex words
     - run our tests against each
+  * README.md, usr/share/man/man1/petname.1:
+    - generate our README.md from our manpage
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 03 Aug 2016 22:56:49 -0500
 
