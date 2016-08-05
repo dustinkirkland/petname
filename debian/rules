@@ -9,4 +9,5 @@ override_dh_auto_test:
 	./debian/tests/check_words usr/share/petname/
 	./debian/tests/check_words usr/share/petname/easy/
 	./debian/tests/check_words usr/share/petname/complex/
+	groff -mandoc -Thtml usr/share/man/man1/petname.1 | pandoc --from=html --to=markdown > README.md
 	dh_auto_test

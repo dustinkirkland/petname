@@ -2,7 +2,7 @@ Source: petname
 Section: admin
 Priority: optional
 Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
-Build-Depends: debhelper (>= 8), dict, liblingua-en-syllable-perl, dictd, dict-gcide, dict-wn, scowl, ispell
+Build-Depends: debhelper (>= 8), dict, liblingua-en-syllable-perl, dictd, dict-gcide, dict-wn, scowl, ispell, groff, pandoc
 Standards-Version: 3.9.7
 Homepage: http://launchpad.net/petname
 Vcs-Browser: http://bazaar.launchpad.net/~petname/petname/trunk/files
