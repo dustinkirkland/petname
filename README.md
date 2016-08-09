@@ -23,13 +23,13 @@
 
 ##OPTIONS []()
 ------------
-```
--w|--words number of words in the name, default is 2
--l|--letters maximum number of letters in each word, default is unlimited
--s|--separator string used to separate name words, default is ’-’
--d|--dir directory containing adverbs.txt, adjectives.txt, names.txt, default is */usr/share/petname/*
--c|--complexity \[0, 1, 2\]; 0 = easy words, 1 = standard words, 2 = complex words, default=1
--u|--ubuntu generate ubuntu-style names, alliteration of first character of each word
+
+- -w|--words number of words in the name, default is 2
+- -l|--letters maximum number of letters in each word, default is unlimited
+- -s|--separator string used to separate name words, default is ’-’
+- -d|--dir directory containing adverbs.txt, adjectives.txt, names.txt, default is */usr/share/petname/*
+- -c|--complexity \[0, 1, 2\]; 0 = easy words, 1 = standard words, 2 = complex words, default=1
+- -u|--ubuntu generate ubuntu-style names, alliteration of first character of each word
 ```
 
 ##DESCRIPTION []()
@@ -78,23 +78,23 @@ massive-colt
 Besides this shell utility, there are also native libraries: python-petname, python3-petname, and golang-petname. Here are some programmatic examples in code:
 
 **Golang Example**
-```golang
+```go
 package main
 
 import (
-"flag"
-"fmt"
-"github.com/dustinkirkland/golang-petname"
+	"flag"
+	"fmt"
+	"github.com/dustinkirkland/golang-petname"
 )
 
 var (
-words = flag.Int("words", 2, "The number of words in the pet name")
-separator = flag.String("separator", "-", "The separator between words in the pet name")
+	words = flag.Int("words", 2, "The number of words in the pet name")
+	separator = flag.String("separator", "-", "The separator between words in the pet name")
 )
 
 func main() {
-flag.Parse()
-fmt.Println(petname.Generate(\*words, \*separator))
+	flag.Parse()
+	fmt.Println(petname.Generate(\*words, \*separator))
 }
 ```
 
@@ -105,7 +105,7 @@ $ pip install petname
 $ sudo apt-get install golang-petname
 
 ```python
-\#!/usr/bin/python
+#!/usr/bin/python
 import argparse
 import petname
 
