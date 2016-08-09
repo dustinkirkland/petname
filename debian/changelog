@@ -1,4 +1,4 @@
-petname (2.4) unreleased; urgency=medium
+petname (2.4-0ubuntu1) yakkety; urgency=medium
 
   * === added directory usr/share/petname/medium, === added symlink
     usr/share/petname/adjectives.txt, === added symlink
@@ -19,7 +19,7 @@ petname (2.4) unreleased; urgency=medium
   * debian/rules, debian/tests/check_words:
     - test updates
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 08 Aug 2016 22:13:38 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 09 Aug 2016 14:03:12 -0500
 
 petname (2.3-0ubuntu1) yakkety; urgency=medium
 
