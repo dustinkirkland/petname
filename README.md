@@ -1,13 +1,5 @@
 #petname
 
-[NAME](#NAME)
-[SYNOPSIS](#SYNOPSIS)
-[OPTIONS](#OPTIONS)
-[DESCRIPTION](#DESCRIPTION)
-[EXAMPLES](#EXAMPLES)
-[CODE](#CODE)
-[AUTHOR](#AUTHOR)
-
 ##NAME []()
 
 **petname** − a utility to generate "pet names", consisting of a random combination of adverbs, an adjective, and an animal name
