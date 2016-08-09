@@ -23,14 +23,12 @@
 
 ##OPTIONS []()
 ------------
-
 - -w|--words number of words in the name, default is 2
 - -l|--letters maximum number of letters in each word, default is unlimited
 - -s|--separator string used to separate name words, default is ’-’
 - -d|--dir directory containing adverbs.txt, adjectives.txt, names.txt, default is */usr/share/petname/*
 - -c|--complexity \[0, 1, 2\]; 0 = easy words, 1 = standard words, 2 = complex words, default=1
 - -u|--ubuntu generate ubuntu-style names, alliteration of first character of each word
-```
 
 ##DESCRIPTION []()
 ----------------
@@ -78,7 +76,7 @@ massive-colt
 Besides this shell utility, there are also native libraries: python-petname, python3-petname, and golang-petname. Here are some programmatic examples in code:
 
 **Golang Example**
-```go
+```golang
 package main
 
 import (
@@ -110,8 +108,8 @@ import argparse
 import petname
 
 parser = argparse.ArgumentParser(description=’Generate human readable random names’)
-parser.add\_argument(’-w’, ’--words’, help=’Number of words in name, default=2’, default=2)
-parser.add\_argument(’-s’, ’--separator’, help=’Separator between words, default="-"’, default="-")
+parser.add_argument(’-w’, ’--words’, help=’Number of words in name, default=2’, default=2)
+parser.add_argument(’-s’, ’--separator’, help=’Separator between words, default="-"’, default="-")
 parser.options = parser.parse\_args()
 
 print petname.Generate(int(parser.options.words), parser.options.separator)
