@@ -1,4 +1,4 @@
-petname (2.1) unreleased; urgency=medium
+petname (2.1-0ubuntu1) yakkety; urgency=medium
 
   * debian/blacklist.txt, debian/tests/check_words,
     usr/share/petname/names.txt:
@@ -53,7 +53,7 @@ petname (2.1) unreleased; urgency=medium
     - manually mangle our markdown readme
   * debian/control:
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 03 Aug 2016 22:56:49 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 08 Aug 2016 21:21:54 -0500
 
 petname (2.0-0ubuntu1) yakkety; urgency=medium
 
