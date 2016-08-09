@@ -1,3 +1,9 @@
+petname (2.5) unreleased; urgency=medium
+
+  * UNRELEASED
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 09 Aug 2016 14:03:14 -0500
+
 petname (2.4-0ubuntu1) yakkety; urgency=medium
 
   * === added directory usr/share/petname/medium, === added symlink
