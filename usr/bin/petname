@@ -29,7 +29,7 @@ DIR="/usr/share/$PKG"
 WORDS=2
 SEPARATOR="-"
 LETTERS=99
-COMPLEXITY=1
+COMPLEXITY=0
 UBUNTU=
 while [ ! -z "$1" ]; do
 	case "${1}" in
@@ -82,13 +82,13 @@ done
 
 case $COMPLEXITY in
 	0)
-		DIR="/usr/share/$PKG/easy"
+		DIR="/usr/share/$PKG/small"
 	;;
 	1)
-		DIR="/usr/share/$PKG"
+		DIR="/usr/share/$PKG/medium"
 	;;
 	2)
-		DIR="/usr/share/$PKG/complex"
+		DIR="/usr/share/$PKG/large"
 	;;
 esac
 

@@ -1,6 +1,21 @@
 petname (2.4) unreleased; urgency=medium
 
-  * UNRELEASED
+  * === added directory usr/share/petname/medium, === added symlink
+    usr/share/petname/adjectives.txt, === added symlink
+    usr/share/petname/adverbs.txt, === added symlink
+    usr/share/petname/names.txt, debian/rules, debian/tests/check_words,
+    === renamed directory usr/share/petname/complex =>
+    usr/share/petname/large, === renamed directory
+    usr/share/petname/easy => usr/share/petname/small, === target is
+    usmall/adjectives.txt, === target is usmall/adverbs.txt, === target
+    is usmall/names.txt, usr/bin/petname, usr/share/man/man1/petname.1,
+    usr/share/petname/adjectives.txt =>
+    usr/share/petname/medium/adjectives.txt,
+    usr/share/petname/adverbs.txt =>
+    usr/share/petname/medium/adverbs.txt, usr/share/petname/names.txt =>
+    usr/share/petname/medium/names.txt:
+    - default to our simplest word-base, which gives ~205K adjective-animal
+      combinations, which are memorable, by default
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 08 Aug 2016 22:13:38 -0500
 

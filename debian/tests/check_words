@@ -23,8 +23,8 @@ echo "TEST: Ensure that we only have a-z in our words; no funny characters; no u
 grep "[^abcdefghijklmnopqrstuvwxyz]" $dir/*txt && fail || succeed
 
 case $dir in
-	*/complex/|*/complex)
-		# Done with checks against complex words
+	*/large/|*/large)
+		# Done with checks against our large/complex wordlist
 		exit 0
 	;;
 esac
