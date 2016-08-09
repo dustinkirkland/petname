@@ -1,6 +1,7 @@
 petname (2.3) unreleased; urgency=medium
 
-  * UNRELEASED
+  * debian/tests/check_words:
+    - bypass the dict(1) tests when building in the buildd
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 08 Aug 2016 21:37:07 -0500
 

@@ -60,6 +60,33 @@ for word in $adverbs $adjectives; do
 done
 [ "$fail" = "1" ] && fail || succeed
 
+echo "TEST: Ensure all adverbs are common in the SCOWL database [$dir]..."
+for word in $adverbs; do
+	if grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-5]?; then
+		continue
+	else
+		echo $word
+		fail=1
+	fi
+done
+[ "$fail" = "1" ] && fail || succeed
+
+echo "TEST: Ensure all adjectives are common in the SCOWL database [$dir]..."
+for word in $adjectives; do
+	if grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-5]?; then
+		continue
+	else
+		echo $word
+		fail=1
+	fi
+done
+[ "$fail" = "1" ] && fail || succeed
+
+if ! pgrep dictd; then
+	echo "Skipping dict(1) tests..."
+	exit 0
+fi
+
 echo "TEST: Ensure all adverbs are actually adverbs in the dict(1) dictionary [$dir]..."
 for word in $adverbs; do
 	if dict -h localhost "$word" 2>&1 | egrep -qs "^      adv | adv\."; then
@@ -76,28 +103,6 @@ for word in $adjectives; do
 	if dict -h localhost "$word" 2>&1 | egrep -qs "^      adj | adj\."; then
 		continue
 	elif echo "$word" | egrep -qs "ing$|ed$"; then
-		continue
-	else
-		echo $word
-		fail=1
-	fi
-done
-[ "$fail" = "1" ] && fail || succeed
-
-echo "TEST: Ensure all adverbs are common in the SCOWL database [$dir]..."
-for word in $adverbs; do
-	if grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-5]?; then
-		continue
-	else
-		echo $word
-		fail=1
-	fi
-done
-[ "$fail" = "1" ] && fail || succeed
-
-echo "TEST: Ensure all adjectives are common in the SCOWL database [$dir]..."
-for word in $adjectives; do
-	if grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-5]?; then
 		continue
 	else
 		echo $word
