@@ -1,18 +1,19 @@
 .TH petname 1 "15 December 2014" petname "petname"
 .SH NAME
-petname \- utility to generate "pet names", consisting of a random combination of adverbs, an adjective, and an animal name
+\fBpetname\fP \- a utility to generate "pet names", consisting of a random combination of adverbs, an adjective, and an animal name
 
 .SH SYNOPSIS
 \fBpetname\fP [-w|--words INT] [-l|--letters INT] [-s|--separator STR] [-d|--dir STR] [-c|--complexity INT] [-u|--ubuntu]
 
 .SH OPTIONS
-
+.nf
     -w|--words            number of words in the name, default is 2
     -l|--letters          maximum number of letters in each word, default is unlimited
     -s|--separator        string used to separate name words, default is '-'
     -d|--dir              directory containing adverbs.txt, adjectives.txt, names.txt, default is \fI/usr/share/petname/\fP
     -c|--complexity       [0, 1, 2]; 0 = easy words, 1 = standard words, 2 = complex words, default=1
     -u|--ubuntu           generate ubuntu-style names, alliteration of first character of each word
+.fi
 
 .SH DESCRIPTION
 
@@ -25,7 +26,7 @@ As such, PetName tries to follow the tenets of Zooko's triangle.  Names are:
  - secure
 
 .SH EXAMPLES
-
+.nf
     $ petname
     wiggly-yellowtail
 
@@ -49,51 +50,55 @@ As such, PetName tries to follow the tenets of Zooko's triangle.  Names are:
 
     $ petname --complexity 0
     massive-colt
+.fi
 
 .SH CODE
 
 Besides this shell utility, there are also native libraries: python-petname, python3-petname, and golang-petname.  Here are some programmatic examples in code:
 
 
-.SS Golang Examples
-    ```golang
-    package main
+.SS Golang Example
+\&
+.nf
+package main
 
-    import (
-            "flag"
-            "fmt"
-            "github.com/dustinkirkland/golang-petname"
-    )
+import (
+    "flag"
+    "fmt"
+    "github.com/dustinkirkland/golang-petname"
+)
 
-    var (
-            words = flag.Int("words", 2, "The number of words in the pet name")
-            separator = flag.String("separator", "-", "The separator between words in the pet name")
-    )
+var (
+    words = flag.Int("words", 2, "The number of words in the pet name")
+    separator = flag.String("separator", "-", "The separator between words in the pet name")
+)
 
-    func main() {
-            flag.Parse()
-            fmt.Println(petname.Generate(*words, *separator))
-    }
-    ```
+func main() {
+    flag.Parse()
+    fmt.Println(petname.Generate(*words, *separator))
+}
+.fi
 
-.SS Python Examples
+.SS Python Example
 
     See: https://pypi.golang.org/pypi/petname
 
         $ pip install petname
         $ sudo apt-get install golang-petname
 
-    ```python
-    import argparse
-    import petname
+\&
+.nf
+#!/usr/bin/python
+import argparse
+import petname
 
-    parser = argparse.ArgumentParser(description='Generate human readable random names')
-    parser.add_argument('-w', '--words', help='Number of words in name, default=2', default=2)
-    parser.add_argument('-s', '--separator', help='Separator between words, default="-"', default="-")
-    parser.options = parser.parse_args()
+parser = argparse.ArgumentParser(description='Generate human readable random names')
+parser.add_argument('-w', '--words', help='Number of words in name, default=2', default=2)
+parser.add_argument('-s', '--separator', help='Separator between words, default="-"', default="-")
+parser.options = parser.parse_args()
 
-    print petname.Generate(int(parser.options.words), parser.options.separator)
-    ```
+print petname.Generate(int(parser.options.words), parser.options.separator)
+.fi
 
 
 .SH AUTHOR

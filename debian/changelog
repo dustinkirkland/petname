@@ -50,6 +50,8 @@ petname (2.1) unreleased; urgency=medium
   * debian/control, debian/rules, README.md, usr/share/man/man1/petname.1:
     - add our new doc build deps
     - reformat for github
+  * README.md, usr/share/man/man1/petname.1:
+    - manually mangle our markdown readme
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 03 Aug 2016 22:56:49 -0500
 

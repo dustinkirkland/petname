@@ -1,4 +1,4 @@
-petname
+#petname
 =======
 
 [NAME](#NAME)
@@ -11,27 +11,28 @@ petname
 
 ------------------------------------------------------------------------
 
-NAME []()
+##NAME []()
 ---------
 
-petname − utility to generate "pet names", consisting of a random combination of adverbs, an adjective, and an animal name
+**petname** − a utility to generate "pet names", consisting of a random combination of adverbs, an adjective, and an animal name
 
-SYNOPSIS []()
+##SYNOPSIS []()
 -------------
 
 **petname** \[-w|--words INT\] \[-l|--letters INT\] \[-s|--separator STR\] \[-d|--dir STR\] \[-c|--complexity INT\] \[-u|--ubuntu\]
 
-OPTIONS []()
+##OPTIONS []()
 ------------
-
+```
 -w|--words number of words in the name, default is 2
 -l|--letters maximum number of letters in each word, default is unlimited
 -s|--separator string used to separate name words, default is ’-’
 -d|--dir directory containing adverbs.txt, adjectives.txt, names.txt, default is */usr/share/petname/*
 -c|--complexity \[0, 1, 2\]; 0 = easy words, 1 = standard words, 2 = complex words, default=1
 -u|--ubuntu generate ubuntu-style names, alliteration of first character of each word
+```
 
-DESCRIPTION []()
+##DESCRIPTION []()
 ----------------
 
 This utility will generate "pet names", consisting of a random combination of an adverb, adjective, and an animal name. These are useful for unique hostnames or container names, for instance.
@@ -42,9 +43,10 @@ As such, PetName tries to follow the tenets of Zooko’s triangle. Names are:
 - decentralized
 - secure
 
-EXAMPLES []()
+##EXAMPLES []()
 -------------
 
+```
 $ petname
 wiggly-yellowtail
 
@@ -68,14 +70,15 @@ amazed-asp
 
 $ petname --complexity 0
 massive-colt
+```
 
-CODE []()
+##CODE []()
 ---------
 
 Besides this shell utility, there are also native libraries: python-petname, python3-petname, and golang-petname. Here are some programmatic examples in code:
 
-**Golang Examples**
-’’’golang
+**Golang Example**
+```golang
 package main
 
 import (
@@ -93,15 +96,16 @@ func main() {
 flag.Parse()
 fmt.Println(petname.Generate(\*words, \*separator))
 }
-’’’
+```
 
-**Python Examples**
+**Python Example**
 See: https://pypi.golang.org/pypi/petname
 
 $ pip install petname
 $ sudo apt-get install golang-petname
 
-’’’python
+```python
+\#!/usr/bin/python
 import argparse
 import petname
 
@@ -111,9 +115,9 @@ parser.add\_argument(’-s’, ’--separator’, help=’Separator between word
 parser.options = parser.parse\_args()
 
 print petname.Generate(int(parser.options.words), parser.options.separator)
-’’’
+```
 
-AUTHOR []()
+##AUTHOR []()
 -----------
 
 This manpage and the utility were written by Dustin Kirkland &lt;dustin.kirkland@gmail.com&gt; for Ubuntu systems (but may be used by others). Permission is granted to copy, distribute and/or modify this document and the utility under the terms of the Apache2 License.
