@@ -1,9 +1,9 @@
-petname (2.2) unreleased; urgency=medium
+petname (2.2-0ubuntu1) yakkety; urgency=medium
 
   * debian/control:
     - add a couple of ispell build-deps, to fix broken build
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 08 Aug 2016 21:21:56 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 08 Aug 2016 21:37:06 -0500
 
 petname (2.1-0ubuntu1) yakkety; urgency=medium
 
