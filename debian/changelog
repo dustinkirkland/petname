@@ -1,6 +1,7 @@
 petname (2.2) unreleased; urgency=medium
 
-  * UNRELEASED
+  * debian/control:
+    - add a couple of ispell build-deps, to fix broken build
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 08 Aug 2016 21:21:56 -0500
 
