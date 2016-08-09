@@ -16,6 +16,8 @@ petname (2.4) unreleased; urgency=medium
     usr/share/petname/medium/names.txt:
     - default to our simplest word-base, which gives ~205K adjective-animal
       combinations, which are memorable, by default
+  * debian/rules, debian/tests/check_words:
+    - test updates
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 08 Aug 2016 22:13:38 -0500
 

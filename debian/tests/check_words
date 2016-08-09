@@ -3,6 +3,8 @@
 set -e
 fail=0
 [ -n "$1" ] && dir="$1" || dir="usr/share/petname"
+[ -n "$2" ] && chars="$2" || chars=12
+[ -n "$3" ] && syllables="$3" || syllables
 adjectives=$(cat $dir/adjectives.txt)
 adverbs=$(cat $dir/adverbs.txt)
 names=$(cat $dir/names.txt)
@@ -16,23 +18,26 @@ fail() {
 	exit 1
 }
 
-echo "TEST: Ensure we have no blacklisted words or derivatives [$dir]..."
+echo "TEST: Ensure that we have no blacklisted words or derivatives [$dir]..."
 grep -xi -Ff debian/blacklist.txt $dir/*txt && fail || succeed
 
 echo "TEST: Ensure that we only have a-z in our words; no funny characters; no upper case [$dir]..."
 grep "[^abcdefghijklmnopqrstuvwxyz]" $dir/*txt && fail || succeed
 
-case $dir in
-	*/large/|*/large)
-		# Done with checks against our large/complex wordlist
-		exit 0
-	;;
-esac
+echo "TEST: Ensure that we have no adjectives more than $chars characters [$dir]..."
+grep "[a-z]\{$((chars+1))\}" $dir/adjectives.txt && fail || succeed
 
-echo "TEST: Ensure that we have no words more than 12 characters [$dir]..."
-grep "[a-z]\{13\}" $dir/*txt && fail || succeed
+echo "TEST: Ensure that we have no names more than $chars characters [$dir]..."
+grep "[a-z]\{$((chars+1))\}" $dir/names.txt && fail || succeed
 
-echo "TEST: Ensure we have no repeated words [$dir]..."
+echo "TEST: Ensure that we have no adverbs more than $((chars+2)) characters [$dir]..."
+grep "[a-z]\{$((chars+3))\}" $dir/names.txt && fail || succeed
+
+# Done with checks against our large/complex wordlist
+[ $chars -gt 40 ] && exit 0
+[ $syllables -gt 20 ] && exit 0
+
+echo "TEST: Ensure that we have no repeated words [$dir]..."
 grep -xi -Ff $dir/adjectives.txt $dir/adverbs.txt && fail || succeed
 grep -xi -Ff $dir/adjectives.txt $dir/names.txt && fail || succeed
 grep -xi -Ff $dir/names.txt $dir/adverbs.txt && fail || succeed
@@ -40,8 +45,26 @@ grep -xi -Ff $dir/names.txt $dir/adverbs.txt && fail || succeed
 echo "TEST: Ensure that all adverbs end in -ly [$dir]..."
 grep -v "ly$" $dir/adverbs.txt && fail || succeed
 
-echo "TEST: Ensure that we have no words more than 4 syllables [$dir]..."
-output=$(cat $dir/*txt | perl -e 'use strict; use Lingua::EN::Syllable; while(<>) { chomp; print $_ . "\n" if syllable($_) > 4; };')
+echo "TEST: Ensure that we have no adjectives more than $syllables syllables [$dir]..."
+output=$(cat $dir/adjectives.txt | perl -e "use strict; use Lingua::EN::Syllable; while(<>) { chomp; print \$_ . '\n' if syllable(\$_) > $syllables; };")
+if [ -n "$output" ]; then
+	echo "$output"
+	fail
+else
+	succeed
+fi
+
+echo "TEST: Ensure that we have no names more than $syllables syllables [$dir]..."
+output=$(cat $dir/names.txt | perl -e "use strict; use Lingua::EN::Syllable; while(<>) { chomp; print \$_ . '\n' if syllable(\$_) > $syllables; };")
+if [ -n "$output" ]; then
+	echo "$output"
+	fail
+else
+	succeed
+fi
+
+echo "TEST: Ensure that we have no adverbs more than $((syllables+1)) syllables [$dir]..."
+output=$(cat $dir/adverbs.txt | perl -e "use strict; use Lingua::EN::Syllable; while(<>) { chomp; print \$_ . '\n' if syllable(\$_) > $((syllables+1)); };")
 if [ -n "$output" ]; then
 	echo "$output"
 	fail
@@ -82,7 +105,7 @@ for word in $adjectives; do
 done
 [ "$fail" = "1" ] && fail || succeed
 
-if ! pgrep dictd; then
+if ! pgrep dictd >/dev/null 2>&1; then
 	echo "Skipping dict(1) tests..."
 	exit 0
 fi
