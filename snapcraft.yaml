@@ -1,0 +1,23 @@
+name: petname
+version: "2.5"
+summary: "generate pronouncable, perhaps even memorable, pet names"
+description: |
+ This utility will generate pet names, consisting of a random
+ combination of an adverb, adjective, and an animal name.  These are
+ useful for unique hostnames, VMs, or containers, for instance.
+architectures:
+  - all
+confinement: strict
+
+apps:
+  petname:
+    command: bin/petname
+
+parts:
+  wrapper:
+    plugin: dump
+    source: usr/
+  mypackages:
+    plugin: nil
+    stage-packages:
+    - coreutils
