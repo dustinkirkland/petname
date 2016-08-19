@@ -5,9 +5,8 @@ description: |
  This utility will generate pet names, consisting of a random
  combination of an adverb, adjective, and an animal name.  These are
  useful for unique hostnames, VMs, or containers, for instance.
-architectures:
-  - all
 confinement: strict
+architectures: [amd64, armhf, i686]
 
 apps:
   petname:
