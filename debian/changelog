@@ -1,6 +1,8 @@
 petname (2.5) unreleased; urgency=medium
 
-  * UNRELEASED
+  * === added directory icons, icons/icon.png, icons/petname_14.png,
+    icons/petname_192.png, icons/petname_64.png, usr/bin/petname:
+    - added an icon (a dog tag)
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 09 Aug 2016 14:03:14 -0500
 

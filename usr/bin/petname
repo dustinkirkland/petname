@@ -25,11 +25,11 @@ error() {
 }
 
 PKG=petname
-DIR="/usr/share/$PKG"
+[ -d "$SNAP/share/$PKG" ] && DIR="$SNAP/share/$PKG" || DIR="/usr/share/$PKG"
 WORDS=2
 SEPARATOR="-"
 LETTERS=99
-COMPLEXITY=0
+COMPLEXITY=
 UBUNTU=
 while [ ! -z "$1" ]; do
 	case "${1}" in
@@ -82,13 +82,16 @@ done
 
 case $COMPLEXITY in
 	0)
-		DIR="/usr/share/$PKG/small"
+		DIR="$DIR/small"
 	;;
 	1)
-		DIR="/usr/share/$PKG/medium"
+		DIR="$DIR/medium"
 	;;
 	2)
-		DIR="/usr/share/$PKG/large"
+		DIR="$DIR/large"
+	;;
+	*)
+		DIR="$DIR"
 	;;
 esac
 
