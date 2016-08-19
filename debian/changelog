@@ -7,6 +7,7 @@ petname (2.5) unreleased; urgency=medium
     - add snapcraft build instructions
     - use binary builds, since we use the coreutils binaries
     - fix arch
+    - add icon
   * icons/petname.png:
     - added icon
 

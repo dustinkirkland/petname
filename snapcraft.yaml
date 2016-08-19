@@ -6,7 +6,7 @@ description: |
  combination of an adverb, adjective, and an animal name.  These are
  useful for unique hostnames, VMs, or containers, for instance.
 confinement: strict
-architectures: [amd64, armhf, i386]
+icon: icons/petname.png
 
 apps:
   petname:
