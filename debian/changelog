@@ -6,6 +6,7 @@ petname (2.5) unreleased; urgency=medium
   * snapcraft.yaml:
     - add snapcraft build instructions
     - use binary builds, since we use the coreutils binaries
+    - fix arch
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 09 Aug 2016 14:03:14 -0500
 
