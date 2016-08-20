@@ -1,3 +1,9 @@
+petname (2.6) unreleased; urgency=medium
+
+  * UNRELEASED
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Sat, 20 Aug 2016 07:33:11 -0500
+
 petname (2.5-0ubuntu1) yakkety; urgency=medium
 
   * === added directory icons, icons/icon.png, icons/petname_14.png,

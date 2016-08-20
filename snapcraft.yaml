@@ -1,5 +1,5 @@
 name: petname
-version: "2.5"
+version: "2.6"
 summary: "generate pronouncable, perhaps even memorable, pet names"
 description: |
  This utility will generate pet names, consisting of a random
