@@ -1,6 +1,8 @@
 petname (2.6) unreleased; urgency=medium
 
-  * UNRELEASED
+  * debian/tests/check_words, usr/share/petname/small/adjectives.txt:
+    - added "funky"
+    - enumerated tests
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Sat, 20 Aug 2016 07:33:11 -0500
 

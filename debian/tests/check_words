@@ -18,34 +18,34 @@ fail() {
 	exit 1
 }
 
-echo "TEST: Ensure that we have no blacklisted words or derivatives [$dir]..."
+echo "TEST [01/16]: Ensure that we have no blacklisted words or derivatives [$dir]..."
 grep -xi -Ff debian/blacklist.txt $dir/*txt && fail || succeed
 
-echo "TEST: Ensure that we only have a-z in our words; no funny characters; no upper case [$dir]..."
+echo "TEST [02/16]: Ensure that we only have a-z in our words; no funny characters; no upper case [$dir]..."
 grep "[^abcdefghijklmnopqrstuvwxyz]" $dir/*txt && fail || succeed
 
-echo "TEST: Ensure that we have no adjectives more than $chars characters [$dir]..."
+echo "TEST [03/16]: Ensure that we have no adjectives more than $chars characters [$dir]..."
 grep "[a-z]\{$((chars+1))\}" $dir/adjectives.txt && fail || succeed
 
-echo "TEST: Ensure that we have no names more than $chars characters [$dir]..."
+echo "TEST [04/16]: Ensure that we have no names more than $chars characters [$dir]..."
 grep "[a-z]\{$((chars+1))\}" $dir/names.txt && fail || succeed
 
-echo "TEST: Ensure that we have no adverbs more than $((chars+2)) characters [$dir]..."
+echo "TEST [05/16]: Ensure that we have no adverbs more than $((chars+2)) characters [$dir]..."
 grep "[a-z]\{$((chars+3))\}" $dir/names.txt && fail || succeed
 
 # Done with checks against our large/complex wordlist
 [ $chars -gt 40 ] && exit 0
 [ $syllables -gt 20 ] && exit 0
 
-echo "TEST: Ensure that we have no repeated words [$dir]..."
+echo "TEST [06/16]: Ensure that we have no repeated words [$dir]..."
 grep -xi -Ff $dir/adjectives.txt $dir/adverbs.txt && fail || succeed
 grep -xi -Ff $dir/adjectives.txt $dir/names.txt && fail || succeed
 grep -xi -Ff $dir/names.txt $dir/adverbs.txt && fail || succeed
 
-echo "TEST: Ensure that all adverbs end in -ly [$dir]..."
+echo "TEST [07/16]: Ensure that all adverbs end in -ly [$dir]..."
 grep -v "ly$" $dir/adverbs.txt && fail || succeed
 
-echo "TEST: Ensure that we have no adjectives more than $syllables syllables [$dir]..."
+echo "TEST [08/16]: Ensure that we have no adjectives more than $syllables syllables [$dir]..."
 output=$(cat $dir/adjectives.txt | perl -e "use strict; use Lingua::EN::Syllable; while(<>) { chomp; print \$_ . '\n' if syllable(\$_) > $syllables; };")
 if [ -n "$output" ]; then
 	echo "$output"
@@ -54,7 +54,7 @@ else
 	succeed
 fi
 
-echo "TEST: Ensure that we have no names more than $syllables syllables [$dir]..."
+echo "TEST [09/16]: Ensure that we have no names more than $syllables syllables [$dir]..."
 output=$(cat $dir/names.txt | perl -e "use strict; use Lingua::EN::Syllable; while(<>) { chomp; print \$_ . '\n' if syllable(\$_) > $syllables; };")
 if [ -n "$output" ]; then
 	echo "$output"
@@ -63,7 +63,7 @@ else
 	succeed
 fi
 
-echo "TEST: Ensure that we have no adverbs more than $((syllables+1)) syllables [$dir]..."
+echo "TEST [10/16]: Ensure that we have no adverbs more than $((syllables+1)) syllables [$dir]..."
 output=$(cat $dir/adverbs.txt | perl -e "use strict; use Lingua::EN::Syllable; while(<>) { chomp; print \$_ . '\n' if syllable(\$_) > $((syllables+1)); };")
 if [ -n "$output" ]; then
 	echo "$output"
@@ -72,7 +72,7 @@ else
 	succeed
 fi
 
-echo "TEST: Ensure all adverbs and adjectives are in the ispell(1) dictionary [$dir]..."
+echo "TEST [11/16]: Ensure all adverbs and adjectives are in the ispell(1) dictionary [$dir]..."
 for word in $adverbs $adjectives; do
 	if (echo "$word" | ispell | grep -qs "^word: ok"); then
 		continue
@@ -83,7 +83,7 @@ for word in $adverbs $adjectives; do
 done
 [ "$fail" = "1" ] && fail || succeed
 
-echo "TEST: Ensure all adverbs are common in the SCOWL database [$dir]..."
+echo "TEST [12/16]: Ensure all adverbs are common in the SCOWL database [$dir]..."
 for word in $adverbs; do
 	if grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-5]?; then
 		continue
@@ -94,7 +94,7 @@ for word in $adverbs; do
 done
 [ "$fail" = "1" ] && fail || succeed
 
-echo "TEST: Ensure all adjectives are common in the SCOWL database [$dir]..."
+echo "TEST [13/16]: Ensure all adjectives are common in the SCOWL database [$dir]..."
 for word in $adjectives; do
 	if grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-5]?; then
 		continue
@@ -110,7 +110,7 @@ if ! pgrep dictd >/dev/null 2>&1; then
 	exit 0
 fi
 
-echo "TEST: Ensure all adverbs are actually adverbs in the dict(1) dictionary [$dir]..."
+echo "TEST [14/16]: Ensure all adverbs are actually adverbs in the dict(1) dictionary [$dir]..."
 for word in $adverbs; do
 	if dict -h localhost "$word" 2>&1 | egrep -qs "^      adv | adv\."; then
 		continue
@@ -121,7 +121,7 @@ for word in $adverbs; do
 done
 [ "$fail" = "1" ] && fail || succeed
 
-echo "TEST: Ensure all adjectives are actually adjectives in the dict(1) dictionary [$dir]..."
+echo "TEST [15/16]: Ensure all adjectives are actually adjectives in the dict(1) dictionary [$dir]..."
 for word in $adjectives; do
 	if dict -h localhost "$word" 2>&1 | egrep -qs "^      adj | adj\."; then
 		continue
@@ -134,7 +134,7 @@ for word in $adjectives; do
 done
 [ "$fail" = "1" ] && fail || succeed
 
-echo "TEST: Ensure that all names are common nouns in the dictionary [$dir]..."
+echo "TEST [16/16]: Ensure that all names are common nouns in the dictionary [$dir]..."
 for word in $names; do
 	score=0
 	if grep -qs "^$word$" debian/whitelist.txt; then

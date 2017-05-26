@@ -159,6 +159,7 @@ free
 fresh
 full
 fun
+funky
 funny
 game
 generous
