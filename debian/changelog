@@ -7,6 +7,8 @@ petname (2.6) unreleased; urgency=medium
     - fixup the markdown
   * README.md, usr/share/man/man1/petname.1:
     - more markdown syntax fixes
+  * README.md, usr/share/man/man1/petname.1:
+    - recommend pip3
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Sat, 20 Aug 2016 07:33:11 -0500
 
