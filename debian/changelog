@@ -1,3 +1,9 @@
+petname (2.7) unreleased; urgency=medium
+
+  * UNRELEASED
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 26 May 2017 14:50:54 -0500
+
 petname (2.6-0ubuntu1) artful; urgency=medium
 
   * debian/tests/check_words, usr/share/petname/small/adjectives.txt:
