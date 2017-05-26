@@ -1,4 +1,4 @@
-petname (2.6) unreleased; urgency=medium
+petname (2.6-0ubuntu1) artful; urgency=medium
 
   * debian/tests/check_words, usr/share/petname/small/adjectives.txt:
     - added "funky"
@@ -10,7 +10,7 @@ petname (2.6) unreleased; urgency=medium
   * README.md, usr/share/man/man1/petname.1:
     - recommend pip3
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Sat, 20 Aug 2016 07:33:11 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 26 May 2017 14:50:51 -0500
 
 petname (2.5-0ubuntu1) yakkety; urgency=medium
 
