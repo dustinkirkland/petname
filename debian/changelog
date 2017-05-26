@@ -5,6 +5,8 @@ petname (2.6) unreleased; urgency=medium
     - enumerated tests
   * README.md:
     - fixup the markdown
+  * README.md, usr/share/man/man1/petname.1:
+    - more markdown syntax fixes
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Sat, 20 Aug 2016 07:33:11 -0500
 
