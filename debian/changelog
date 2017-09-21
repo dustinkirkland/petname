@@ -1,3 +1,9 @@
+petname (2.8) unreleased; urgency=medium
+
+  * UNRELEASED
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 21 Sep 2017 15:33:39 -0500
+
 petname (2.7-0ubuntu1) artful; urgency=medium
 
   * usr/share/petname/small/names.txt,
