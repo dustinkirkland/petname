@@ -306,7 +306,6 @@ grackle
 griffon
 grizzly
 grouper
-gryphon
 haddock
 hagfish
 halibut
@@ -394,7 +393,6 @@ bullfrog
 cardinal
 chipmunk
 cockatoo
-crawfish
 crayfish
 dinosaur
 doberman

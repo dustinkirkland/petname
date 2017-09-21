@@ -1,6 +1,8 @@
 petname (2.7) unreleased; urgency=medium
 
-  * UNRELEASED
+  * usr/share/petname/small/names.txt:
+    - remove two words (gryphon, crawfish) that seem to have fallen out
+      of the common database
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 26 May 2017 14:50:54 -0500
 
