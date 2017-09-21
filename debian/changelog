@@ -10,6 +10,10 @@ petname (2.7) unreleased; urgency=medium
     - fix lintian errors
   * debian/compat:
     - bump compat
+  * debian/compat, debian/control, debian/rules,
+    debian/tests/check_words => debian/tests/checkwords,
+    debian/tests/control:
+    - fix test name to make lintian happy
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 26 May 2017 14:50:54 -0500
 

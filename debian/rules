@@ -6,8 +6,8 @@ LC_ALL=C
 	dh $@
 
 override_dh_auto_test:
-	./debian/tests/check_words usr/share/petname/small/ 8 3
-	./debian/tests/check_words usr/share/petname/medium/ 12 4
-	./debian/tests/check_words usr/share/petname/large/ 9999 9999
+	./debian/tests/checkwords usr/share/petname/small/ 8 3
+	./debian/tests/checkwords usr/share/petname/medium/ 12 4
+	./debian/tests/checkwords usr/share/petname/large/ 9999 9999
 	#groff -mandoc -Thtml usr/share/man/man1/petname.1 | pandoc --from=html --to=markdown_github > README.md
 	dh_auto_test
