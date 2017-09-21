@@ -1,4 +1,4 @@
-petname (2.7) unreleased; urgency=medium
+petname (2.7-0ubuntu1) artful; urgency=medium
 
   * usr/share/petname/small/names.txt,
     usr/share/petname/large/adverbs.txt,
@@ -15,7 +15,7 @@ petname (2.7) unreleased; urgency=medium
     debian/tests/control:
     - fix test name to make lintian happy
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 26 May 2017 14:50:54 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 21 Sep 2017 15:33:37 -0500
 
 petname (2.6-0ubuntu1) artful; urgency=medium
 
