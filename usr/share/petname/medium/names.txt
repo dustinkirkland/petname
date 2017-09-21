@@ -208,7 +208,6 @@ crake
 crane
 crappie
 crawdad
-crawfish
 crayfish
 creeper
 cricket
@@ -384,7 +383,6 @@ grub
 grubworm
 grunt
 grunter
-gryphon
 guan
 guanaco
 gudgeon
