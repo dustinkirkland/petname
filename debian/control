@@ -2,8 +2,8 @@ Source: petname
 Section: admin
 Priority: optional
 Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
-Build-Depends: debhelper (>= 8), dict, liblingua-en-syllable-perl, dictd, dict-gcide, dict-wn, scowl, ispell, ienglish-common, iamerican
-Standards-Version: 3.9.7
+Build-Depends: debhelper, dict, liblingua-en-syllable-perl, dictd, dict-gcide, dict-wn, scowl, ispell, ienglish-common, iamerican
+Standards-Version: 4.0.0
 Homepage: http://launchpad.net/petname
 Vcs-Browser: http://bazaar.launchpad.net/~petname/petname/trunk/files
 Vcs-Bzr: https://code.launchpad.net/petname/petname/trunk
