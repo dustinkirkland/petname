@@ -2,7 +2,7 @@
 
 ## NAME []()
 
-**petname** − a utility to generate "pet names", consisting of a random combination of adverbs, an adjective, and an animal name
+**petname** − an RFC1178 implementation o generate "pet names", consisting of a random combination of adverbs, an adjective, and an animal name
 
 ## SYNOPSIS []()
 
@@ -20,11 +20,15 @@
 
 This utility will generate "pet names", consisting of a random combination of an adverb, adjective, and an animal name. These are useful for unique hostnames or container names, for instance.
 
-As such, PetName tries to follow the tenets of Zooko’s triangle. Names are:
+
+It's also an implmentation of [Don Libes'](https://en.wikipedia.org/wiki/Don_Libes) [RFC 1178](https://tools.ietf.org/html/rfc1178) (August 1990) [Zooko’s Triangle](https://en.wikipedia.org/wiki/Zooko%27s_triangle).
+
+Petnames are:
 
 - human meaningful
-- decentralized
-- secure
+- easy to pronounce
+- easy to visualize
+- rare to collide
 
 ## EXAMPLES []()
 
@@ -56,7 +60,7 @@ massive-colt
 
 ## CODE []()
 
-Besides this shell utility, there are also native libraries: python-petname, python3-petname, and golang-petname. Here are some programmatic examples in code:
+Besides this shell utility, there are also native libraries: [python-petname](https://pypi.org/project/petname/), [python3-petname](https://pypi.org/project/petname/), and [golang-petname](https://github.com/dustinkirkland/golang-petname). Here are some programmatic examples in code:
 
 **Golang Example**
 ```golang

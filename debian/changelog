@@ -1,6 +1,7 @@
 petname (2.8) unreleased; urgency=medium
 
-  * UNRELEASED
+  * debian/control, README.md:
+    - update with better examples an links, and reference RFC1178
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 21 Sep 2017 15:33:39 -0500
 

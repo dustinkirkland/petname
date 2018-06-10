@@ -12,7 +12,7 @@ Package: petname
 Architecture: all
 Depends: ${misc:Depends}
 Recommends: dict
-Description: generate pronouncable, perhaps even memorable, pet names
+Description: RFC1178 implmentation to generate pronouncable, perhaps even memorable, pet names
  This utility will generate "pet names", consisting of a random
  combination of an adverb, adjective, and an animal name.  These are
  useful for unique hostnames, VMs, or containers, for instance.
