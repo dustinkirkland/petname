@@ -11,7 +11,7 @@ Vcs-Bzr: https://code.launchpad.net/petname/petname/trunk
 Package: petname
 Architecture: all
 Depends: ${misc:Depends}
-Recommends: dict
+Recommends: man-db
 Description: RFC1178 implmentation to generate pronouncable, perhaps even memorable, pet names
  This utility will generate "pet names", consisting of a random
  combination of an adverb, adjective, and an animal name.  These are
