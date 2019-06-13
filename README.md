@@ -2,7 +2,7 @@
 
 ## Name
 
-**petname** − a utility to generate "pet names", consisting of a random combination of adverbs, an adjective, and an animal name
+**petname** − an [RFC1178](https://tools.ietf.org/html/rfc1178) implementation to generate pronounceable, sometimes even memorable, "pet names", consisting of a random combination of adverbs, an adjective, and an animal name
 
 ## Synopsis
 
@@ -33,6 +33,8 @@ As such, PetName tries to follow the tenets of Zooko’s triangle. Names are:
 - human meaningful
 - decentralized
 - secure
+
+Besides this shell utility, there are also native libraries: [python-petname](https://pypi.org/project/petname/), [python3-petname](https://pypi.org/project/petname/), and [golang-petname](https://github.com/dustinkirkland/golang-petname). Here are some programmatic examples in code:
 
 ## Examples
 
