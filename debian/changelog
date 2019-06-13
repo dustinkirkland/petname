@@ -1,4 +1,4 @@
-petname (2.8) unreleased; urgency=medium
+petname (2.8-0ubuntu1) eoan; urgency=medium
 
   * README.md:
     - update to the newer python-petname readme
@@ -7,7 +7,7 @@ petname (2.8) unreleased; urgency=medium
   * debian/control:
     - recommend man-db for --help
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 12 Jun 2019 19:54:27 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 13 Jun 2019 15:00:58 -0500
 
 petname (2.7-0ubuntu1) artful; urgency=medium
 
