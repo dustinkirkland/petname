@@ -1,8 +1,9 @@
 petname (2.8) unreleased; urgency=medium
 
-  * UNRELEASED
+  * README.md:
+    - update to the newer python-petname readme
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 21 Sep 2017 15:33:39 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 12 Jun 2019 19:42:37 -0500
 
 petname (2.7-0ubuntu1) artful; urgency=medium
 
