@@ -4,6 +4,8 @@ petname (2.8) unreleased; urgency=medium
     - update to the newer python-petname readme
     - refer to https://tools.ietf.org/html/rfc1178
     - update golang and python examples
+  * debian/control:
+    - recommend man-db for --help
 
  -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 12 Jun 2019 19:54:27 -0500
 
