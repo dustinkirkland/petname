@@ -311,7 +311,6 @@ hagfish
 halibut
 hamster
 herring
-jackass
 javelin
 jawfish
 jaybird

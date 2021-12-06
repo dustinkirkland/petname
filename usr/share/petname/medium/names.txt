@@ -442,7 +442,6 @@ insect
 jabiru
 jacamar
 jackal
-jackass
 jackdaw
 jackrabbit
 jaeger
