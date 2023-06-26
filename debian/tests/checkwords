@@ -85,7 +85,7 @@ done
 
 echo "TEST [12/16]: Ensure all adverbs are common in the SCOWL database [$dir]..."
 for word in $adverbs; do
-	if grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-5]?; then
+	if grep -qsri "^$word$" /usr/share/dict/scowl/*; then
 		continue
 	else
 		echo $word
@@ -96,7 +96,7 @@ done
 
 echo "TEST [13/16]: Ensure all adjectives are common in the SCOWL database [$dir]..."
 for word in $adjectives; do
-	if grep -qsri "^$word$" /usr/share/dict/scowl/english-words.[0-5]?; then
+	if grep -qsri "^$word$" /usr/share/dict/scowl/*; then
 		continue
 	else
 		echo $word

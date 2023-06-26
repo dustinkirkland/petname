@@ -5,8 +5,10 @@ petname (2.9) unreleased; urgency=medium
     - removed "jackass" and added to the blacklist
   * debian/control, debian/copyright:
     - migrating from bzr to git, launchpad to github
+  * debian/compat, debian/tests/checkwords:
+    - bump compat, expand scowl dictionary set
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 26 Jun 2023 15:36:25 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 26 Jun 2023 16:29:10 -0500
 
 petname (2.8-0ubuntu1) eoan; urgency=medium
 
