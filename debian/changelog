@@ -1,8 +1,12 @@
 petname (2.9) unreleased; urgency=medium
 
-  * UNRELEASED
+  * debian/blacklist.txt, usr/share/petname/medium/names.txt,
+    usr/share/petname/small/names.txt:
+    - removed "jackass" and added to the blacklist
+  * debian/control, debian/copyright:
+    - migrating from bzr to git, launchpad to github
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 13 Jun 2019 15:01:00 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 26 Jun 2023 15:36:25 -0500
 
 petname (2.8-0ubuntu1) eoan; urgency=medium
 
