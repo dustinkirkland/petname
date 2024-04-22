@@ -177,7 +177,6 @@ snipe
 squid
 stork
 swift
-swine
 tapir
 tetra
 tiger
@@ -204,7 +203,6 @@ condor
 cougar
 coyote
 dassie
-donkey
 dragon
 earwig
 falcon
@@ -367,7 +365,6 @@ sunbeam
 sunbird
 sunfish
 tadpole
-termite
 terrier
 unicorn
 vulture

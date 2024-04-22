@@ -247,7 +247,6 @@ doe
 dog
 dogfish
 dolphin
-donkey
 dormouse
 dory
 dotterel
@@ -910,7 +909,6 @@ swan
 sweeper
 swift
 swiftlet
-swine
 swordfish
 swordtail
 sylph
@@ -933,7 +931,6 @@ teal
 tench
 tenpounder
 tenrec
-termite
 tern
 terrapin
 terrier
