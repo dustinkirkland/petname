@@ -1,4 +1,10 @@
-petname (2.9) unreleased; urgency=medium
+petname (2.10) unreleased; urgency=medium
+
+  * UNRELEASED
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Sun, 28 Apr 2024 14:35:04 -0500
+
+petname (2.9-0ubuntu1) experimental; urgency=medium
 
   * debian/blacklist.txt, usr/share/petname/medium/names.txt,
     usr/share/petname/small/names.txt:
@@ -12,7 +18,7 @@ petname (2.9) unreleased; urgency=medium
     - removed termite/donkey/swine from the lists, per:
       https://github.com/dustinkirkland/petname/issues/3
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 22 Apr 2024 08:38:10 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Sun, 28 Apr 2024 14:34:52 -0500
 
 petname (2.8-0ubuntu1) eoan; urgency=medium
 
