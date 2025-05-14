@@ -156,6 +156,7 @@ molly
 moose
 moray
 mouse
+otter
 panda
 perch
 prawn
@@ -204,6 +205,7 @@ cougar
 coyote
 dassie
 dragon
+donkey
 earwig
 falcon
 feline
