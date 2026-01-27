@@ -178,8 +178,6 @@ coati
 coatimundi
 cobia
 cobra
-cockatoo
-cockroach
 cod
 codling
 coelacanth
@@ -663,7 +661,6 @@ parrot
 parrotfish
 partridge
 passerine
-peacock
 peafowl
 peccary
 pegasus
@@ -1036,7 +1033,6 @@ wolfhound
 wolverine
 wombat
 woodchuck
-woodcock
 woodcreeper
 woodlouse
 woodpecker

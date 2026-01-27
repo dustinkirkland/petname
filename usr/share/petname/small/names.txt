@@ -339,7 +339,6 @@ octopus
 opossum
 ostrich
 panther
-peacock
 pegasus
 pelican
 penguin
@@ -388,7 +387,6 @@ bonefish
 bullfrog
 cardinal
 chipmunk
-cockatoo
 crayfish
 dinosaur
 doberman
@@ -449,4 +447,3 @@ titmouse
 tortoise
 treefrog
 werewolf
-woodcock
