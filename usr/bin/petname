@@ -34,30 +34,57 @@ UBUNTU=
 while [ ! -z "$1" ]; do
 	case "${1}" in
 		-w|--words)
+			# Validate that words is a positive integer
+			case "$2" in
+				''|*[!0-9]*) error "words must be a positive integer, got: $2" ;;
+			esac
 			WORDS="$2"
 			shift 2
 		;;
 		-l|--letters)
+			# Validate that letters is a positive integer
+			case "$2" in
+				''|*[!0-9]*) error "letters must be a positive integer, got: $2" ;;
+			esac
 			LETTERS="$2"
 			shift 2
 		;;
 		-s|--separator)
+			# Validate separator length (max 100 chars to prevent memory issues)
+			if [ ${#2} -gt 100 ]; then
+				error "separator must be 100 characters or less"
+			fi
 			SEPARATOR="$2"
 			shift 2
 		;;
 		-h|--help)
-			exec man $PKG
+			exec man "$PKG"
 		;;
 		-d|--dir)
+			# Validate directory exists and is readable
+			if [ ! -d "$2" ]; then
+				error "directory does not exist: $2"
+			fi
+			if [ ! -r "$2" ]; then
+				error "directory is not readable: $2"
+			fi
 			DIR="$2"
 			shift 2
 		;;
 		-c|--complexity)
-			COMPLEXITY="$2"
+			# Validate complexity is 0, 1, or 2
+			case "$2" in
+				0|1|2)
+					COMPLEXITY="$2"
+				;;
+				*)
+					error "complexity must be 0 (small), 1 (medium), or 2 (large), got: $2"
+				;;
+			esac
 			shift 2
 		;;
 		-u|--ubuntu)
-			UBUNTU=$(cat $DIR/*.txt | shuf -n 1 | head -c 1)
+			UBUNTU=$(cat "$DIR"/*.txt | shuf -n 1 | head -c 1)
 			shift
 		;;
 		--adverb)
@@ -78,7 +105,7 @@ while [ ! -z "$1" ]; do
 	esac
 done
 
-[ $LETTERS -lt 3 ] && LETTERS=3
+[ "$LETTERS" -lt 3 ] && LETTERS=3
 
 case $COMPLEXITY in
 	0)
@@ -96,15 +123,15 @@ case $COMPLEXITY in
 esac
 
 Adverb() {
-	grep "^$UBUNTU.\{0,$LETTERS\}$" $DIR/adverbs.txt | shuf -n 1
+	grep "^$UBUNTU.\{0,$LETTERS\}$" "$DIR/adverbs.txt" | shuf -n 1
 }
 
 Adjective() {
-	grep "^$UBUNTU.\{0,$LETTERS\}$" $DIR/adjectives.txt | shuf -n 1
+	grep "^$UBUNTU.\{0,$LETTERS\}$" "$DIR/adjectives.txt" | shuf -n 1
 }
 
 Name() {
-	grep "^$UBUNTU.\{0,$LETTERS\}$" $DIR/names.txt | shuf -n 1
+	grep "^$UBUNTU.\{0,$LETTERS\}$" "$DIR/names.txt" | shuf -n 1
 }
 
 Generate() {
@@ -126,11 +153,13 @@ Generate() {
 		printf "%s%s%s\n" "$adj" "$SEPARATOR" "$name"
 		return
 	else
+		# Ensure WORDS is at least 3 for this branch
+		[ "$WORDS" -lt 3 ] && WORDS=3
 		adj="$(Adjective)"
 		name="$(Name)"
 		count=$((WORDS-2))
 		adverbs=
-		for i in $(seq 1 $count); do
+		for i in $(seq 1 "$count"); do
 			adv="$(Adverb)"
 			if [ -z "$adverbs" ]; then
 				adverbs=$(printf "%s%s" "$adv" "$SEPARATOR")

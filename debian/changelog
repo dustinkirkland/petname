@@ -1,3 +1,23 @@
+petname (2.11) stable; urgency=medium
+
+  * usr/bin/petname:
+    - added input validation for --words and --letters parameters
+    - added validation that --complexity is 0, 1, or 2
+    - added 100-character limit on --separator parameter
+    - added validation that --dir exists and is readable
+    - quoted all variable expansions to prevent word splitting
+    - improved error messages for invalid parameters
+  * debian/tests/checkwords:
+    - quoted all variable expansions for robustness
+    - improved shell script safety and best practices
+  * Security improvements:
+    - prevents errors from non-numeric parameters
+    - validates directory paths before use
+    - protects against potential word splitting issues
+    - better error handling throughout
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 14 Feb 2026 22:30:00 -0600
+
 petname (2.10) stable; urgency=medium
 
   * usr/share/petname/medium/names.txt, usr/share/petname/small/names.txt:

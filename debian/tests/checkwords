@@ -5,9 +5,9 @@ fail=0
 [ -n "$1" ] && dir="$1" || dir="usr/share/petname"
 [ -n "$2" ] && chars="$2" || chars=12
 [ -n "$3" ] && syllables="$3" || syllables
-adjectives=$(cat $dir/adjectives.txt)
-adverbs=$(cat $dir/adverbs.txt)
-names=$(cat $dir/names.txt)
+adjectives=$(cat "$dir/adjectives.txt")
+adverbs=$(cat "$dir/adverbs.txt")
+names=$(cat "$dir/names.txt")
 
 succeed() {
 	echo "⤷ Success"
@@ -19,34 +19,34 @@ fail() {
 }
 
 echo "TEST [01/16]: Ensure that we have no blacklisted words or derivatives [$dir]..."
-grep -xi -Ff debian/blacklist.txt $dir/*txt && fail || succeed
+grep -xi -Ff debian/blacklist.txt "$dir"/*txt && fail || succeed
 
 echo "TEST [02/16]: Ensure that we only have a-z in our words; no funny characters; no upper case [$dir]..."
-grep "[^abcdefghijklmnopqrstuvwxyz]" $dir/*txt && fail || succeed
+grep "[^abcdefghijklmnopqrstuvwxyz]" "$dir"/*txt && fail || succeed
 
 echo "TEST [03/16]: Ensure that we have no adjectives more than $chars characters [$dir]..."
-grep "[a-z]\{$((chars+1))\}" $dir/adjectives.txt && fail || succeed
+grep "[a-z]\{$((chars+1))\}" "$dir/adjectives.txt" && fail || succeed
 
 echo "TEST [04/16]: Ensure that we have no names more than $chars characters [$dir]..."
-grep "[a-z]\{$((chars+1))\}" $dir/names.txt && fail || succeed
+grep "[a-z]\{$((chars+1))\}" "$dir/names.txt" && fail || succeed
 
 echo "TEST [05/16]: Ensure that we have no adverbs more than $((chars+2)) characters [$dir]..."
-grep "[a-z]\{$((chars+3))\}" $dir/names.txt && fail || succeed
+grep "[a-z]\{$((chars+3))\}" "$dir/names.txt" && fail || succeed
 
 # Done with checks against our large/complex wordlist
 [ $chars -gt 40 ] && exit 0
 [ $syllables -gt 20 ] && exit 0
 
 echo "TEST [06/16]: Ensure that we have no repeated words [$dir]..."
-grep -xi -Ff $dir/adjectives.txt $dir/adverbs.txt && fail || succeed
-grep -xi -Ff $dir/adjectives.txt $dir/names.txt && fail || succeed
-grep -xi -Ff $dir/names.txt $dir/adverbs.txt && fail || succeed
+grep -xi -Ff "$dir/adjectives.txt" "$dir/adverbs.txt" && fail || succeed
+grep -xi -Ff "$dir/adjectives.txt" "$dir/names.txt" && fail || succeed
+grep -xi -Ff "$dir/names.txt" "$dir/adverbs.txt" && fail || succeed
 
 echo "TEST [07/16]: Ensure that all adverbs end in -ly [$dir]..."
-grep -v "ly$" $dir/adverbs.txt && fail || succeed
+grep -v "ly$" "$dir/adverbs.txt" && fail || succeed
 
 echo "TEST [08/16]: Ensure that we have no adjectives more than $syllables syllables [$dir]..."
-output=$(cat $dir/adjectives.txt | perl -e "use strict; use Lingua::EN::Syllable; while(<>) { chomp; print \$_ . '\n' if syllable(\$_) > $syllables; };")
+output=$(cat "$dir/adjectives.txt" | perl -e "use strict; use Lingua::EN::Syllable; while(<>) { chomp; print \$_ . '\n' if syllable(\$_) > $syllables; };")
 if [ -n "$output" ]; then
 	echo "$output"
 	fail
@@ -55,7 +55,7 @@ else
 fi
 
 echo "TEST [09/16]: Ensure that we have no names more than $syllables syllables [$dir]..."
-output=$(cat $dir/names.txt | perl -e "use strict; use Lingua::EN::Syllable; while(<>) { chomp; print \$_ . '\n' if syllable(\$_) > $syllables; };")
+output=$(cat "$dir/names.txt" | perl -e "use strict; use Lingua::EN::Syllable; while(<>) { chomp; print \$_ . '\n' if syllable(\$_) > $syllables; };")
 if [ -n "$output" ]; then
 	echo "$output"
 	fail
@@ -64,7 +64,7 @@ else
 fi
 
 echo "TEST [10/16]: Ensure that we have no adverbs more than $((syllables+1)) syllables [$dir]..."
-output=$(cat $dir/adverbs.txt | perl -e "use strict; use Lingua::EN::Syllable; while(<>) { chomp; print \$_ . '\n' if syllable(\$_) > $((syllables+1)); };")
+output=$(cat "$dir/adverbs.txt" | perl -e "use strict; use Lingua::EN::Syllable; while(<>) { chomp; print \$_ . '\n' if syllable(\$_) > $((syllables+1)); };")
 if [ -n "$output" ]; then
 	echo "$output"
 	fail
