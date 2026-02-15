@@ -1,4 +1,4 @@
-petname (2.10) unreleased; urgency=medium
+petname (2.10) stable; urgency=medium
 
   * usr/share/petname/medium/names.txt, usr/share/petname/small/names.txt:
     - removed cockatoo, cockroach, peacock, and woodcock to avoid
