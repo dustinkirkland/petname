@@ -1,8 +1,15 @@
 petname (2.10) unreleased; urgency=medium
 
-  * UNRELEASED
+  * usr/share/petname/medium/names.txt, usr/share/petname/small/names.txt:
+    - removed cockatoo, cockroach, peacock, and woodcock to avoid
+      potentially awkward professional combinations, per:
+      https://github.com/dustinkirkland/petname/pull/6
+  * debian/blacklist.txt:
+    - added cockatoo, cockroach, peacock, and woodcock to blacklist
+      for consistency, per:
+      https://github.com/dustinkirkland/petname/pull/7
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Sun, 28 Apr 2024 14:35:04 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 14 Feb 2026 20:53:08 -0600
 
 petname (2.9-0ubuntu1) experimental; urgency=medium
 
