@@ -30,7 +30,6 @@ kid
 kit
 koi
 lab
-man
 owl
 pig
 pug
