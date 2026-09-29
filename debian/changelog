@@ -1,3 +1,9 @@
+petname (2.13) UNRELEASED; urgency=medium
+
+  * Open development for 2.13.
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 29 Sep 2026 05:52:12 -0500
+
 petname (2.12) stable; urgency=medium
 
   * new release 
