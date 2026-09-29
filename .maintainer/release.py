@@ -482,6 +482,27 @@ def bump_version(v):
     return ".".join(parts)
 
 
+def set_setup_py_version(new_ver):
+    """Set python-petname/setup.py's version=, in place.
+
+    Uses re.subn's match COUNT to detect failure, not text equality: if
+    open-dev already set setup.py to this exact version (the normal case —
+    final's new_ver, when closing an open-dev-opened UNRELEASED stanza, IS
+    the version open-dev already wrote there), the substitution is a
+    correct no-op, not an error. Only zero regex matches is a real failure.
+    """
+    setup_path = REPOS["python-petname"] / "setup.py"
+    text = setup_path.read_text()
+    new_text, n = re.subn(r"version='[^']+'", f"version='{new_ver}'", text, count=1)
+    if n == 0:
+        die(f"could not find version='...' in {setup_path}")
+    if new_text != text:
+        setup_path.write_text(new_text)
+        print(f"  Updated setup.py version to {new_ver}")
+    else:
+        print(f"  setup.py version already {new_ver}")
+
+
 def git_state(repo_name):
     path = REPOS[repo_name]
     branch = run(["git", "-C", str(path), "branch", "--show-current"], capture=True).stdout.strip()
@@ -731,13 +752,7 @@ def cmd_final(args):
               f"{'y' if len(subjects) == 1 else 'ies'} (no editor opened)")
 
         if name == "python-petname":
-            setup_path = path / "setup.py"
-            text = setup_path.read_text()
-            new_text = re.sub(r"version='[^']+'", f"version='{new_ver}'", text, count=1)
-            if new_text == text:
-                die(f"could not update version= in {setup_path}")
-            setup_path.write_text(new_text)
-            print(f"  Updated setup.py version to {new_ver}")
+            set_setup_py_version(new_ver)
 
         run(["git", "-C", str(path), "add", "-A"])
         run(["git", "-C", str(path), "commit", "-m", f"Release {name} {new_ver}"])
@@ -804,13 +819,7 @@ def cmd_open_dev(args):
              f"Open development for {next_ver}."], cwd=path, env=env)
 
         if name == "python-petname":
-            setup_path = path / "setup.py"
-            text = setup_path.read_text()
-            new_text = re.sub(r"version='[^']+'", f"version='{next_ver}'", text, count=1)
-            if new_text == text:
-                die(f"could not update version= in {setup_path}")
-            setup_path.write_text(new_text)
-            print(f"  Updated setup.py version to {next_ver}")
+            set_setup_py_version(next_ver)
 
         commit_msg = f"bump version to {next_ver} and open for development"
         run(["git", "-C", str(path), "add", "-A"])
