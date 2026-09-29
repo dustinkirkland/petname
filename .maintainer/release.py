@@ -10,9 +10,8 @@ copy of the README, previously kept in sync by hand-run
 debian/update-wordlists.sh scripts in each of those repos. This script
 supersedes running those by hand: it re-derives the embedded copies
 straight from this checkout (no network fetch, no push-first required),
-runs each repo's own test suite, and — for `final` — walks each dirty
-repo through a version bump, debian/changelog entry (via `dch`), commit,
-tag, and push.
+runs each repo's own test suite, and — for `final` — walks each repo
+through an auto-filled debian/changelog entry, commit, tag, and push.
 
 Usage:
     ./release.py status                    # version / git / wordlist-drift snapshot, read-only
@@ -20,35 +19,50 @@ Usage:
     ./release.py test     [--repo R]... [--docker]
     ./release.py rc       [--no-docker] [--no-readme]
     ./release.py final    [--repo R]... [--docker] [--interactive]   # alias: release
-    ./release.py open-dev [--repo R]... [--interactive]
+    ./release.py open-dev [--repo R]...
 
 R is one of: petname, python-petname, golang-petname (repeatable; default: all three).
 --check (sync only) reports drift without writing files.
 --docker (test/final) or the default of `rc` runs the real test suites together in a
 throwaway ubuntu:noble container with the full Build-Depends toolchain installed
 (ispell/dictd/scowl/go) instead of whatever happens to be on this host.
---interactive additionally confirms the sync/test steps, not just commit/tag/push
-(commit/tag/push always confirm, interactive or not).
+--interactive (final only) additionally confirms the sync/test steps, not just
+commit/tag/push (commit/tag/push always confirm, interactive or not).
 
 `rc` is a pre-release gate, not a release-candidate cut: it syncs and runs the full
 test suite across all three repos and reports pass/fail — it never commits, tags, or
 pushes anything. Run it before `final` to check "if I released right now, would
 everything be in sync and passing?"
 
-`final` cuts the actual release (version bump, changelog, tag, push) — same job the
-old `release` command did; `release` still works as an alias. It refuses to run on a
-repo whose HEAD is an `open-dev` bump commit, same guard byobu's release.py uses.
+`final` cuts the actual release: it never opens an editor. debian/changelog is
+auto-filled from `git log` — the commit subjects since the last ACTUALLY-RELEASED
+(non-UNRELEASED) stanza (see commits_since_last_release) become the new stanza's
+bullets via `dch --append`/`--newversion`, non-interactively. That anchor spans
+across any open-dev bump commit, so commits landed between a release and the
+following open-dev bump are never missed even if HEAD is currently that bump
+commit itself (unlike byobu's HEAD-message guard, which this tool deliberately
+doesn't use — see _OPEN_DEV_MSG_RE's comment). If open-dev already opened an
+UNRELEASED stanza for this version, final just fills and closes it (`dch
+--release`) rather than bumping again; otherwise it bumps fresh, same as before.
+After a successful python-petname push, it builds and uploads to PyPI
+(https://pypi.org/project/petname/) via `python3 -m build` + `twine upload`, the
+way byobu's release.py publishes trustmux — confirmed first, same as
+commit/tag/push; skipped with instructions if `build`/`twine` aren't installed.
+`release` still works as an alias for `final`.
 
 `open-dev`, run after `final`, bumps each repo straight to its next dev version
 (changelog stanza + setup.py where applicable) and commits "bump version to X.Y and
 open for development" — so later work accrues under the next version instead of
-silently piling onto the one just released. No tag.
+silently piling onto the one just released. No tag. Unlike every other command
+here, open-dev never prompts: bump/commit/push happen unconditionally for every
+clean, not-already-open target repo.
 
 Sibling repos are found at ../python-petname and ../golang-petname relative to
 this repo, or via $PYTHON_PETNAME_SRC / $GOLANG_PETNAME_SRC.
 
-This script does NOT touch PyPI, Snap, PPA, or Debian upload — those remain
-manual; `final` prints a reminder checklist for them at the end.
+This script does NOT touch Snap, PPA, or Debian upload — those remain manual;
+`final` prints a reminder checklist for them at the end. PyPI IS automated (see
+above).
 """
 
 import argparse
@@ -401,6 +415,61 @@ def changelog_identity(repo_name):
     return (m.group(1), m.group(2)) if m else (None, None)
 
 
+def changelog_second_distro(repo_name):
+    """Return the distribution of the SECOND changelog stanza.
+
+    Used when closing out an UNRELEASED stanza (opened by `open-dev`): that
+    stanza doesn't know its real target distro, so we reuse whatever the
+    previously-released stanza used. (dch --release's own "inherit from
+    previous entry" behavior was tested and found unreliable on this
+    system — it picked the host's Ubuntu devel codename instead — so this
+    is computed explicitly rather than relying on that.)
+    """
+    path = REPOS[repo_name] / "debian" / "changelog"
+    text = path.read_text()
+    matches = re.findall(r"^\S+ \([^)]+\)\s+(\S+);", text, re.MULTILINE)
+    return matches[1] if len(matches) > 1 else (matches[0] if matches else "stable")
+
+
+def commits_since_last_release(repo_name):
+    """Commit subjects on HEAD since the last actually-released (i.e. not
+    UNRELEASED) changelog stanza was created — used both to decide whether
+    there's anything to release and to auto-fill the next stanza's bullets.
+
+    Anchoring on the last REAL release (not just line 1) matters: if an
+    open-dev stanza is already open, commits can still land between the
+    previous release and that open-dev bump commit (this happened for
+    real — see golang-petname's e19a26ec/8afa6b64, pushed but never tagged
+    because an earlier version of this script only checked working-tree
+    dirtiness, not commit history). Anchoring on line 1 alone would keep
+    missing commits like that; anchoring on the last real release catches
+    them retroactively as well as going forward. Excludes merge commits and
+    the open-dev bump commit itself (it carries no real content of its own).
+    """
+    path = REPOS[repo_name]
+    text = (path / "debian" / "changelog").read_text()
+    line_no = None
+    for i, line in enumerate(text.splitlines(), start=1):
+        m = re.match(rf"^{re.escape(repo_name)} \([^)]+\)\s+(\S+);", line)
+        if m and m.group(1) != "UNRELEASED":
+            line_no = i
+            break
+    if line_no is None:
+        die(f"{repo_name}: could not find a released (non-UNRELEASED) "
+            f"stanza in debian/changelog")
+    blame = run(["git", "-C", str(path), "blame", "--porcelain",
+                 "-L", f"{line_no},{line_no}", "--", "debian/changelog"],
+                capture=True).stdout
+    since = blame.split()[0] if blame.strip() else None
+    if not since or set(since) == {"0"}:
+        die(f"{repo_name}: could not determine the commit that introduced "
+            f"the last released debian/changelog stanza (line {line_no})")
+    log = run(["git", "-C", str(path), "log", "--format=%s", "--no-merges",
+               f"{since}..HEAD"], capture=True).stdout
+    subjects = [line for line in log.splitlines() if line.strip()]
+    return [s for s in subjects if not _OPEN_DEV_MSG_RE.match(s)]
+
+
 def setup_py_version(repo_dir):
     text = (repo_dir / "setup.py").read_text()
     m = re.search(r"version='([^']+)'", text)
@@ -526,11 +595,63 @@ def cmd_rc(args):
     print("  Run `final` (alias: `release`) when ready to cut versions.")
 
 
-# A commit message left by `open-dev`, matched here so `final` refuses to
-# release on top of one — same guard byobu's release.py uses: an open-dev
-# bump commit carries no real changes, so a release tagged there would ship
-# nothing new under a new version number.
+# A commit message left by `open-dev`. byobu's release.py refuses to run
+# `final` when HEAD matches this — a blunt proxy for "nothing real to
+# release". This tool doesn't need that guard: commits_since_last_release()
+# already anchors on the last REAL release rather than on HEAD, so it's
+# correct even when HEAD happens to be the open-dev commit itself (real
+# work can land before a bump that hasn't been followed by anything yet —
+# this happened for real with golang-petname's e19a26ec/8afa6b64, and a
+# HEAD-message guard would have kept blocking their release forever). This
+# regex is kept only to filter the open-dev commit's own line out of the
+# derived subjects list, since it carries no real content of its own.
 _OPEN_DEV_MSG_RE = re.compile(r"^bump version to .* and open for development$")
+
+
+def _missing_pypi_tools():
+    missing = []
+    if not shutil.which("twine"):
+        missing.append("twine")
+    r = subprocess.run([sys.executable, "-c", "import build"], capture_output=True)
+    if r.returncode != 0:
+        missing.append("build")
+    return missing
+
+
+def publish_pypi(new_ver):
+    """Build + upload python-petname to PyPI (https://pypi.org/project/petname/),
+    the way byobu's release.py publishes trustmux — but there's no GitHub
+    Actions here to trigger on a tag push, so this runs `python3 -m build`
+    and `twine upload` directly. Requires `pip install build twine` and
+    PyPI credentials (an API token in ~/.pypirc, or TWINE_USERNAME=__token__
+    + TWINE_PASSWORD=<token> in the environment) — twine itself will prompt
+    for these if missing, which needs a real terminal same as our confirm().
+    """
+    section(f"PyPI: build + upload python-petname {new_ver}")
+    missing = _missing_pypi_tools()
+    if missing:
+        path = REPOS["python-petname"]
+        print(f"  ⚠ missing: {', '.join(missing)} — install with: pip install --user build twine")
+        print(f"  Skipping PyPI upload. Run manually once installed:")
+        print(f"    cd {path} && python3 -m build && twine upload dist/*")
+        return
+
+    path = REPOS["python-petname"]
+    dist = path / "dist"
+    if dist.exists():
+        shutil.rmtree(dist)
+    run([sys.executable, "-m", "build"], cwd=path)
+    artifacts = sorted(dist.glob("*"))
+    if not artifacts:
+        die(f"build produced no artifacts in {dist}")
+    print(f"  Built: {', '.join(a.name for a in artifacts)}")
+
+    if not confirm(f"Upload python-petname {new_ver} to PyPI "
+                    f"(https://pypi.org/project/petname/) via twine?", always=True):
+        print(f"  (PyPI upload skipped — run manually: cd {path} && twine upload dist/*)")
+        return
+    run(["twine", "upload"] + [str(a) for a in artifacts], cwd=path)
+    print(f"  ✓ uploaded python-petname {new_ver} to PyPI")
 
 
 def cmd_final(args):
@@ -555,39 +676,59 @@ def cmd_final(args):
         banner(f"Final: {name}")
 
         path = REPOS[name]
-        head_msg = run(["git", "-C", str(path), "log", "--format=%s", "-1"], capture=True).stdout.strip()
-        if _OPEN_DEV_MSG_RE.match(head_msg):
-            print(f"  ⚠ {name}: HEAD is an open-dev bump commit ('{head_msg}') — "
-                  f"skipping. Add real changes first, or release before running open-dev.")
-            continue
-
         ok = docker_ok if args.docker else TEST_FNS[name]()
         if ok is False:
             if not confirm(f"{name}: tests FAILED — continue to release anyway?", skippable=True):
                 continue
 
+        # "Anything to release" = commits since the last changelog stanza
+        # (subjects) OR uncommitted working-tree changes (e.g. from sync in
+        # Pass 1 above, if word lists actually changed).
+        subjects = commits_since_last_release(name)
         dirty = run(["git", "-C", str(path), "status", "--porcelain"], capture=True).stdout
-        if not dirty.strip():
-            print(f"  {name}: no changes — nothing to release")
+        if not subjects and not dirty.strip():
+            print(f"  {name}: no changes since the last release — nothing to release")
             continue
+        if not subjects:
+            dirty_files = [line[3:] for line in dirty.strip().splitlines()]
+            subjects = [f"Sync word lists/README from petname ({', '.join(dirty_files)})"]
 
-        section(f"{name}: pending changes")
-        print(indent(dirty, "    "))
-        if not confirm(f"Commit, version-bump, tag, and push {name}?", skippable=True, always=True):
+        section(f"{name}: changelog entry to be auto-filled from git log")
+        for s in subjects:
+            print(f"    * {s}")
+        if dirty.strip():
+            print(f"  plus uncommitted working-tree changes:")
+            print(indent(dirty, "    "))
+        if not confirm(f"Version-bump/close changelog (via dch, no editor), commit, tag, "
+                        f"and push {name}?", skippable=True, always=True):
             continue
 
         cur_ver, distro = changelog_top(name)
-        suggested = bump_version(cur_ver)
-        new_ver = input(f"  New version for {name} [{suggested}]: ").strip() or suggested
-
         debfullname, debemail = changelog_identity(name)
         env = os.environ.copy()
         if debfullname:
             env["DEBFULLNAME"] = debfullname
         if debemail:
             env["DEBEMAIL"] = debemail
-        print(f"  Opening $EDITOR via dch for the {name} ({new_ver}) changelog entry…")
-        run(["dch", "--newversion", new_ver, "--distribution", distro], cwd=path, env=env)
+
+        if distro == "UNRELEASED":
+            # open-dev already bumped the version and opened this stanza —
+            # just fill in its bullets and close it out (dch --release),
+            # reusing the distro this repo actually ships to.
+            new_ver = cur_ver
+            target_distro = changelog_second_distro(name)
+            for s in subjects:
+                run(["dch", "--append", s], cwd=path, env=env)
+            run(["dch", "--release", "--distribution", target_distro, ""], cwd=path, env=env)
+        else:
+            # No open-dev cycle was started — bump fresh, same as before.
+            new_ver = bump_version(cur_ver)
+            run(["dch", "--newversion", new_ver, "--distribution", distro, subjects[0]],
+                cwd=path, env=env)
+            for s in subjects[1:]:
+                run(["dch", "--append", s], cwd=path, env=env)
+        print(f"  ✓ changelog for {name} {new_ver} auto-filled from {len(subjects)} entr"
+              f"{'y' if len(subjects) == 1 else 'ies'} (no editor opened)")
 
         if name == "python-petname":
             setup_path = path / "setup.py"
@@ -608,14 +749,13 @@ def cmd_final(args):
             run(["git", "-C", str(path), "push", "origin", new_ver])
             print(f"  ✓ pushed {name} {new_ver}")
             released[name] = new_ver
+            if name == "python-petname":
+                publish_pypi(new_ver)
         else:
             print(f"  (committed+tagged locally; push skipped)")
 
     if released:
         banner("Manual follow-up (not automated by this script)")
-        if "python-petname" in released:
-            print(f"  • PyPI upload for python-petname {released['python-petname']}:")
-            print(f"      cd {REPOS['python-petname']} && python3 -m build && twine upload dist/*")
         if "petname" in released:
             print(f"  • Snap release for petname {released['petname']} (snapcraft.yaml)")
         print(f"  • Debian/PPA uploads, if applicable, for: {', '.join(released)}")
@@ -625,17 +765,19 @@ def cmd_final(args):
 def cmd_open_dev(args):
     """Bump each target repo to its next dev version right after a release.
 
-    Mirrors byobu's open-dev: a standalone commit, message
-    "bump version to X.Y and open for development", that `final` refuses to
-    release on top of (see _OPEN_DEV_MSG_RE) — so future work accrues under
-    the next version's changelog stanza instead of silently piling onto the
-    one that was just released. No tag; push is confirmed like everything
-    else here.
+    Mirrors byobu's open-dev: a standalone commit, message "bump version to
+    X.Y and open for development" (matched by _OPEN_DEV_MSG_RE, so `final`
+    can filter it out of the derived changelog subjects), opening a new
+    UNRELEASED stanza so future work has somewhere to accrue instead of
+    silently piling onto the one just released. No tag.
+
+    Unlike every other command here, this one never prompts: bump, commit,
+    and push happen unconditionally for every clean, not-already-open
+    target repo. (Skips — dirty tree, already open — are reported, not
+    asked about; there's nothing to confirm either way.)
     """
     preflight()
     targets = args.repo or REPO_ORDER
-    global _interactive
-    _interactive = args.interactive
 
     for name in targets:
         banner(f"Open-dev: {name}")
@@ -652,11 +794,6 @@ def cmd_open_dev(args):
             continue
 
         next_ver = bump_version(cur_ver)
-        if not confirm(f"Open development for {name} {next_ver} "
-                        f"(bumps changelog{' + setup.py' if name == 'python-petname' else ''}, "
-                        f"commits, no tag)?", skippable=True, always=True):
-            continue
-
         debfullname, debemail = changelog_identity(name)
         env = os.environ.copy()
         if debfullname:
@@ -680,11 +817,8 @@ def cmd_open_dev(args):
         run(["git", "-C", str(path), "commit", "-m", commit_msg])
         print(f"  ✓ {name}: {commit_msg}")
 
-        if confirm(f"Push {name} open-dev commit to origin?", always=True):
-            run(["git", "-C", str(path), "push", "origin", "HEAD"])
-            print(f"  ✓ pushed {name}")
-        else:
-            print(f"  (committed locally; push skipped)")
+        run(["git", "-C", str(path), "push", "origin", "HEAD"])
+        print(f"  ✓ pushed {name}")
 
 
 def main():
@@ -734,10 +868,9 @@ def main():
 
     sp = sub.add_parser("open-dev",
                          help="bump each repo to its next dev version after a release "
-                              "(no tag; commit message matches byobu's convention)")
+                              "(no tag; commit message matches byobu's convention). "
+                              "Never prompts: bump/commit/push happen unconditionally.")
     add_repo_arg(sp)
-    sp.add_argument("-i", "--interactive", action="store_true",
-                     help="also confirm the version-bump step (commit/push always confirm)")
     sp.set_defaults(fn=cmd_open_dev)
 
     args = p.parse_args()
