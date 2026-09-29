@@ -1,8 +1,12 @@
-petname (2.13) UNRELEASED; urgency=medium
+petname (2.13) stable; urgency=medium
 
   * Open development for 2.13.
+  * Fix false failure in setup.py version bump when already correct
+  * Untrack .maintainer/__pycache__, add .gitignore
+  * final: auto-fill changelog from git log, add PyPI publish; open-dev:
+    no prompts
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 29 Sep 2026 05:52:12 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 29 Sep 2026 07:00:31 -0500
 
 petname (2.12) stable; urgency=medium
 

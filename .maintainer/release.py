@@ -13,15 +13,20 @@ straight from this checkout (no network fetch, no push-first required),
 runs each repo's own test suite, and — for `final` — walks each repo
 through an auto-filled debian/changelog entry, commit, tag, and push.
 
+The three repos share ONE version number (by request): `final` and
+`open-dev` always act on all three together, never a subset — see
+"Lockstep versioning" below.
+
 Usage:
     ./release.py status                    # version / git / wordlist-drift snapshot, read-only
     ./release.py sync     [--repo R]... [--check] [--no-readme]
     ./release.py test     [--repo R]... [--docker]
     ./release.py rc       [--no-docker] [--no-readme]
-    ./release.py final    [--repo R]... [--docker] [--interactive]   # alias: release
-    ./release.py open-dev [--repo R]...
+    ./release.py final    [--docker] [--interactive]   # alias: release; always all 3 repos
+    ./release.py open-dev                              # always all 3 repos
 
-R is one of: petname, python-petname, golang-petname (repeatable; default: all three).
+R (sync/test only) is one of: petname, python-petname, golang-petname (repeatable;
+default: all three). final/open-dev have no --repo — see "Lockstep versioning".
 --check (sync only) reports drift without writing files.
 --docker (test/final) or the default of `rc` runs the real test suites together in a
 throwaway ubuntu:noble container with the full Build-Depends toolchain installed
@@ -34,6 +39,19 @@ test suite across all three repos and reports pass/fail — it never commits, ta
 pushes anything. Run it before `final` to check "if I released right now, would
 everything be in sync and passing?"
 
+Lockstep versioning: petname, python-petname, and golang-petname share one version
+number across the board, even though each has its own independent change history.
+shared_target_version() computes it as the highest base version any of the three
+currently reports; `final` always releases ALL THREE to that version, and `open-dev`
+always opens the next shared dev cycle for all three at once — no --repo filtering
+on either. A repo with no real changes since its last release still gets bumped and
+tagged, with a placeholder bullet (_EMPTY_RELEASE_BULLET) saying so — an accepted
+tradeoff ("might mean some empty versions from time to time") for "petname family
+vX.Y" meaning the same thing in all three places. open-dev refuses to open the next
+cycle unless all three are currently released (none UNRELEASED) at the exact same
+version — that invariant only holds right after final has released all three
+together.
+
 `final` cuts the actual release: it never opens an editor. debian/changelog is
 auto-filled from `git log` — the commit subjects since the last ACTUALLY-RELEASED
 (non-UNRELEASED) stanza (see commits_since_last_release) become the new stanza's
@@ -42,20 +60,22 @@ across any open-dev bump commit, so commits landed between a release and the
 following open-dev bump are never missed even if HEAD is currently that bump
 commit itself (unlike byobu's HEAD-message guard, which this tool deliberately
 doesn't use — see _OPEN_DEV_MSG_RE's comment). If open-dev already opened an
-UNRELEASED stanza for this version, final just fills and closes it (`dch
---release`) rather than bumping again; otherwise it bumps fresh, same as before.
+UNRELEASED stanza at the shared target version, final just fills and closes it
+(`dch --release`) rather than bumping again; if a repo is instead already
+released but behind the shared target (e.g. it wasn't part of an earlier
+lockstep cycle), final bumps it straight to the target version to catch up.
 After a successful python-petname push, it builds and uploads to PyPI
 (https://pypi.org/project/petname/) via `python3 -m build` + `twine upload`, the
 way byobu's release.py publishes trustmux — confirmed first, same as
 commit/tag/push; skipped with instructions if `build`/`twine` aren't installed.
 `release` still works as an alias for `final`.
 
-`open-dev`, run after `final`, bumps each repo straight to its next dev version
-(changelog stanza + setup.py where applicable) and commits "bump version to X.Y and
-open for development" — so later work accrues under the next version instead of
-silently piling onto the one just released. No tag. Unlike every other command
-here, open-dev never prompts: bump/commit/push happen unconditionally for every
-clean, not-already-open target repo.
+`open-dev`, run after `final`, bumps all three repos straight to the next shared
+dev version (changelog stanza + setup.py where applicable) and commits "bump
+version to X.Y and open for development" — so later work accrues under the next
+version instead of silently piling onto the one just released. No tag. Unlike
+every other command here, open-dev never prompts once its alignment check
+passes: bump/commit/push happen unconditionally for every clean repo.
 
 Sibling repos are found at ../python-petname and ../golang-petname relative to
 this repo, or via $PYTHON_PETNAME_SRC / $GOLANG_PETNAME_SRC.
@@ -503,6 +523,40 @@ def set_setup_py_version(new_ver):
         print(f"  setup.py version already {new_ver}")
 
 
+# ── lockstep versioning ──────────────────────────────────────────────────
+#
+# petname, python-petname, and golang-petname each used to version
+# independently. By request, they now share one number: `open-dev` bumps
+# all three to the same next version together, and `final` always releases
+# all three together — a repo with no real changes since its last release
+# still gets bumped and tagged (with a placeholder changelog bullet saying
+# so), so the number never drifts apart. This costs the occasional
+# no-op/empty release for a repo with nothing new to say, in exchange for
+# "petname family vX.Y" meaning the same thing everywhere.
+
+_EMPTY_RELEASE_BULLET = (
+    "No changes — version bumped for release alignment across "
+    "petname/python-petname/golang-petname."
+)
+
+
+def _version_tuple(v):
+    return tuple(int(p) for p in v.split("."))
+
+
+def shared_target_version():
+    """The version `final` should converge all three repos to: the highest
+    base version any of them currently reports (released or still an open
+    UNRELEASED dev cycle). Normally that's whatever `open-dev` last opened
+    for everyone together; if one repo is behind (e.g. it was released
+    independently before lockstep started, or missed a cycle), `final`
+    catches it up to this same target rather than requiring it be aligned
+    first.
+    """
+    versions = {name: _version_tuple(changelog_top(name)[0]) for name in REPO_ORDER}
+    return ".".join(str(p) for p in max(versions.values()))
+
+
 def git_state(repo_name):
     path = REPOS[repo_name]
     branch = run(["git", "-C", str(path), "branch", "--show-current"], capture=True).stdout.strip()
@@ -677,14 +731,18 @@ def publish_pypi(new_ver):
 
 def cmd_final(args):
     preflight()
-    targets = args.repo or REPO_ORDER
     global _interactive
     _interactive = args.interactive
 
-    # Pass 1: sync every non-petname target from petname's canonical word
+    # Lockstep: always all three, converged to whichever repo currently
+    # reports the highest version (see shared_target_version).
+    target_ver = shared_target_version()
+    section(f"Lockstep target version: {target_ver}")
+
+    # Pass 1: sync every non-petname repo from petname's canonical word
     # lists/README *before* testing — otherwise a combined --docker run
     # would test the pre-sync state.
-    for name in targets:
+    for name in REPO_ORDER:
         if name != "petname":
             do_sync(name, readme=not args.no_readme)
 
@@ -693,7 +751,7 @@ def cmd_final(args):
     docker_ok = run_docker_tests() if args.docker else None
 
     released = {}
-    for name in targets:
+    for name in REPO_ORDER:
         banner(f"Final: {name}")
 
         path = REPOS[name]
@@ -702,17 +760,24 @@ def cmd_final(args):
             if not confirm(f"{name}: tests FAILED — continue to release anyway?", skippable=True):
                 continue
 
-        # "Anything to release" = commits since the last changelog stanza
-        # (subjects) OR uncommitted working-tree changes (e.g. from sync in
-        # Pass 1 above, if word lists actually changed).
+        cur_ver, distro = changelog_top(name)
+        if distro != "UNRELEASED" and cur_ver == target_ver:
+            print(f"  {name}: already at the shared version {target_ver} — nothing to do")
+            continue
+
+        # "Real changes" = commits since the last release, or uncommitted
+        # working-tree changes (e.g. from sync in Pass 1, if word lists
+        # actually changed). Absent either, this repo still gets released
+        # at target_ver to stay in lockstep — with a placeholder bullet
+        # saying so, per the "some empty versions from time to time"
+        # tradeoff of sharing one version across all three.
         subjects = commits_since_last_release(name)
         dirty = run(["git", "-C", str(path), "status", "--porcelain"], capture=True).stdout
-        if not subjects and not dirty.strip():
-            print(f"  {name}: no changes since the last release — nothing to release")
-            continue
-        if not subjects:
+        if not subjects and dirty.strip():
             dirty_files = [line[3:] for line in dirty.strip().splitlines()]
             subjects = [f"Sync word lists/README from petname ({', '.join(dirty_files)})"]
+        elif not subjects:
+            subjects = [_EMPTY_RELEASE_BULLET]
 
         section(f"{name}: changelog entry to be auto-filled from git log")
         for s in subjects:
@@ -720,11 +785,10 @@ def cmd_final(args):
         if dirty.strip():
             print(f"  plus uncommitted working-tree changes:")
             print(indent(dirty, "    "))
-        if not confirm(f"Version-bump/close changelog (via dch, no editor), commit, tag, "
-                        f"and push {name}?", skippable=True, always=True):
+        if not confirm(f"Version-bump/close changelog (via dch, no editor) to {target_ver}, "
+                        f"commit, tag, and push {name}?", skippable=True, always=True):
             continue
 
-        cur_ver, distro = changelog_top(name)
         debfullname, debemail = changelog_identity(name)
         env = os.environ.copy()
         if debfullname:
@@ -733,39 +797,40 @@ def cmd_final(args):
             env["DEBEMAIL"] = debemail
 
         if distro == "UNRELEASED":
-            # open-dev already bumped the version and opened this stanza —
-            # just fill in its bullets and close it out (dch --release),
-            # reusing the distro this repo actually ships to.
-            new_ver = cur_ver
+            # open-dev already opened this stanza at target_ver — just fill
+            # in its bullets and close it out (dch --release), reusing the
+            # distro this repo actually ships to.
+            assert cur_ver == target_ver, f"{name}: UNRELEASED at {cur_ver}, expected {target_ver}"
             target_distro = changelog_second_distro(name)
             for s in subjects:
                 run(["dch", "--append", s], cwd=path, env=env)
             run(["dch", "--release", "--distribution", target_distro, ""], cwd=path, env=env)
         else:
-            # No open-dev cycle was started — bump fresh, same as before.
-            new_ver = bump_version(cur_ver)
-            run(["dch", "--newversion", new_ver, "--distribution", distro, subjects[0]],
+            # This repo is behind (released, but at an older version than
+            # target_ver) — catch it up directly, reusing its own last
+            # real distro.
+            run(["dch", "--newversion", target_ver, "--distribution", distro, subjects[0]],
                 cwd=path, env=env)
             for s in subjects[1:]:
                 run(["dch", "--append", s], cwd=path, env=env)
-        print(f"  ✓ changelog for {name} {new_ver} auto-filled from {len(subjects)} entr"
+        print(f"  ✓ changelog for {name} {target_ver} auto-filled from {len(subjects)} entr"
               f"{'y' if len(subjects) == 1 else 'ies'} (no editor opened)")
 
         if name == "python-petname":
-            set_setup_py_version(new_ver)
+            set_setup_py_version(target_ver)
 
         run(["git", "-C", str(path), "add", "-A"])
-        run(["git", "-C", str(path), "commit", "-m", f"Release {name} {new_ver}"])
-        run(["git", "-C", str(path), "tag", new_ver])
-        print(f"  ✓ committed + tagged {name} {new_ver}")
+        run(["git", "-C", str(path), "commit", "-m", f"Release {name} {target_ver}"])
+        run(["git", "-C", str(path), "tag", target_ver])
+        print(f"  ✓ committed + tagged {name} {target_ver}")
 
-        if confirm(f"Push {name} commit and tag {new_ver} to origin?", always=True):
+        if confirm(f"Push {name} commit and tag {target_ver} to origin?", always=True):
             run(["git", "-C", str(path), "push", "origin", "HEAD"])
-            run(["git", "-C", str(path), "push", "origin", new_ver])
-            print(f"  ✓ pushed {name} {new_ver}")
-            released[name] = new_ver
+            run(["git", "-C", str(path), "push", "origin", target_ver])
+            print(f"  ✓ pushed {name} {target_ver}")
+            released[name] = target_ver
             if name == "python-petname":
-                publish_pypi(new_ver)
+                publish_pypi(target_ver)
         else:
             print(f"  (committed+tagged locally; push skipped)")
 
@@ -778,23 +843,40 @@ def cmd_final(args):
 
 
 def cmd_open_dev(args):
-    """Bump each target repo to its next dev version right after a release.
+    """Bump all three repos to the next shared dev version right after a
+    lockstep release.
 
-    Mirrors byobu's open-dev: a standalone commit, message "bump version to
-    X.Y and open for development" (matched by _OPEN_DEV_MSG_RE, so `final`
-    can filter it out of the derived changelog subjects), opening a new
-    UNRELEASED stanza so future work has somewhere to accrue instead of
-    silently piling onto the one just released. No tag.
+    Mirrors byobu's open-dev: a standalone commit per repo, message "bump
+    version to X.Y and open for development" (matched by _OPEN_DEV_MSG_RE,
+    so `final` can filter it out of the derived changelog subjects),
+    opening a new UNRELEASED stanza so future work has somewhere to accrue
+    instead of silently piling onto the one just released. No tag.
 
-    Unlike every other command here, this one never prompts: bump, commit,
-    and push happen unconditionally for every clean, not-already-open
-    target repo. (Skips — dirty tree, already open — are reported, not
-    asked about; there's nothing to confirm either way.)
+    Lockstep: refuses to open the next cycle unless all three are
+    currently released (none UNRELEASED) at the exact same version — that
+    invariant only holds right after `final` has released all three
+    together, which is the point at which the next cycle should open.
+    Unlike every other command here, once that invariant holds, this
+    never prompts: bump, commit, and push happen unconditionally for
+    every clean repo.
     """
     preflight()
-    targets = args.repo or REPO_ORDER
 
-    for name in targets:
+    states = {name: changelog_top(name) for name in REPO_ORDER}
+    open_ones = [name for name, (_, distro) in states.items() if distro == "UNRELEASED"]
+    if open_ones:
+        print(f"Already open for development: {', '.join(open_ones)} — "
+              f"run `final` to close {'it' if len(open_ones) == 1 else 'them'} out "
+              f"before opening the next shared cycle.")
+        return
+    versions = {name: ver for name, (ver, _) in states.items()}
+    if len(set(versions.values())) != 1:
+        die(f"Repos are out of lockstep: {versions}\n  Run `final` to realign first.")
+    cur_ver = next(iter(versions.values()))
+    next_ver = bump_version(cur_ver)
+    section(f"Opening shared dev version {next_ver} (was {cur_ver})")
+
+    for name in REPO_ORDER:
         banner(f"Open-dev: {name}")
         path = REPOS[name]
 
@@ -803,12 +885,6 @@ def cmd_open_dev(args):
             print(f"  {name}: working tree is dirty — commit or stash first. Skipping.")
             continue
 
-        cur_ver, distro = changelog_top(name)
-        if distro == "UNRELEASED":
-            print(f"  {name}: already open for development ({cur_ver}, UNRELEASED) — skipping")
-            continue
-
-        next_ver = bump_version(cur_ver)
         debfullname, debemail = changelog_identity(name)
         env = os.environ.copy()
         if debfullname:
@@ -865,9 +941,8 @@ def main():
     sp.set_defaults(fn=cmd_rc)
 
     sp = sub.add_parser("final", aliases=["release"],
-                         help="sync + test + version bump + tag + push, per repo "
-                              "('release' still works as an alias)")
-    add_repo_arg(sp)
+                         help="sync + test + lockstep version bump + tag + push, all 3 repos "
+                              "together ('release' still works as an alias)")
     sp.add_argument("--no-readme", action="store_true", help="skip README.md propagation")
     sp.add_argument("--docker", action="store_true",
                      help="test via a throwaway Docker container (see `test --docker`)")
@@ -876,10 +951,10 @@ def main():
     sp.set_defaults(fn=cmd_final)
 
     sp = sub.add_parser("open-dev",
-                         help="bump each repo to its next dev version after a release "
-                              "(no tag; commit message matches byobu's convention). "
-                              "Never prompts: bump/commit/push happen unconditionally.")
-    add_repo_arg(sp)
+                         help="bump all 3 repos to the next shared dev version after a "
+                              "lockstep release (no tag; commit message matches byobu's "
+                              "convention). Never prompts: bump/commit/push happen "
+                              "unconditionally once all 3 are released and aligned.")
     sp.set_defaults(fn=cmd_open_dev)
 
     args = p.parse_args()
