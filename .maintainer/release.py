@@ -296,6 +296,72 @@ TEST_FNS = {
 }
 
 
+# ── Docker test mode ─────────────────────────────────────────────────────
+#
+# The host running this script often won't have petname's full test
+# toolchain installed (Lingua::EN::Syllable, ispell, dictd+scowl, go — see
+# debian/control's Build-Depends) — checkwords tests 08+ need the former,
+# golang-petname needs `go`. Rather than install those system-wide on the
+# maintainer's machine, --docker runs all three repos' real test suites
+# together in a throwaway ubuntu:noble container with the actual
+# Build-Depends installed, mounting each repo read-only.
+
+DOCKER_IMAGE = "ubuntu:noble"
+
+_DOCKER_APT_PACKAGES = [
+    "dict", "liblingua-en-syllable-perl", "dictd", "dict-gcide", "dict-wn",
+    "scowl", "ispell", "ienglish-common", "iamerican",
+    "golang-go", "python3", "ca-certificates",
+]
+
+_DOCKER_TEST_SCRIPT = r"""
+set -e
+export DEBIAN_FRONTEND=noninteractive
+echo "--- apt-get install: """ + " ".join(_DOCKER_APT_PACKAGES) + r""" ---"
+apt-get update -qq
+apt-get install -y --no-install-recommends """ + " ".join(_DOCKER_APT_PACKAGES) + r""" 2>&1 | tail -20
+
+echo "--- starting dictd ---"
+service dictd start 2>/dev/null || (dictd 2>/dev/null & sleep 1) || true
+
+echo "=== petname: checkwords ==="
+cd /src/petname
+./debian/tests/checkwords usr/share/petname/small 8 3
+./debian/tests/checkwords usr/share/petname/medium 12 4
+./debian/tests/checkwords usr/share/petname/large 9999 9999
+
+echo "=== python-petname: unittest ==="
+cd /src/python-petname
+python3 -m unittest
+
+echo "=== golang-petname: go test ==="
+cd /src/golang-petname
+go test ./...
+
+echo "=== ALL DOCKER TESTS PASSED ==="
+"""
+
+
+def run_docker_tests():
+    section(f"Test (Docker, {DOCKER_IMAGE}): petname + python-petname + golang-petname")
+    if not shutil.which("docker"):
+        die("docker not found — required for --docker test mode.")
+    print("  This installs the real Build-Depends toolchain in a throwaway "
+          "container — takes a minute…")
+    r = run([
+        "docker", "run", "--rm",
+        "-v", f"{REPOS['petname']}:/src/petname:ro",
+        "-v", f"{REPOS['python-petname']}:/src/python-petname:ro",
+        "-v", f"{REPOS['golang-petname']}:/src/golang-petname:ro",
+        DOCKER_IMAGE, "bash", "-c", _DOCKER_TEST_SCRIPT,
+    ], check=False, capture=True)
+    out = (r.stdout or "") + (r.stderr or "")
+    print(indent(out, "  "))
+    ok = r.returncode == 0
+    print("  ✓ all Docker tests passed" if ok else f"  ✗ Docker tests FAILED (exit {r.returncode})")
+    return ok
+
+
 # ── version / changelog helpers ─────────────────────────────────────────
 
 def changelog_top(repo_name):
@@ -378,6 +444,11 @@ def cmd_sync(args):
 
 def cmd_test(args):
     preflight()
+    if args.docker:
+        if args.repo:
+            print("  (--docker tests all three repos together; ignoring --repo)")
+        ok = run_docker_tests()
+        sys.exit(0 if ok else 1)
     targets = args.repo or REPO_ORDER
     results = {}
     for name in targets:
@@ -399,13 +470,22 @@ def cmd_release(args):
     global _interactive
     _interactive = args.interactive
 
-    released = {}
+    # Pass 1: sync every non-petname target from petname's canonical word
+    # lists/README *before* testing — otherwise a combined --docker run
+    # would test the pre-sync state.
     for name in targets:
-        banner(f"Release: {name}")
         if name != "petname":
             do_sync(name, readme=not args.no_readme)
 
-        ok = TEST_FNS[name]()
+    # Pass 2: test. --docker runs all three together in one container, so
+    # do it once up front rather than per repo.
+    docker_ok = run_docker_tests() if args.docker else None
+
+    released = {}
+    for name in targets:
+        banner(f"Release: {name}")
+
+        ok = docker_ok if args.docker else TEST_FNS[name]()
         if ok is False:
             if not confirm(f"{name}: tests FAILED — continue to release anyway?", skippable=True):
                 continue
@@ -487,11 +567,18 @@ def main():
 
     sp = sub.add_parser("test", help="run each repo's test suite")
     add_repo_arg(sp)
+    sp.add_argument("--docker", action="store_true",
+                     help=f"run all 3 repos' real test suites together in a throwaway "
+                          f"{DOCKER_IMAGE} container with the full Build-Depends "
+                          f"toolchain installed (ispell/dictd/scowl/go), instead of "
+                          f"whatever happens to be on this host")
     sp.set_defaults(fn=cmd_test)
 
     sp = sub.add_parser("release", help="sync + test + version bump + tag + push, per repo")
     add_repo_arg(sp)
     sp.add_argument("--no-readme", action="store_true", help="skip README.md propagation")
+    sp.add_argument("--docker", action="store_true",
+                     help="test via a throwaway Docker container (see `test --docker`)")
     sp.add_argument("-i", "--interactive", action="store_true",
                      help="also confirm sync/test steps (commit/tag/push always confirm)")
     sp.set_defaults(fn=cmd_release)
