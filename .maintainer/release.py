@@ -17,13 +17,22 @@ tag, and push.
 Usage:
     ./release.py status                    # version / git / wordlist-drift snapshot, read-only
     ./release.py sync    [--repo R]... [--check] [--no-readme]
-    ./release.py test    [--repo R]...
-    ./release.py release [--repo R]... [--interactive]
+    ./release.py test    [--repo R]... [--docker]
+    ./release.py rc      [--no-docker] [--no-readme]
+    ./release.py release [--repo R]... [--docker] [--interactive]
 
 R is one of: petname, python-petname, golang-petname (repeatable; default: all three).
 --check (sync only) reports drift without writing files.
+--docker (test/release) or the default of `rc` runs the real test suites together in a
+throwaway ubuntu:noble container with the full Build-Depends toolchain installed
+(ispell/dictd/scowl/go) instead of whatever happens to be on this host.
 --interactive additionally confirms the sync/test steps, not just commit/tag/push
 (commit/tag/push always confirm, interactive or not).
+
+`rc` is a pre-release gate, not a release-candidate cut: it syncs and runs the full
+test suite across all three repos and reports pass/fail — it never commits, tags, or
+pushes anything. Run it before `release` to check "if I released right now, would
+everything be in sync and passing?"
 
 Sibling repos are found at ../python-petname and ../golang-petname relative to
 this repo, or via $PYTHON_PETNAME_SRC / $GOLANG_PETNAME_SRC.
@@ -464,6 +473,49 @@ def cmd_test(args):
         sys.exit(1)
 
 
+def cmd_rc(args):
+    """Pre-release gate: sync + full test suite across all 3 repos.
+
+    Unlike `release`, this never commits, tags, or pushes anything — it just
+    answers "if I released right now, would everything be in sync and
+    passing?" Defaults to --docker so the gate reflects the real
+    Build-Depends toolchain (ispell/dictd/scowl/go), not just whatever
+    happens to be on this host; pass --no-docker to use the host instead.
+    """
+    preflight()
+    banner("RC gate")
+
+    section("Sync")
+    any_synced = False
+    for name in REPO_ORDER:
+        if name != "petname":
+            if do_sync(name, readme=not args.no_readme):
+                any_synced = True
+    if any_synced:
+        print("\n  ⚠ sync modified files on disk (see `git status` in each repo) — "
+              "not committed. Review before running `release`.")
+    else:
+        print("\n  Nothing to sync — all repos already match petname's word lists/README.")
+
+    if args.no_docker:
+        results = {name: TEST_FNS[name]() for name in REPO_ORDER}
+        failed = any(ok is False for ok in results.values())
+    else:
+        ok = run_docker_tests()
+        results = {"all three (docker)": ok}
+        failed = not ok
+
+    banner("RC gate summary")
+    for name, ok in results.items():
+        mark = "✓" if ok else ("⚠ skipped" if ok is None else "✗ FAILED")
+        print(f"  {mark}  {name}")
+    if failed:
+        print("\n  ✗ RC gate FAILED — fix the above before releasing.")
+        sys.exit(1)
+    print("\n  ✓ RC gate passed. Nothing was committed, tagged, or pushed.")
+    print("  Run `release` when ready to cut versions.")
+
+
 def cmd_release(args):
     preflight()
     targets = args.repo or REPO_ORDER
@@ -573,6 +625,13 @@ def main():
                           f"toolchain installed (ispell/dictd/scowl/go), instead of "
                           f"whatever happens to be on this host")
     sp.set_defaults(fn=cmd_test)
+
+    sp = sub.add_parser("rc", help="pre-release gate: sync + full test suite, no commit/tag/push")
+    sp.add_argument("--no-readme", action="store_true", help="skip README.md propagation")
+    sp.add_argument("--no-docker", action="store_true",
+                     help="test on this host instead of a throwaway Docker container "
+                          "(the default, for the real Build-Depends toolchain)")
+    sp.set_defaults(fn=cmd_rc)
 
     sp = sub.add_parser("release", help="sync + test + version bump + tag + push, per repo")
     add_repo_arg(sp)
