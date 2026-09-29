@@ -10,20 +10,21 @@ copy of the README, previously kept in sync by hand-run
 debian/update-wordlists.sh scripts in each of those repos. This script
 supersedes running those by hand: it re-derives the embedded copies
 straight from this checkout (no network fetch, no push-first required),
-runs each repo's own test suite, and — for `release` — walks each dirty
+runs each repo's own test suite, and — for `final` — walks each dirty
 repo through a version bump, debian/changelog entry (via `dch`), commit,
 tag, and push.
 
 Usage:
     ./release.py status                    # version / git / wordlist-drift snapshot, read-only
-    ./release.py sync    [--repo R]... [--check] [--no-readme]
-    ./release.py test    [--repo R]... [--docker]
-    ./release.py rc      [--no-docker] [--no-readme]
-    ./release.py release [--repo R]... [--docker] [--interactive]
+    ./release.py sync     [--repo R]... [--check] [--no-readme]
+    ./release.py test     [--repo R]... [--docker]
+    ./release.py rc       [--no-docker] [--no-readme]
+    ./release.py final    [--repo R]... [--docker] [--interactive]   # alias: release
+    ./release.py open-dev [--repo R]... [--interactive]
 
 R is one of: petname, python-petname, golang-petname (repeatable; default: all three).
 --check (sync only) reports drift without writing files.
---docker (test/release) or the default of `rc` runs the real test suites together in a
+--docker (test/final) or the default of `rc` runs the real test suites together in a
 throwaway ubuntu:noble container with the full Build-Depends toolchain installed
 (ispell/dictd/scowl/go) instead of whatever happens to be on this host.
 --interactive additionally confirms the sync/test steps, not just commit/tag/push
@@ -31,14 +32,23 @@ throwaway ubuntu:noble container with the full Build-Depends toolchain installed
 
 `rc` is a pre-release gate, not a release-candidate cut: it syncs and runs the full
 test suite across all three repos and reports pass/fail — it never commits, tags, or
-pushes anything. Run it before `release` to check "if I released right now, would
+pushes anything. Run it before `final` to check "if I released right now, would
 everything be in sync and passing?"
+
+`final` cuts the actual release (version bump, changelog, tag, push) — same job the
+old `release` command did; `release` still works as an alias. It refuses to run on a
+repo whose HEAD is an `open-dev` bump commit, same guard byobu's release.py uses.
+
+`open-dev`, run after `final`, bumps each repo straight to its next dev version
+(changelog stanza + setup.py where applicable) and commits "bump version to X.Y and
+open for development" — so later work accrues under the next version instead of
+silently piling onto the one just released. No tag.
 
 Sibling repos are found at ../python-petname and ../golang-petname relative to
 this repo, or via $PYTHON_PETNAME_SRC / $GOLANG_PETNAME_SRC.
 
 This script does NOT touch PyPI, Snap, PPA, or Debian upload — those remain
-manual; `release` prints a reminder checklist for them at the end.
+manual; `final` prints a reminder checklist for them at the end.
 """
 
 import argparse
@@ -513,10 +523,17 @@ def cmd_rc(args):
         print("\n  ✗ RC gate FAILED — fix the above before releasing.")
         sys.exit(1)
     print("\n  ✓ RC gate passed. Nothing was committed, tagged, or pushed.")
-    print("  Run `release` when ready to cut versions.")
+    print("  Run `final` (alias: `release`) when ready to cut versions.")
 
 
-def cmd_release(args):
+# A commit message left by `open-dev`, matched here so `final` refuses to
+# release on top of one — same guard byobu's release.py uses: an open-dev
+# bump commit carries no real changes, so a release tagged there would ship
+# nothing new under a new version number.
+_OPEN_DEV_MSG_RE = re.compile(r"^bump version to .* and open for development$")
+
+
+def cmd_final(args):
     preflight()
     targets = args.repo or REPO_ORDER
     global _interactive
@@ -535,14 +552,20 @@ def cmd_release(args):
 
     released = {}
     for name in targets:
-        banner(f"Release: {name}")
+        banner(f"Final: {name}")
+
+        path = REPOS[name]
+        head_msg = run(["git", "-C", str(path), "log", "--format=%s", "-1"], capture=True).stdout.strip()
+        if _OPEN_DEV_MSG_RE.match(head_msg):
+            print(f"  ⚠ {name}: HEAD is an open-dev bump commit ('{head_msg}') — "
+                  f"skipping. Add real changes first, or release before running open-dev.")
+            continue
 
         ok = docker_ok if args.docker else TEST_FNS[name]()
         if ok is False:
             if not confirm(f"{name}: tests FAILED — continue to release anyway?", skippable=True):
                 continue
 
-        path = REPOS[name]
         dirty = run(["git", "-C", str(path), "status", "--porcelain"], capture=True).stdout
         if not dirty.strip():
             print(f"  {name}: no changes — nothing to release")
@@ -599,6 +622,71 @@ def cmd_release(args):
         print(f"  • GitHub release notes, if desired: gh release create <tag> --generate-notes")
 
 
+def cmd_open_dev(args):
+    """Bump each target repo to its next dev version right after a release.
+
+    Mirrors byobu's open-dev: a standalone commit, message
+    "bump version to X.Y and open for development", that `final` refuses to
+    release on top of (see _OPEN_DEV_MSG_RE) — so future work accrues under
+    the next version's changelog stanza instead of silently piling onto the
+    one that was just released. No tag; push is confirmed like everything
+    else here.
+    """
+    preflight()
+    targets = args.repo or REPO_ORDER
+    global _interactive
+    _interactive = args.interactive
+
+    for name in targets:
+        banner(f"Open-dev: {name}")
+        path = REPOS[name]
+
+        dirty = run(["git", "-C", str(path), "status", "--porcelain"], capture=True).stdout
+        if dirty.strip():
+            print(f"  {name}: working tree is dirty — commit or stash first. Skipping.")
+            continue
+
+        cur_ver, distro = changelog_top(name)
+        if distro == "UNRELEASED":
+            print(f"  {name}: already open for development ({cur_ver}, UNRELEASED) — skipping")
+            continue
+
+        next_ver = bump_version(cur_ver)
+        if not confirm(f"Open development for {name} {next_ver} "
+                        f"(bumps changelog{' + setup.py' if name == 'python-petname' else ''}, "
+                        f"commits, no tag)?", skippable=True, always=True):
+            continue
+
+        debfullname, debemail = changelog_identity(name)
+        env = os.environ.copy()
+        if debfullname:
+            env["DEBFULLNAME"] = debfullname
+        if debemail:
+            env["DEBEMAIL"] = debemail
+        run(["dch", "--newversion", next_ver, "--distribution", "UNRELEASED",
+             f"Open development for {next_ver}."], cwd=path, env=env)
+
+        if name == "python-petname":
+            setup_path = path / "setup.py"
+            text = setup_path.read_text()
+            new_text = re.sub(r"version='[^']+'", f"version='{next_ver}'", text, count=1)
+            if new_text == text:
+                die(f"could not update version= in {setup_path}")
+            setup_path.write_text(new_text)
+            print(f"  Updated setup.py version to {next_ver}")
+
+        commit_msg = f"bump version to {next_ver} and open for development"
+        run(["git", "-C", str(path), "add", "-A"])
+        run(["git", "-C", str(path), "commit", "-m", commit_msg])
+        print(f"  ✓ {name}: {commit_msg}")
+
+        if confirm(f"Push {name} open-dev commit to origin?", always=True):
+            run(["git", "-C", str(path), "push", "origin", "HEAD"])
+            print(f"  ✓ pushed {name}")
+        else:
+            print(f"  (committed locally; push skipped)")
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -633,14 +721,24 @@ def main():
                           "(the default, for the real Build-Depends toolchain)")
     sp.set_defaults(fn=cmd_rc)
 
-    sp = sub.add_parser("release", help="sync + test + version bump + tag + push, per repo")
+    sp = sub.add_parser("final", aliases=["release"],
+                         help="sync + test + version bump + tag + push, per repo "
+                              "('release' still works as an alias)")
     add_repo_arg(sp)
     sp.add_argument("--no-readme", action="store_true", help="skip README.md propagation")
     sp.add_argument("--docker", action="store_true",
                      help="test via a throwaway Docker container (see `test --docker`)")
     sp.add_argument("-i", "--interactive", action="store_true",
                      help="also confirm sync/test steps (commit/tag/push always confirm)")
-    sp.set_defaults(fn=cmd_release)
+    sp.set_defaults(fn=cmd_final)
+
+    sp = sub.add_parser("open-dev",
+                         help="bump each repo to its next dev version after a release "
+                              "(no tag; commit message matches byobu's convention)")
+    add_repo_arg(sp)
+    sp.add_argument("-i", "--interactive", action="store_true",
+                     help="also confirm the version-bump step (commit/push always confirm)")
+    sp.set_defaults(fn=cmd_open_dev)
 
     args = p.parse_args()
     args.fn(args)
