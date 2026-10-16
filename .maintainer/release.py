@@ -68,9 +68,14 @@ After a successful python-petname push, it builds and uploads to PyPI
 (https://pypi.org/project/petname/) via `python3 -m build` + `twine upload`, the
 way byobu's release.py publishes trustmux — confirmed first, same as
 commit/tag/push; skipped with instructions if `build`/`twine` aren't installed.
-`release` still works as an alias for `final`.
+`release` still works as an alias for `final`. If anything was actually released,
+`final` finishes by offering to run `open-dev` immediately (confirm, skippable,
+auto-proceeds by default — same pattern byobu's/hollywood's release.py use for
+their own post-final open-dev step), so the next shared version always has a
+home the moment `final`'s process exits, across all three repos at once.
 
-`open-dev`, run after `final`, bumps all three repos straight to the next shared
+`open-dev`, run after `final` (automatically, by default), bumps all three repos
+straight to the next shared
 dev version (changelog stanza + setup.py where applicable) and commits "bump
 version to X.Y and open for development" — so later work accrues under the next
 version instead of silently piling onto the one just released. No tag. Unlike
@@ -840,6 +845,23 @@ def cmd_final(args):
             print(f"  • Snap release for petname {released['petname']} (snapcraft.yaml)")
         print(f"  • Debian/PPA uploads, if applicable, for: {', '.join(released)}")
         print(f"  • GitHub release notes, if desired: gh release create <tag> --generate-notes")
+
+        # A final release leaves every repo's changelog pinned at the
+        # version just shipped. Any commit made after this point, in any
+        # of the three, has no home until something opens the next cycle —
+        # same failure mode byobu's release.py closes in its own Phase 10
+        # (ported to hollywood's release.py too). Closing it here means
+        # the next shared version always has a home from the moment this
+        # process exits, across all three repos at once.
+        section("Open next shared dev cycle")
+        if confirm(
+            f"Final release {target_ver} is complete for {', '.join(released)}. "
+            f"Run open-dev now to bump all three repos to the next shared "
+            f"version, so post-release commits don't accumulate under "
+            f"{target_ver} again?",
+            skippable=True,
+        ):
+            cmd_open_dev(args)
 
 
 def cmd_open_dev(args):

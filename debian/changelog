@@ -1,8 +1,9 @@
-petname (2.14) UNRELEASED; urgency=medium
+petname (2.14) stable; urgency=medium
 
   * Open development for 2.14.
+  * Sync word lists/README from petname (maintainer/release.py)
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 29 Sep 2026 07:07:52 -0500
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 16 Oct 2026 08:04:43 -0500
 
 petname (2.13) stable; urgency=medium
 
