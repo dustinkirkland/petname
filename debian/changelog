@@ -1,3 +1,9 @@
+petname (2.15) UNRELEASED; urgency=medium
+
+  * Open development for 2.15.
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 16 Oct 2026 08:04:53 -0500
+
 petname (2.14) stable; urgency=medium
 
   * Open development for 2.14.
